@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: #ececec;
+  font-family: "Rubik Vinyl", system-ui;
+  font-weight: 400;
+  font-size: 28px;
+}
+
+ul {
+  margin: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 70px;
+  margin-bottom: 20px;
+  background-color: #2a0e3c;
+  color: #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 4px 7px 10px rgba(8, 8, 121, 0.5);
+}
+
+a:hover {
+  background-color: #4b1e6c;
+  box-shadow: 6px 10px 15px rgba(8, 8, 121, 0.7);
+  transition: all 0.3s ease;
+}

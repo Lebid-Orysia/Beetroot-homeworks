@@ -1,0 +1,428 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.header,
+main,
+footer {
+  max-width: 1126px;
+  margin: 0 auto;
+}
+
+/*......... header........ */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 35px auto;
+  margin-bottom: 50px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+
+.header-nav {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 200%;
+  margin-right: 40px;
+}
+
+.header-list a {
+  color: #2f281e;
+}
+
+.header-list a:hover {
+  color: #FF9900;
+  transition: all 0.6s ease;
+}
+
+.sign-up,
+.sign-in {
+  padding: 11px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.sign-in {
+  border: 1px solid #BCD0E5;
+  background-color: transparent;
+  color: #173a56;
+}
+
+.sign-in:hover {
+  background-color: #FF9900;
+  color: #fff;
+  border: 1px solid #FF9900;
+  transition: all 0.3s ease;
+}
+
+.sign-up {
+  background-color: #FF9900;
+  color: #fff;
+  border: 1px solid #FF9900;
+}
+
+.sign-up:hover {
+  background-color: transparent;
+  color: #173a56;
+  border: 1px solid #BCD0E5;
+  transition: all 0.3s ease;
+}
+
+
+/* .........main........... */
+
+/* ............section hero........ */
+.hero {
+  display: flex;
+  align-items: start;
+  gap: 65px;
+  margin-bottom: 110px;
+}
+
+.hero-content {
+  max-width: 518px;
+  margin-top: 83px;
+}
+
+.hero-heading {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 123%;
+  color: #2f281e;
+  margin-bottom: 30px;
+}
+
+.hero-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  color: #544837;
+  margin-bottom: 45px;
+}
+
+.hero-button {
+  padding: 14px 41px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  background-color: #FF9900;
+  border: 1px solid #FF9900;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.hero-button:hover {
+  background-color: transparent;
+  color: #173a56;
+  border: 1px solid #BCD0E5;
+  transition: all 0.3s ease;
+}
+
+.hero-link {
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #f90;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  vertical-align: middle;
+}
+
+.hero-link:hover {
+  color: #173a56;
+  transition: all 0.3s ease;
+}
+
+/* .......tools section........ */
+.shadow-box {
+  background-image: url(../img/tools-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 90px;
+  margin-bottom: 120px;
+}
+
+.tools-header {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  color: #2f281e;
+  margin-bottom: 54px;
+}
+
+.tools-list {
+  display: flex;
+  gap: 45px;
+  justify-content: center;
+}
+
+.tools-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 19px;
+  background: #7752BE;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.tools-line {
+  width: 50px;
+  height: 50px;
+  border-radius: 19px;
+  background: #FAB005;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.tools-heart {
+  width: 50px;
+  height: 50px;
+  border-radius: 19px;
+  background: #F03E3D;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.tools-clock {
+  width: 50px;
+  height: 50px;
+  border-radius: 19px;
+  background: #4DADF7;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.arrow,
+.line,
+.heart,
+.clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tools-items h3 {
+  font-weight: 600;
+  font-size: 22px;
+  color: #2f281e;
+  margin-bottom: 13px;
+}
+
+.tools-items p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 163%;
+  color: #544837;
+  margin-bottom: 60px;
+}
+
+.tools-button {
+  padding: 15px 33px;
+  background: #FF9900;
+  border: 1px solid #FF9900;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 auto;
+}
+
+.tools-button:hover {
+  background-color: transparent;
+  color: #173a56;
+  border: 1px solid #BCD0E5;
+  transition: all 0.3s ease;
+}
+
+
+/* .........design section........ */
+
+.design {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 120px;
+}
+
+.design-content {
+  max-width: 486px;
+}
+
+.design-heading,
+.managers-heading,
+.marketers-heading {
+  font-weight: 700;
+  font-size: 36px;
+  color: #2f281e;
+  margin-bottom: 22px;
+}
+
+.design-text,
+.managers-text,
+.marketers-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 163%;
+  color: #544837;
+  margin-bottom: 30px;
+}
+
+.design-span-text,
+.managers-span-text,
+.marketers-span-text {
+  line-height: 0%;
+  margin-bottom: 3px;
+}
+
+.design-subheading,
+.marketers-subheading {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 163%;
+  color: #2f281e;
+  margin-bottom: 12px;
+}
+
+.design-subtext {
+  margin-bottom: 25px;
+}
+
+
+/* ........managers section........ */
+.managers {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 105px;
+}
+
+.managers-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.orange-marks {
+  width: 35px;
+  height: 35px;
+  border-radius: 40%;
+  background: #FF9900;
+  position: relative;
+  display: inline-block;
+}
+
+.tick {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.managers-list li {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+
+/* .......marketers section........ */
+.marketers {
+  display: flex;
+  align-items: center;
+  gap: 82px;
+  margin-bottom: 146px;
+}
+
+
+/* .........footer............. */
+
+footer {
+  border-top: 1px solid #BCD0E5;
+  display: flex;
+  padding-top: 102px;
+  justify-content: space-between;
+  margin-bottom: 83px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 130px;
+
+}
+
+.links-list {
+  list-style: none;
+  padding-top: 70px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 219%;
+}
+
+.links-list a {
+  color: #544837;
+}
+
+.links-list a:hover {
+  color: #FF9900;
+  transition: all 0.6s ease;
+}
+
+.sign-now input {
+  display: block;
+  width: 325px;
+  height: 48px;
+  border: 1px solid #BCD0E5;
+  border-radius: 5px;
+  margin-top: 100px;
+}
+
+.sign-now button {
+  padding: 8px 15px;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  background-color: #FF9900;
+  border: 1px solid #FF9900;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.sign-now button:hover {
+  background-color: transparent;
+  color: #173a56;
+  border: 1px solid #BCD0E5;
+  transition: all 0.3s ease;
+}
+

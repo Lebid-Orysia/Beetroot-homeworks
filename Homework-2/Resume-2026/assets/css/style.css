@@ -1,0 +1,133 @@
+body {
+  background-color: rgb(192, 194, 194);
+}
+
+.resume-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  gap: 180px;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 740px;
+  margin-left: 40px;
+
+}
+
+.main-info h1 {
+  margin: 10px 0;
+  font-size: 36px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  color: rgb(233, 233, 245);
+}
+
+.main-info p,
+.sity {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.main-info-icon,
+.projects-icon {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* left side */
+.left-column {
+  width: 30%;
+  text-align: left;
+}
+
+.left-column h2 {
+  text-align: left;
+  margin-bottom: 10px;
+  color: rgb(233, 233, 245);
+  font-family: "Montserrat", sans-serif;
+}
+
+.left-column li {
+  font-family: "Nunito Sans", sans-serif;
+  margin-bottom: 10px;
+  margin-left: 40px;
+}
+
+.left-column ul {
+  padding-left: 0px;
+}
+
+
+/* right side */
+.right-column {
+  width: 70%;
+  text-align: left;
+}
+
+.right-column section {
+  margin-bottom: 50px;
+}
+
+.right-column h3,
+.right-column h2 {
+  text-align: left;
+  margin-bottom: 10px;
+  color: rgb(233, 233, 245);
+  font-family: "Montserrat", sans-serif;
+  margin-top: 30px;
+}
+
+.right-column p,
+.right-column li {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.right-column a,
+.main-info a {
+  color: rgb(124, 166, 203);
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+
+.right-column a:hover,
+.main-info a:hover {
+  color: rgb(65, 126, 180);
+  transition: all 0.5s ease;
+}
+
+
+.change-lang {
+  position: absolute;
+  top: 10px;
+  right: 320px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.my-foto {
+  border-radius: 50%;
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+}
+
+.sity {
+  margin-bottom: 30px;
+}
