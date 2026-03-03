@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans Mono", monospace;
+  background-color: #e5efe5;
+  padding: 20px;
+}
+
+form {
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 8px;
+  display: grid;
+  justify-self: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(7, 51, 16);
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  max-width: 580px;
+  border: 2px solid rgb(7, 109, 17);
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+}
+
+legend {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgb(2, 52, 8);
+  padding: 0 20px;
+}
+
+input, select, textarea, button {
+  padding: 10px;
+  border: 2px solid rgb(7, 109, 17);
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+#reset-button {
+  font-family: "Noto Sans Mono", monospace;
+  background-color: rgb(100, 108, 101);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#reset-button:hover {
+  background-color: rgb(71, 71, 71);
+}
+
+#submit-button {
+  font-family: "Noto Sans Mono", monospace;
+  background-color: rgb(7, 109, 17);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#submit-button:hover {
+  background-color: rgb(2, 82, 12);
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+#favorite-color {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+}

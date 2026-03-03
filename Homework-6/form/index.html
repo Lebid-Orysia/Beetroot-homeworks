@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+  <title>Form</title>
+</head>
+
+<body>
+  <h1>Комплексна реєстрація та анкета користувача</h1>
+  <form action="#" method="post" enctype="multipart/form-data" id="my_form"
+    onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;">
+
+    <fieldset>
+      <legend>Персональні дані</legend>
+      <label for="first-name">Прізвище</label>
+      <input type="text" id="first-name" name="first-name" placeholder="Doe" minlength="2" maxlength="50" required>
+
+      <label for="last-name">Ім'я</label>
+      <input type="text" id="last-name" name="last-name" placeholder="Jon" minlength="2" maxlength="50" required>
+
+      <label for="middle-name">По батькові</label>
+      <input type="text" id="middle-name" name="middle-name" placeholder="Smith" required>
+      <br>
+      <label for="data-of-birth">Дата народження</label>
+      <input type="date" id="data-of-birth" name="data-of-birth" required>
+
+      <div>
+        <span id="gender-label">Стать</span><br>
+        <input type="radio" id="gender-male" name="gender" value="male" required checked>
+        <label for="gender-male">Чоловік</label>
+        <input type="radio" id="gender-female" name="gender" value="female" required>
+        <label for="gender-female">Жінка</label>
+        <input type="radio" id="gender-other" name="gender" value="other" required>
+        <label for="gender-other">Інше</label>
+      </div>
+      <br>
+      <label for="profile-foto">Фото профілю</label>
+      <input type="file" id="profile-foto" name="profile-foto" accept="image/*">
+      <br>
+      <label for="tel">Номер телефону</label>
+      <input type="tel" id="tel" name="tel" placeholder="+380 (00) 000-00-00" required>
+      <label for="email">Електронна пошта</label>
+      <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Контактна інформація та адреса</legend>
+      <label for="country">Країна</label>
+      <input type="search" id="country" name="country" required>
+
+      <label for="city">Місто</label>
+      <select name="city" id="city">
+        <option value="">Виберіть місто</option>
+        <option value="Kyiv">Київ</option>
+        <option value="Lviv">Львів</option>
+        <option value="Kharkiv">Харків</option>
+        <option value="Odesa">Одеса</option>
+        <option value="Dnipro">Дніпро</option>
+        <option value="Mykolaiv">Миколаїв</option>
+        <option value="Vinnytsia">Вінниця</option>
+        <option value="Kherson">Херсон</option>
+        <option value="Poltava">Полтава</option>
+        <option value="Ivano-Frankivsk">Івано-Франківськ</option>
+        <option value="Ternopil">Тернопіль</option>
+        <option value="Chernivtsi">Чернівці</option>
+        <option value="Sumy">Суми</option>
+        <option value="Rivne">Рівне</option>
+        <option value="Lutsk">Луцьк</option>
+        <option value="Zhytomyr">Житомир</option>
+        <option value="Kropyvnytskyi">Кропивницький</option>
+        <option value="Cherkasy">Черкаси</option>
+        <option value="Uzhhorod">Ужгород</option>
+        <option value="Zaporizhia">Запоріжжя</option>
+        <option value="Luhansk">Луганськ</option>
+        <option value="Donetsk">Донецьк</option>
+        <option value="Khmelnytskyi">Хмельницький</option>
+        <option value="Chernihiv">Чернігів</option>
+      </select>
+      <br>
+      <label for="street">Вулиця</label>
+      <input type="search" id="street" name="street" required>
+      <label for="house">Будинок</label>
+      <input type="search" id="house" name="house" required>
+      <br>
+      <label for="post-index">Поштовий індекс</label>
+      <input type="number" id="post-index" name="post-index" placeholder="00000" min="0" max="99999" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Навчання та хобі</legend>
+      <label for="education">Курс</label>
+      <select name="education" id="education">
+        <option value="">Виберіть курс</option>
+        <option value="front-end">Front-End</option>
+        <option value="back-end">Back-End</option>
+        <option value="project-management">Project Management</option>
+        <option value="qa">QA</option>
+      </select>
+      <br>
+      <label for="experience">Рівень навичок (від 0 до 100)</label>
+      <input type="range" id="experience" name="experience" min="0" max="100" value="0">
+      <br>
+
+      <div>
+        <span id="hobbies-label">Хобі</span>
+        <br>
+        <input type="checkbox" id="hobbies-music" name="hobbies" value="music">
+        <label for="hobbies-music">Музика</label>
+        <input type="checkbox" id="hobbies-sport" name="hobbies" value="sport">
+        <label for="hobbies-sport">Спорт</label>
+        <input type="checkbox" id="hobbies-travel" name="hobbies" value="travel">
+        <label for="hobbies-travel">Подорожі</label>
+        <input type="checkbox" id="hobbies-cooking" name="hobbies" value="cooking">
+        <label for="hobbies-cooking">Кулінарія</label><br>
+        <input type="checkbox" id="hobbies-reading" name="hobbies" value="reading">
+        <label for="hobbies-reading">Читання</label>
+        <input type="checkbox" id="hobbies-games" name="hobbies" value="games">
+        <label for="hobbies-games">Ігри</label>
+        <input type="checkbox" id="hobbies-other" name="hobbies" value="other">
+        <label for="hobbies-other">Інше</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Інше</legend>
+      <label for="additional-info">Про себе</label>
+      <textarea id="additional-info" name="additional-info" rows="6" cols="50"></textarea>
+      <br>
+      <label for="favorite-color">Улюблений колір</label>
+      <input type="color" id="favorite-color" name="favorite-color">
+      <br>
+      <label for="favorite-movie">Улюблений жанр фільму</label>
+      <select name="favorite-movie[]" id="favorite-movie" multiple>
+        <optgroup label="Жанри фільмів">
+          <option value="action">Екшн</option>
+          <option value="comedy">Комедія</option>
+          <option value="drama">Драма</option>
+          <option value="horror">Жахи</option>
+          <option value="romance">Мелодрама</option>
+          <option value="sci-fi">Фантастика</option>
+          <option value="adventure">Пригоди</option>
+          <option value="detective">Детектив</option>
+          <option value="western">Вестерн</option>
+        </optgroup>
+      </select>
+      <br>
+      <label for="password">Придумайте пароль</label>
+      <input type="password" id="password" name="password" placeholder="password" required>
+      <br>
+      <label for="terms">Погоджуюсь з обробкою персональних даних
+        <input type="checkbox" id="terms">
+      </label>
+      <br>
+      <button type="reset" id="reset-button">Скинути форму</button>
+      <br>
+      <button type="submit" id="submit-button">Зареєструватися</button>
+    </fieldset>
+
+  </form>
+</body>
+
+</html>
