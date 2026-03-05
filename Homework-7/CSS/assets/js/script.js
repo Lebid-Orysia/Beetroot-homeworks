@@ -1,5 +1,2 @@
-document
-  .getElementById('themeToggle')
-  .addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
+document.getElementById('themeToggle').addEventListener('click', () => {document.body.classList.toggle('dark-theme');
   });
