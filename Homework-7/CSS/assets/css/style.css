@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #828282;
+  --primary-bg-color: #fff;
+  --section-background-color: #F6F6F6;
+}
+
+body.dark-theme {
+  --primary-color: #fff;
+  --secondary-color: #b7b5b5;
+  --primary-bg-color: #575555;;
+  --section-background-color: #212121;
+}
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--primary-color);
+  font-weight: 400;
+  text-align: center;
+  background: var(--primary-bg-color);
+}
+
+.container {
+  max-width: 970px;
+  margin: 0 auto;
+}
+
+/*.......... Header .............*/
+header {
+  padding: 25px 0;
+  border-bottom: 1px solid #828282;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+header nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  justify-content: center;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 18px;
+  letter-spacing: 0.02em;
+}
+
+header nav ul li a:hover {
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+/*.......... Hero .............*/
+.hero {
+  height: 502px;
+}
+
+.hero h1 {
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 50px;
+}
+
+.hero img {
+  margin: 0;
+}
+
+/*.......... About .............*/
+
+.about {
+  background-color: var(--section-background-color);
+  padding: 100px 0 100px 0;
+}
+
+.about h2 {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 34px;
+}
+
+.about p {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.about p:last-child {
+  margin-bottom: 0;
+}
+
+/*.......... Skills .............*/
+.skills {
+  padding: 100px 0 100px 0;
+}
+
+hgroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.skills h2 {
+  font-weight: 700;
+  font-size: 34px;
+}
+
+.skills p {
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+.skills-item {
+  display: flex;
+  gap: 97px;
+  justify-content: center;
+}
+
+.photoshop,
+.illustrator,
+.after-effects,
+.figma {
+  margin-bottom: 25px;
+}
+
+.skills-item p {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--secondary-color);
+  margin-bottom: 60px;
+}
+
+.last-img {
+  margin-top: 20px;
+}
+
+/* ........portfolio ........ */
+.portfolio {
+  background-color: var(--section-background-color);
+  padding: 100px 0 100px 0;
+}
+
+.portfolio h2 {
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 50px;
+}
+
+.portfolio img {
+  margin-bottom: 40px;
+}
+
+.portfolio a {
+  display: block;
+  font-size: 18px;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--primary-color);
+  margin-bottom: 70px;
+}
+
+.portfolio .last-link {
+  margin-bottom: 0;
+}
+
+/*.......... Contact .............*/
+.contacts {
+  padding: 100px 0 100px 0;
+}
+
+.contacts-wrapper {
+  display: grid;
+  gap: 60px;
+}
+
+.contacts h2 {
+  font-weight: 700;
+  font-size: 34px;
+}
+
+.contacts .contacts-header p {
+  font-size: 18px;
+  max-width: 280px;
+}
+
+.contacts-item button {
+  border-radius: 22px;
+  width: 180px;
+  height: 44px;
+  background: var(--primary-color);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  color: var(--primary-bg-color);
+  border: none;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.contacts-item button:hover {
+  background: var(--secondary-color);
+  transition: all 0.3s ease;
+}
+
+.contacts-social {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+.contacts-footer{
+  font-size: 14px;
+  color: var(--secondary-color);
+}
+
+body:has(#themeToggle:checked) {
+    svg {
+        fill: #fff;
+    }
+}
+
+.theme-toggle svg {
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
