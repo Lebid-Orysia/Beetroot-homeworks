@@ -222,14 +222,14 @@ hgroup {
   color: var(--secondary-color);
 }
 
-body:has(#themeToggle:checked) {
-    svg {
-        fill: #fff;
-    }
-}
-
 .theme-toggle svg {
   position: absolute;
   top: 20px;
   left: 0;
+}
+
+body:has(#themeToggle:checked) {
+    svg {
+        fill: #fff;
+    }
 }
