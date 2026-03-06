@@ -111,19 +111,19 @@
       <div>
         <span id="hobbies-label">Хобі</span>
         <br>
-        <input type="checkbox" id="hobbies-music" name="hobbies" value="music">
+        <input type="checkbox" id="hobbies-music" name="hobbies[]" value="music">
         <label for="hobbies-music">Музика</label>
-        <input type="checkbox" id="hobbies-sport" name="hobbies" value="sport">
+        <input type="checkbox" id="hobbies-sport" name="hobbies[]" value="sport">
         <label for="hobbies-sport">Спорт</label>
-        <input type="checkbox" id="hobbies-travel" name="hobbies" value="travel">
+        <input type="checkbox" id="hobbies-travel" name="hobbies[]" value="travel">
         <label for="hobbies-travel">Подорожі</label>
-        <input type="checkbox" id="hobbies-cooking" name="hobbies" value="cooking">
+        <input type="checkbox" id="hobbies-cooking" name="hobbies[]" value="cooking">
         <label for="hobbies-cooking">Кулінарія</label><br>
-        <input type="checkbox" id="hobbies-reading" name="hobbies" value="reading">
+        <input type="checkbox" id="hobbies-reading" name="hobbies[]" value="reading">
         <label for="hobbies-reading">Читання</label>
-        <input type="checkbox" id="hobbies-games" name="hobbies" value="games">
+        <input type="checkbox" id="hobbies-games" name="hobbies[]" value="games">
         <label for="hobbies-games">Ігри</label>
-        <input type="checkbox" id="hobbies-other" name="hobbies" value="other">
+        <input type="checkbox" id="hobbies-other" name="hobbies[]" value="other">
         <label for="hobbies-other">Інше</label>
       </div>
     </fieldset>
@@ -155,7 +155,7 @@
       <input type="password" id="password" name="password" placeholder="password" required>
       <br>
       <label for="terms">Погоджуюсь з обробкою персональних даних
-        <input type="checkbox" id="terms">
+        <input type="checkbox" id="terms" name="terms" checked>
       </label>
       <br>
       <button type="reset" id="reset-button">Скинути форму</button>
