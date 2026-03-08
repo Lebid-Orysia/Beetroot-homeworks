@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/SVG/lebid.svg" type="image/svg+xml">
+    <title>CSS Dinner Shopping List</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="roboto-bold">CSS Dinner Shopping List</h1>
+            <p class="roboto-regular">Let’s go to the mall!</p>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <form action="#" method="post">
+                <ul class="shopping-list roboto-regular">
+                    <li>
+                        <input type="checkbox" id="pickles" name="products[]">
+                        <label for="pickles" >A lot of pickles</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="apples" name="products[]" checked >
+                        <label for="apples" title="(for more CSS manipulations)">10 apples</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="oranges" name="products[]">
+                        <label for="oranges">20 oranges</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="plates" name="products[]">
+                        <label for="plates">13 plates</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="bentos" name="products[]">
+                        <label for="bentos">15 bentos</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="bottle" name="products[]">
+                        <label for="bottle">1 bottle of Sake</label>
+                    </li>
+                </ul>
+            </form>
+            <button class="roboto-regular">Bon appetit :)</button>
+        </div>
+    </main>
+
+</body>
+
+</html>
