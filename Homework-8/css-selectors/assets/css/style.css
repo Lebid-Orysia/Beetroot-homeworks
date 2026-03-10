@@ -24,7 +24,6 @@
 
 header {
   background-color: #4a4f56;
-  ;
   padding: 23px 0;
 }
 
@@ -64,7 +63,7 @@ main {
   transition: all .1s ease-in;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
   width: 28px;
   height: 28px;
   cursor: pointer;
@@ -75,6 +74,7 @@ input[type="checkbox"]{
 
 
 label {
+  width: 800px;
   color: #ffff;
   font-size: 27px;
   line-height: 119%;
@@ -96,34 +96,17 @@ li:hover {
   border-color: #ffff;
 }
 
-#pickles+label::after {
-  content: '(for the next lessons about CSS)';
+span {
   font-size: 17px;
   line-height: 129%;
 }
 
-#apples+label::after {
-  content: '(for more CSS manipulations)';
-  font-size: 17px;
-  line-height: 129%;
+span::before {
+  content: '(';
 }
 
-#oranges+label::after {
-  content: '(because they are awesome)';
-  font-size: 17px;
-  line-height: 129%;
-}
-
-#plates+label::after {
-  content: '(hm... they always dissapear)';
-  font-size: 17px;
-  line-height: 129%;
-}
-
-#bottle+label::after {
-  content: '(for my friends)';
-  font-size: 17px;
-  line-height: 129%;
+span::after {
+  content: ')';
 }
 
 input:checked+label {
@@ -144,4 +127,10 @@ button {
   border: none;
   margin-top: 40px;
   cursor: pointer;
+  &:hover{
+    background-color: #625E77;
+    scale: 1.03;
+    color: #fff;
+    transition: ease .3s;
+  }
 }
