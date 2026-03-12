@@ -50,10 +50,12 @@ li {
 
 ul:hover li {
   opacity: 70%;
+  transition: all .1s ease-in;
 }
 
 ul li:hover {
   opacity: 100%;
+  transition: all .1s ease-in;
 }
 
 .box-lisbon {
