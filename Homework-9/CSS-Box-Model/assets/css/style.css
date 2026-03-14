@@ -59,57 +59,57 @@ ul li:hover {
   transition: all .1s ease-in;
 }
 
-.box-lisbon {
+.box-blue {
   width: 50%;
   background-color: #3399CC;
 }
 
-.box-paris {
+.box-turquoise {
   width: 25%;
   background-color: #33CCCC;
 }
 
-.box-belgrade {
+.box-dark-pink {
   width: 25%;
   background-color: #996699;
 }
 
-.box-venice {
+.box-red {
   width: 25%;
   background-color: #C24747;
 }
 
-.box-tel-avive {
+.box-orange {
   width: 25%;
   background-color: #E2674A;
 }
 
-.box-cair {
+.box-yellow {
   width: 25%;
   background-color: #FFCC66;
 }
 
-.box-new-york {
+.box-light-green {
   width: 25%;
   background-color: #99CC99;
 }
 
-.box-new-delhi {
+.box-ocean-blue {
   width: 25%;
   background-color: #669999;
 }
 
-.box-san-francisco {
+.box-pink {
   width: 50%;
   background-color: #CC6699;
 }
 
-.box-tokyo {
+.box-green {
   width: 25%;
   background-color: #339966;
 }
 
-.box-sydney {
+.box-purple {
   width: 100%;
   background-color: #666699;
 }
