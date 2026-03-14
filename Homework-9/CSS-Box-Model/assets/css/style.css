@@ -34,7 +34,8 @@ ul {
   width: 100%;
   text-align: center;
   list-style: none;
-  border: 2px solid white
+  border: 2px solid white;
+  background-color: #fff;
 }
 
 
