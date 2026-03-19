@@ -6,17 +6,20 @@
 }
 
 body {
-  background-color: #ececec;
+  background-color: #b09fbc;
   font-family: "Rubik Vinyl", system-ui;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 26px;
+  position: relative;
 }
 
 ul {
-  margin: 50px;
+  margin: 30px auto;
+  padding: 0 30px;
+  justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
   list-style: none;
 }
 
@@ -25,7 +28,7 @@ a {
   align-items: center;
   justify-content: center;
   width: 300px;
-  height: 70px;
+  height: 80px;
   margin-bottom: 20px;
   background-color: #2a0e3c;
   color: #e0e0e0;
