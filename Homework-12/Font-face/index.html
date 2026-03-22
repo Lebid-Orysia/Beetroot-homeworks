@@ -12,73 +12,70 @@
 
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="">eng</a></li>
-        <li><a href="">documentation <span>&#8260;</span></a></li>
-        <li><a href="">who's using</a></li>
-        </a>
-      </ul>
-      <img src="company-logo-black.svg" alt="logo">
-    </nav>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="#" class="tourney">eng</a></li>
+          <li class="staatliches"><a href="./index.html">documentation</a><span>/</span>
+            <a href="./using.html" class="staatliches">who's using</a>
+          </li>
+        </ul>
+        <img src="./assets/img/company-logo-black.svg" alt="logo">
+      </nav>
+    </div>
   </header>
-  <div class="container">
-    <main>
+  <main>
+    <div class="container">
       <section class="introduction">
-        <h2>Introduction <sup>Chapter 1</sup></h2>
+        <h2>Introduction<sup>Chapter 1</sup></h2>
         <p>
-          Welcome to the very start of your React Native journey! If you're looking for environment setup
-          instructions, they've moved to <u>their own section</u>. Continue reading for an introduction to the
-          documentation,
-          Native Components, React, and more!
+          Welcome to the very start of your React Native journey! If you're looking for environment setup instructions,
+          they've moved to <a href="#">their own section.</a> Continue reading for an introduction to the documentation,
+          Native
+          Components, React, and more!
         </p>
       </section>
 
       <section class="components">
         <h2>core components<sup>Chapter 2</sup></h2>
-        <p>
-          React Native is an open source framework for building Android and iOS applications using React and the
-          app
-          platform’s native capabiles. With React Native, you use JavaScript to access your platform’s APIs as
-          well as
-          to describe the appearance and behavior of your UI using React components: <em>
-            bundles of reusable, nestable
-            code
-          </em>. You can learn more about React in the next section. But first, let’s cover how components work in
-          React Native.
+        <p>React Native is an open source framework for building Android and iOS applications using React and the app
+          platform’s native capabiles. With React Native, you use JavaScript to access your platform’s APIs as well as
+          to describe the appearance and behavior of your UI using React components: <span
+            class="pt-sans-italic">bundles of reusable, nestable code.</span> You can learn more about React in the next
+          section. But first, let’s cover how components work in React Native.
         </p>
       </section>
 
-      <section class="react-fundamentals">
-        <h2>react fundamentals <sup>Chapter 3</sup></h2>
-        <p>React Native runs on <a href="#">React</a>, a popular open source library for building user interfaces with
-          JavaScript. To
+      <section class="react">
+        <h2>react fundamentals<sup>Chapter 3</sup></h2>
+        <p>React Native runs on React, a popular open source library for building user interfaces withJavaScript. To
           make the most of React Native, it helps to understand React itself. This section can get you started or can
           serve as a refresher course.</p>
 
         <p>We’re going to cover the core concepts behind React:</p>
-        <ul>
-          <li>
-            + components. The rest of this introduction to React uses cats in its examples: friendly, approachable
-            creatures that need names and a cafe to work in.
-          </li>
-          <li>
-            + JSX. React and React Native use JSX, a syntax that lets you write elements inside JavaScript like so:
-            <Text>Hello, I am your cat!</Text>.
-          </li>
-          <li>
-            + props. Props is short for “properties”.
-          </li>
-          <li>
-            + state. While you can think of props as arguments you use to configure how components render, state is like
-            a component’s personal data storage. State is useful for handling data that changes over time or that comes
-            from user interaction. State gives your components memory!
-          </li>
-        </ul>
+
+        <p><span class="pt-bold">+ components.</span> The rest of this introduction to React uses cats in its
+          examples: friendly,approachable creatures that need names and a cafe to work in.</p>
+
+        <p><span class="pt-bold">+ JSX. </span>React and React Native use JSX, a syntax that lets you write elements
+          inside JavaScript like so: <span class="text-gray">&lt;Text&gt;Hello, I am your cat!&lt;/Text&gt;.</span></p>
+        <p>The React docs have <a href="">a comprehensive guide to JSX</a> you can refer to learn even more. Because JSX
+          is
+          JavaScript, you can use variables inside it. Here you are declaring a <span class="text-gray">name</span> for
+          the cat, name, and
+          embedding it with curly braces inside <span class="text-gray">&lt;Text&gt;</span></p>
+
+        <p><span class="pt-bold">+ props.</span> Props is short for “properties”.</p>
+
+        <p><span class="pt-bold">+ state.</span>While you can think of props as arguments you use to configure how
+          components render, state is like a component’s personal data storage. State is useful for handling data
+          that changes over time or that comes from user interaction. State gives your components memory!</p>
       </section>
+
       <section class="handling-text">
         <h2>handling text input <sup>Chapter 4</sup></h2>
-        <p>TextInput is a Core Component that allows the user to enter text. It has an onChangeText prop that takes a
+        <p>TextInput is a Core Component that allows the user to enter text. It has an <span
+            class="pt-sans-italic">onChangeText</span> prop that takes a
           function to be called every time the text changed, and an onSubmitEditing prop that takes a function to be
           called when the text is submitted.
         </p>
@@ -87,8 +84,8 @@
           translated as "🍕 🍕".
         </p>
       </section>
-    </main>
-  </div>
+    </div>
+  </main>
 
 </body>
 
