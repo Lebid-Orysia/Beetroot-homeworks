@@ -121,7 +121,8 @@ section {
       letter-spacing: 4%;
       text-transform: none;
       margin-left: 10px;
-
+      position: relative;
+      top: -11px;
     }
   }
 
