@@ -48,32 +48,42 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 80px;
   padding: 13px 0;
+  background-color: #fff;
+  z-index: 1;
   margin-bottom: 70px;
 }
+
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
+  
   ul {
     display: flex;
     gap: 50px;
     margin-top: 5px;
     align-items: baseline;
-
+    
     a {
       text-decoration: none;
     }
-
+    
     .staatliches span {
       margin: 0 10px;
     }
   }
 }
 
+main {
+  margin-top: 150px;
+}
 section {
   margin-bottom: 66px;
 
@@ -102,7 +112,7 @@ section {
   p {
     font-size: 1.75rem;
     line-height: 48px;
-    margin-bottom: 28px;
+    margin-bottom: 29px;
   }
 
   ul li {
