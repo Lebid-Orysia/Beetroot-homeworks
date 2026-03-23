@@ -74,134 +74,48 @@ nav {
   }
 }
 
-.introduction {
-  margin-bottom: 70px;
+section {
+  margin-bottom: 66px;
 
   h2 {
     font-family: "Francois One", sans-serif;
     font-size: 2.25rem;
-    line-height: 129%;
-    letter-spacing: 0.04em;
+    line-height: 2.25rem;
+
+    letter-spacing: 4%;
+    font-weight: 400;
     text-transform: uppercase;
-    color: #000;
     margin-bottom: 40px;
-    
+
 
     sup {
       font-family: "Farro", sans-serif;
       font-weight: 300;
       font-size: 1.125rem;
-      letter-spacing: 0.04em;
-      color: #000;
+      letter-spacing: 4%;
       text-transform: none;
       margin-left: 10px;
 
     }
   }
+
   p {
     font-size: 1.75rem;
-    line-height: 165%;
-    color: #000;
+    line-height: 48px;
+    margin-bottom: 28px;
+  }
+
+  ul li {
     margin-bottom: 40px;
+    line-height: 2.9rem;
   }
 }
 
-.components {
-  margin-bottom: 70px;
 
-  h2 {
-    font-family: "Francois One", sans-serif;
-    font-size: 2.25rem;
-    line-height: 78%;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #000;
-    margin-bottom: 40px;
-    
-
-    sup {
-      font-family: "Farro", sans-serif;
-      font-weight: 300;
-      font-size: 1.125rem;
-      letter-spacing: 0.04em;
-      color: #000;
-      text-transform: none;
-      margin-left: 10px;
-
-    }
-  }
-  p {
-    font-size: 1.75rem;
-    line-height: 177%;
-    color: #000;
-    margin-bottom: 40px;
-  }
-}
-
-.react {
-  margin-bottom: 70px;
-
-  h2 {
-    font-family: "Francois One", sans-serif;
-    font-size: 2.25rem;
-    line-height: 57%;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #000;
-    margin-bottom: 40px;
-    
-
-    sup {
-      font-family: "Farro", sans-serif;
-      font-weight: 300;
-      font-size: 1.125rem;
-      letter-spacing: 0.04em;
-      color: #000;
-      text-transform: none;
-      margin-left: 10px;
-
-    }
-  }
-  p {
-    font-size: 1.75rem;
-    line-height: 163%;
-    color: #000;
-    margin-bottom: 40px;
-  }
-}
-
-.handling-text {
-  margin-bottom: 90px;
-
-  h2 {
-    font-family: "Francois One", sans-serif;
-    font-size: 2.25rem;
-    line-height: 57%;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #000;
-    margin-bottom: 40px;
-    
-
-    sup {
-      font-family: "Farro", sans-serif;
-      font-weight: 300;
-      font-size: 1.125rem;
-      letter-spacing: 0.04em;
-      color: #000;
-      text-transform: none;
-      margin-left: 10px;
-
-    }
-  }
-  p {
-    font-size: 1.75rem;
-    line-height: 172%;
-    color: #000;
-    margin-bottom: 40px;
-  }
-}
-
-.text-gray{
+.text-gray {
   background-color: #dadada;
+}
+
+.heading-first-section, .heading-last-section{
+  margin-bottom: 46px;
 }
