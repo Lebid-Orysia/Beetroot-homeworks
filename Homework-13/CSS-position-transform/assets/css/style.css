@@ -37,6 +37,7 @@ body {
   font-size: 1.75rem;
   background-color: var(--background-color);
   color: var(--primary-color);
+  transition: all .4s ease;
 }
 
 .pt-sans-italic {
@@ -75,6 +76,7 @@ header {
   background-color: var(--background-color);
   z-index: 1;
   margin-bottom: 70px;
+  transition: all .4s ease;
 }
 
 
@@ -224,8 +226,7 @@ body:has(#themeToggle:checked) {
     background-image: url(../img/sun-svgrepo-com.svg);
     background-repeat: no-repeat;
     background-position: center;
-
-
+  
     svg {
       visibility: hidden;
     }
