@@ -13,7 +13,7 @@
     content: '';
     width: 100px;
     height: 8px;
-    background: #000;
+    background-color: var(--line-before);
     display: block;
   }
 }
@@ -59,7 +59,7 @@
 
 
 .flip-card-back {
-  background-color: #03062f;
+  background-color: #131313;
   transform: rotateX(180deg);
 
   img {
