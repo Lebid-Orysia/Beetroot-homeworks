@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/font.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="shortcut icon" href="./assets/SVG/lebid.svg" type="image/x-icon">
+  <title>Web-forms</title>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="flex-wrapper">
+        <div class="form-wrapp">
+          <h2>Create an Account</h2>
+          <form action="#" method="post">
+            <div class="form-inner">
+
+              <div class="form-cols">
+                <div class="form-row">
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-row">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" name="last-name" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <p>We'll never share your email with anyone else.</p>
+              </div>
+
+              <div class="form-row">
+                <ul class="input-group">
+                  <li>
+                    <input type="radio" id="gender-male" name="gender" value="male" required checked>
+                    <label for="gender-male">Male</label>
+                  </li>
+                  <li> <input type="radio" id="gender-female" name="gender" value="female" required>
+                    <label for="gender-female">Female</label>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="form-cols">
+                <div class="form-row">
+                  <label for="country">Country</label>
+                  <select name="country" id="country">
+                    <option value="">Select</option>
+                    <option value="ukraine">Ukraine</option>
+                    <option value="usa">USA</option>
+                    <option value="germany">Germany</option>
+                    <option value="italy">Italy</option>
+                    <option value="poland">Poland</option>
+                  </select>
+                </div>
+                <div class="form-row">
+                  <label for="city">City</label>
+                  <input type="text" id="city" name="city" required>
+                </div>
+              </div>
+
+              <div class="form-btn">
+                <button type="submit">Sign Up</button>
+              </div>
+
+              <p>By clicking the 'Sign Up' button, you confirm that you accept our <a href="">Terms of Use</a> and <a
+                  href="">Privacy Policy</a>.</p>
+              <p>Have an account?</p>
+              <p><a href="">Log In</a></p>
+            </div>
+          </form>
+        </div>
+
+<!-- ................Second form.............. -->
+        <div class="form-wrapp">
+          <h2>Profile</h2>
+          <form action="#" method="post">
+            <div class="form-inner">
+              <div class="image-wrapp">
+                <img src="./assets/img/userpic.png" alt="userpic" width="80">
+              </div>
+              <div class="form-row">
+                <input type="file" id="profile-foto" name="profile-foto" accept="image/*">
+                <button type="reset">
+                  <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.666667 10.6667C0.666667 11.4 1.26667 12 2 12H7.33333C8.06667 12 8.66667 11.4 8.66667 10.6667V2.66667H0.666667V10.6667V10.6667ZM9.33333 0.666667H7L6.33333 0H3L2.33333 0.666667H0V2H9.33333V0.666667V0.666667Z"
+                      fill="#969696" />
+                  </svg>
+                </button>
+                <p>Up to 1 MB (300x300 px)</p>
+              </div>
+
+              <div class="form-cols">
+                <div class="form-row">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-row">
+                  <label for="email2">Email</label>
+                  <input type="email" id="email2" name="email2" required>
+                </div>
+              </div>
+
+              <div class="form-cols">
+                <div class="form-row">
+                  <label for="country2">Country</label>
+                  <select name="country2" id="country2">
+                    <option value="">Select</option>
+                    <option value="ukraine">Ukraine</option>
+                    <option value="usa">USA</option>
+                    <option value="germany">Germany</option>
+                    <option value="italy">Italy</option>
+                    <option value="poland">Poland</option>
+                  </select>
+                </div>
+                <div class="form-row">
+                  <label for="city2">City</label>
+                  <input type="text" id="city2" name="city2" required>
+                </div>
+              </div>
+
+              <div class="form-cols">
+                <div class="form-row">
+                  <label for="zip-code">Zip Code</label>
+                  <input type="number" id="zip-code" name="zip-code" min="0" max="99999" required>
+                </div>
+                <div class="form-row">
+                  <label for="tel">Phone Number</label>
+                  <input type="tel" id="tel" name="tel" required>
+                </div>
+              </div>
+
+              <div class="form-btn">
+                <button type="submit">Update</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
