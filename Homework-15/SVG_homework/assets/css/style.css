@@ -119,6 +119,11 @@ ul {
     font-weight: 600;
     color: #3DB370;
     line-height: auto;
+    transition: all 0.4s ease;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
