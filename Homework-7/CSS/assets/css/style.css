@@ -1,8 +1,42 @@
-* {
-  margin: 0;
+*,
+*::before,
+*::after {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button {
+  transition: all .2s ease;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  main {
+    flex-grow: 1;
+  }
+}
+
 
 :root {
   --primary-color: #000;
@@ -14,7 +48,8 @@
 body.dark-theme {
   --primary-color: #fff;
   --secondary-color: #b7b5b5;
-  --primary-bg-color: #575555;;
+  --primary-bg-color: #575555;
+  ;
   --section-background-color: #212121;
 }
 
@@ -28,7 +63,7 @@ body {
 }
 
 .container {
-  max-width: 970px;
+  width: min(90%, 970px);
   margin: 0 auto;
 }
 
@@ -57,6 +92,26 @@ header nav ul li a {
 header nav ul li a:hover {
   color: var(--primary-color);
   transition: all 0.3s ease;
+}
+
+.theme-toggle {
+  position: relative;
+  top: -22px;
+  left: 270px;
+  cursor: pointer;
+}
+
+.burger {
+  display: none;
+
+  span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 5px auto;
+    transition: all .3s ease;
+  }
 }
 
 /*.......... Hero .............*/
@@ -129,6 +184,15 @@ hgroup {
 .after-effects,
 .figma {
   margin-bottom: 25px;
+  width: 80px;
+  height: auto;
+}
+
+.img-stars {
+  display: inline-block;
+  width: 170px;
+  height: auto;
+  object-fit: contain;
 }
 
 .skills-item p {
@@ -140,7 +204,7 @@ hgroup {
 }
 
 .last-img {
-  margin-top: 20px;
+  margin-top: -15px;
 }
 
 /* ........portfolio ........ */
@@ -217,7 +281,7 @@ hgroup {
   justify-content: center;
 }
 
-.contacts-footer{
+.contacts-footer {
   font-size: 14px;
   color: var(--secondary-color);
 }
@@ -229,7 +293,53 @@ hgroup {
 }
 
 body:has(#themeToggle:checked) {
-    svg {
-        fill: #fff;
-    }
+  svg {
+    fill: #fff;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .skills-item {
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    height: auto;
+  }
+
+  .theme-toggle {
+    top: 39px;
+    left: 228px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav {
+    display: none;
+  }
+
+  .hero {
+    height: auto;
+  }
+
+  .theme-toggle {
+    top: -68px;
+    left: 70px;
+  }
+
+  header {
+    padding: 60px 0 0 0;
+  }
+
+  .burger {
+    display: inline-block;
+    position: relative;
+    top: -35px;
+    right: -145px;
+  }
+
+  .contacts {
+    padding: 70px 0 40px 0;
+  }
 }
