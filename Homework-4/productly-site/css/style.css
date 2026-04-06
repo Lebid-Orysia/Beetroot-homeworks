@@ -497,3 +497,112 @@ header {
     letter-spacing: 1.5%;
   }
 }
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+
+  span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--brown-dark);
+    border-radius: 2px;
+  }
+}
+
+
+@media screen and (max-width: 1124px) {
+  .hero-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px;
+  }
+
+  .hero-content {
+    margin-top: 40px;
+  }
+
+  .tools-list {
+    flex-wrap: wrap;
+  }
+
+  .design .container,
+  .marketers .container,
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .managers .container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .main-menu ul {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+  .hero-heading {
+    font-size: 1.75rem;
+  }
+
+  header {
+    .container {
+      flex-direction: column;
+      gap: 13px;
+      padding: 20px 0;
+    }
+  }
+
+  .btn-wrap {
+    button.btn {
+      min-width: 90px;
+      padding: 8px;
+    }
+
+  }
+
+  .main {
+    padding-top: 30px;
+  }
+
+  .tools-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tools h2,
+  .design .design-content h2,
+  .managers  .managers-content h2,
+  .marketers .marketers-content h2 {
+    font-size: 1.65rem;
+  }
+
+
+.marketers .marketers-content,
+.design .design-content,
+.managers .managers-content {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.footer {
+  .footer-nav {
+    gap: 50px;
+  }
+
+}
+}
