@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -9,6 +9,7 @@
   <link rel="icon" type="image/svg+xml" href="./assets/SVG/lebid.svg">
 
   <!-- Styles -->
+  <link rel="stylesheet" href="./assets/css/hamburgers.min.css">
   <link rel="stylesheet" href="./assets/css/fonts.css">
   <link rel="stylesheet" href="./assets/css/style.min.css">
 
@@ -19,201 +20,282 @@
 </head>
 
 <body>
+  <div class="overlay"></div>
+
+  <div class="mobile-panel">
+    <div class="logo-mobile">
+      <a href=""><img src="./assets/image/logo.svg" alt="manifest logo"></a>
+    </div>
+    <div class="search-btn">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M13.1017 11.0715L16.8788 14.6313C17.0475 14.8079 17.0391 15.0783 16.8599 15.2454L16.1989 15.8684C16.1102 15.9526 15.9896 16 15.8637 16C15.7378 16 15.6171 15.9526 15.5285 15.8684L11.7514 12.3085C11.6469 12.21 11.5521 12.1028 11.4681 11.9881L10.7599 11.0982C9.58814 11.9801 8.13301 12.4602 6.63347 12.4598C3.54346 12.4699 0.858359 10.461 0.167823 7.62231C-0.522714 4.78365 0.965611 1.87288 3.75166 0.613257C6.53772 -0.646363 9.87794 0.0813446 11.7948 2.36555C13.7117 4.64977 13.6937 7.88086 11.7514 10.1459L12.6957 10.76C12.8431 10.849 12.9794 10.9535 13.1017 11.0715ZM1.9126 6.23017C1.9126 8.68773 4.02641 10.68 6.63393 10.68C7.88611 10.68 9.087 10.2112 9.97242 9.37666C10.8578 8.54216 11.3553 7.41034 11.3553 6.23017C11.3553 3.77262 9.24145 1.78037 6.63393 1.78037C4.02641 1.78037 1.9126 3.77262 1.9126 6.23017Z"
+          fill="black" />
+      </svg>
+    </div>
+    <nav class="mobile-menu">
+      <ul>
+        <li>
+          <a href="#">home</a>
+        </li>
+        <li>
+          <a href="#">about</a>
+        </li>
+        <li>
+          <a href="#">works</a>
+        </li>
+        <li>
+          <a href="#">blog</a>
+        </li>
+        <li>
+          <a href="#">contact</a>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+
   <div class="page-wrapper">
     <header>
       <div class="container">
-        <div class="logo-wrapper">
-          <img src="./assets/image/logo.svg" alt="manifest logo">
-        </div>
-        <div class="nav-wrapper">
-          <nav>
-            <ul>
-              <li>
-                <a href="#">home</a>
-              </li>
-              <li>
-                <a href="#">about</a>
-              </li>
-              <li>
-                <a href="#">works</a>
-              </li>
-              <li>
-                <a href="#">blog</a>
-              </li>
-              <li>
-                <a href="#">contact</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="search-btn">
-            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M13.1017 11.0715L16.8788 14.6313C17.0475 14.8079 17.0391 15.0783 16.8599 15.2454L16.1989 15.8684C16.1102 15.9526 15.9896 16 15.8637 16C15.7378 16 15.6171 15.9526 15.5285 15.8684L11.7514 12.3085C11.6469 12.21 11.5521 12.1028 11.4681 11.9881L10.7599 11.0982C9.58814 11.9801 8.13301 12.4602 6.63347 12.4598C3.54346 12.4699 0.858359 10.461 0.167823 7.62231C-0.522714 4.78365 0.965611 1.87288 3.75166 0.613257C6.53772 -0.646363 9.87794 0.0813446 11.7948 2.36555C13.7117 4.64977 13.6937 7.88086 11.7514 10.1459L12.6957 10.76C12.8431 10.849 12.9794 10.9535 13.1017 11.0715ZM1.9126 6.23017C1.9126 8.68773 4.02641 10.68 6.63393 10.68C7.88611 10.68 9.087 10.2112 9.97242 9.37666C10.8578 8.54216 11.3553 7.41034 11.3553 6.23017C11.3553 3.77262 9.24145 1.78037 6.63393 1.78037C4.02641 1.78037 1.9126 3.77262 1.9126 6.23017Z"
-                fill="black" />
-            </svg>
+        <div class="header-wrapper">
+          <div class="logo-wrapper">
+            <a href=""><img src="./assets/image/logo.svg" alt="manifest logo"></a>
+          </div>
+          <div class="nav-wrapper">
+            <nav class="desktop-nav">
+              <ul>
+                <li>
+                  <a href="#">home</a>
+                </li>
+                <li>
+                  <a href="#">about</a>
+                </li>
+                <li>
+                  <a href="#">works</a>
+                </li>
+                <li>
+                  <a href="#">blog</a>
+                </li>
+                <li>
+                  <a href="#">contact</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="search-btn">
+              <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M13.1017 11.0715L16.8788 14.6313C17.0475 14.8079 17.0391 15.0783 16.8599 15.2454L16.1989 15.8684C16.1102 15.9526 15.9896 16 15.8637 16C15.7378 16 15.6171 15.9526 15.5285 15.8684L11.7514 12.3085C11.6469 12.21 11.5521 12.1028 11.4681 11.9881L10.7599 11.0982C9.58814 11.9801 8.13301 12.4602 6.63347 12.4598C3.54346 12.4699 0.858359 10.461 0.167823 7.62231C-0.522714 4.78365 0.965611 1.87288 3.75166 0.613257C6.53772 -0.646363 9.87794 0.0813446 11.7948 2.36555C13.7117 4.64977 13.6937 7.88086 11.7514 10.1459L12.6957 10.76C12.8431 10.849 12.9794 10.9535 13.1017 11.0715ZM1.9126 6.23017C1.9126 8.68773 4.02641 10.68 6.63393 10.68C7.88611 10.68 9.087 10.2112 9.97242 9.37666C10.8578 8.54216 11.3553 7.41034 11.3553 6.23017C11.3553 3.77262 9.24145 1.78037 6.63393 1.78037C4.02641 1.78037 1.9126 3.77262 1.9126 6.23017Z"
+                  fill="black" />
+              </svg>
+            </div>
+            <div class="hamburger-wrap">
+              <button id="hamb-btn" class="hamburger hamburger--spring" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="container">
-          <h1>Manifest is a newborn theme.
-            Clean, simple and fast.</h1>
+      <section>
+        <div class="first-screen">
+          <div class="container">
+            <h1>Manifest is a newborn theme.
+              Clean, simple and fast.</h1>
+          </div>
         </div>
       </section>
 
-      <section class="blog">
-        <div class="container">
-          <h2>Blog</h2>
-          <div class="blog-wrapper">
-            <div class="blog-item">
-              <div class="content">
-                <div class="tags">
-                  Technology, Interface Design
+      <section>
+        <div class="blog">
+          <div class="container">
+            <h2>Blog</h2>
+            <div class="blog-wrapper">
+              <div class="blog-item">
+                <div class="content">
+                  <div class="tags">
+                    Technology, Interface Design
+                  </div>
+                  <h3>Using UX Design to Build a Sustainable Future</h3>
+                  <div class="date">
+                    <time datetime="2020-05-06">6 May, 2020</time>
+                  </div>
+                  <p>Transformation has to be driven by everybody, not just by climate groups, and we have a
+                    responsibility to use our influence to drive this.
+                    <span>
+                      <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M23.5303 6.05328C23.8232 5.76039 23.8232 5.28551 23.5303 4.99262L18.7574 0.21965C18.4645 -0.0732434 17.9896 -0.0732435 17.6967 0.21965C17.4038 0.512543 17.4038 0.987417 17.6967 1.28031L21.9393 5.52295L17.6967 9.76559C17.4038 10.0585 17.4038 10.5334 17.6967 10.8263C17.9896 11.1191 18.4645 11.1191 18.7574 10.8263L23.5303 6.05328ZM-6.55671e-08 6.27295L23 6.27295L23 4.77295L6.55671e-08 4.77295L-6.55671e-08 6.27295Z"
+                          fill="#7B7B7B" />
+                      </svg>
+                    </span>
+                  </p>
                 </div>
-                <h3>Using UX Design to Build a Sustainable Future</h3>
-                <div class="date">
-                  <time datetime="2020-05-06">6 May, 2020</time>
+                <div class="picture">
+                  <img src="./assets/image/arrow.png" alt="arrow">
                 </div>
-                <p>Transformation has to be driven by everybody, not just by climate groups, and we have a
-                  responsibility to use our influence to drive this.</p>
-                <div class="text-arrow">
+              </div>
+            </div>
+            <div class="blog-wrapper">
+              <div class="blog-item direction-reverse">
+                <div class="content">
+                  <div class="tags">
+                    Technology, Interface Design
+                  </div>
+                  <h3>Using UX Design to Build a Sustainable Future</h3>
+                  <div class="date">
+                    <time datetime="2020-05-06">6 May, 2020</time>
+                  </div>
+                  <p>Transformation has to be driven by everybody, not just by climate groups, and we have a
+                    responsibility to use our influence to drive this.
+                    <span><svg width="24" height="12" viewBox="0 0 24 12" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M23.5303 6.05328C23.8232 5.76039 23.8232 5.28551 23.5303 4.99262L18.7574 0.21965C18.4645 -0.0732434 17.9896 -0.0732435 17.6967 0.21965C17.4038 0.512543 17.4038 0.987417 17.6967 1.28031L21.9393 5.52295L17.6967 9.76559C17.4038 10.0585 17.4038 10.5334 17.6967 10.8263C17.9896 11.1191 18.4645 11.1191 18.7574 10.8263L23.5303 6.05328ZM-6.55671e-08 6.27295L23 6.27295L23 4.77295L6.55671e-08 4.77295L-6.55671e-08 6.27295Z"
+                          fill="#7B7B7B" />
+                      </svg></span>
+                  </p>
+                </div>
+                <div class="picture">
+                  <img src="./assets/image/blog-build-image.png" alt="build">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="latest-posts">
+          <div class="container">
+            <hgroup>
+              <h3>Latest Posts</h3>
+              <a href="#">
+                <p>View All
                   <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
-                      d="M23.5303 6.0533C23.8232 5.76041 23.8232 5.28554 23.5303 4.99264L18.7574 0.219673C18.4645 -0.0732205 17.9896 -0.0732206 17.6967 0.219673C17.4038 0.512566 17.4038 0.98744 17.6967 1.28033L21.9393 5.52297L17.6967 9.76561C17.4038 10.0585 17.4038 10.5334 17.6967 10.8263C17.9896 11.1192 18.4645 11.1192 18.7574 10.8263L23.5303 6.0533ZM-6.55671e-08 6.27297L23 6.27297L23 4.77297L6.55671e-08 4.77297L-6.55671e-08 6.27297Z"
+                      d="M23.5303 6.05328C23.8232 5.76039 23.8232 5.28551 23.5303 4.99262L18.7574 0.21965C18.4645 -0.0732434 17.9896 -0.0732435 17.6967 0.21965C17.4038 0.512543 17.4038 0.987417 17.6967 1.28031L21.9393 5.52295L17.6967 9.76559C17.4038 10.0585 17.4038 10.5334 17.6967 10.8263C17.9896 11.1191 18.4645 11.1191 18.7574 10.8263L23.5303 6.05328ZM-6.55671e-08 6.27295L23 6.27295L23 4.77295L6.55671e-08 4.77295L-6.55671e-08 6.27295Z"
                       fill="#7B7B7B" />
                   </svg>
+                </p>
+              </a>
+            </hgroup>
+            <ul>
+              <li>
+                <div class="img-wrapp">
+                  <img src="./assets/image/letest-lamp.png" alt="lamp">
                 </div>
-              </div>
-              <div class="picture">
-                <img src="./assets/image/arrow.png" alt="arrow">
-              </div>
-            </div>
+                <div class="latest-post-content">
+                  <div class="subtext">
+                    <span>Interface Design</span>
+                    <time datetime="2020-06-08">8 June, 2020</time>
+                  </div>
+                  <h3>UX traffic light colours</h3>
+                  <p>UI has to make a huge visual difference between warning, an alert and a success.</p>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrapp">
+                  <img src="./assets/image/latest-arrow.png" alt="arrow">
+                </div>
+                <div class="latest-post-content">
+                  <div class="subtext">
+                    <span>Technology</span>
+                    <time datetime="2020-05-06">6 May, 2020</time>
+                  </div>
+                  <h3>Using UX Design to Build a Sustainable Future</h3>
+                  <p>UI has to make a huge visual difference between warning, an alert and a success.</p>
+                </div>
+              </li>
+              <li>
+                <div class="img-wrapp">
+                  <img src="./assets/image/latest-roof.png" alt="build">
+                </div>
+                <div class="latest-post-content">
+                  <div class="subtext">
+                    <span>Visual Design</span>
+                    <time datetime="2020-06-08">8 June, 2020</time>
+                  </div>
+                  <h3>Creativity vs. UX</h3>
+                  <p>Is it possible to create a delightful user experience without following best UX practices?</p>
+                </div>
+              </li>
+            </ul>
           </div>
+        </div>
+      </section>
 
-          <div class="blog-wrapper">
-            <div class="blog-item">
-              <div class="content">
-                <div class="tags">
-                  Technology, Interface Design
-                </div>
-                <h3>Using UX Design to Build a Sustainable Future</h3>
-                <div class="date">
-                  <time datetime="2020-05-06">6 May, 2020</time>
-                </div>
-                <p>Transformation has to be driven by everybody, not just by climate groups, and we have a
-                  responsibility to use our influence to drive this.</p>
-                <div class="text-arrow">
+      <section>
+        <div class="most-popular">
+          <div class="container">
+            <hgroup>
+              <h3>The Most Popular</h3>
+              <a href="#">
+                <p>View All
                   <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
-                      d="M23.5303 6.0533C23.8232 5.76041 23.8232 5.28554 23.5303 4.99264L18.7574 0.219673C18.4645 -0.0732205 17.9896 -0.0732206 17.6967 0.219673C17.4038 0.512566 17.4038 0.98744 17.6967 1.28033L21.9393 5.52297L17.6967 9.76561C17.4038 10.0585 17.4038 10.5334 17.6967 10.8263C17.9896 11.1192 18.4645 11.1192 18.7574 10.8263L23.5303 6.0533ZM-6.55671e-08 6.27297L23 6.27297L23 4.77297L6.55671e-08 4.77297L-6.55671e-08 6.27297Z"
+                      d="M23.5303 6.05328C23.8232 5.76039 23.8232 5.28551 23.5303 4.99262L18.7574 0.21965C18.4645 -0.0732434 17.9896 -0.0732435 17.6967 0.21965C17.4038 0.512543 17.4038 0.987417 17.6967 1.28031L21.9393 5.52295L17.6967 9.76559C17.4038 10.0585 17.4038 10.5334 17.6967 10.8263C17.9896 11.1191 18.4645 11.1191 18.7574 10.8263L23.5303 6.05328ZM-6.55671e-08 6.27295L23 6.27295L23 4.77295L6.55671e-08 4.77295L-6.55671e-08 6.27295Z"
                       fill="#7B7B7B" />
                   </svg>
+                </p>
+              </a>
+            </hgroup>
+            <ul>
+              <li>
+                <div class="img-wrapp">
+                  <img src="./assets/image/lamp3.png" alt="lamp">
                 </div>
+                <div class="subtext">
+                  <span>Interface Design</span>
+                  <time datetime="2020-06-08">8 June, 2020</time>
+                </div>
+                <h3>Mentorship Match — How a simple LinkedIn feature can boost diversity</h3>
+                <p>LinkedIn is on a clear mission to make professionals more successful by connecting the global
+                  workforce
+                  and as we learned — diversity and success go hand in hand</p>
+              </li>
+              <li>
+                <div class="img-wrapp">
+                  <img src="./assets/image/arrow3.png" alt="arrow">
+                </div>
+                <div class="subtext">
+                  <span>Visual Design</span>
+                  <time datetime="2020-06-08">8 June, 2020</time>
+                </div>
+                <h3>Creativity vs. UX</h3>
+                <p>Is it possible to create a delightful user experience without following best UX practices?</p>
+              </li>
+            </ul>
+            <div class="most-popular-btn">
+              <button type="button">Load More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="info">
+            <div class="heading-text">
+              <p>Full-time UI/UX designer <br> Head of Design at VeronaLabs.com</p>
+              <div class="text-arrow">
+                <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M23.5303 6.0533C23.8232 5.76041 23.8232 5.28554 23.5303 4.99264L18.7574 0.219673C18.4645 -0.0732205 17.9896 -0.0732206 17.6967 0.219673C17.4038 0.512566 17.4038 0.98744 17.6967 1.28033L21.9393 5.52297L17.6967 9.76561C17.4038 10.0585 17.4038 10.5334 17.6967 10.8263C17.9896 11.1192 18.4645 11.1192 18.7574 10.8263L23.5303 6.0533ZM-6.55671e-08 6.27297L23 6.27297L23 4.77297L6.55671e-08 4.77297L-6.55671e-08 6.27297Z"
+                    fill="#7B7B7B" />
+                </svg>
               </div>
-              <div class="picture">
-                <img src="./assets/image/blog-build-image.png" alt="build">
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="latest-posts">
-        <div class="container">
-          <hgroup>
-            <h3>Latest Posts</h3>
-            <p>View All</p>
-            <div class="text-arrow">
-              <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M23.5303 6.0533C23.8232 5.76041 23.8232 5.28554 23.5303 4.99264L18.7574 0.219673C18.4645 -0.0732205 17.9896 -0.0732206 17.6967 0.219673C17.4038 0.512566 17.4038 0.98744 17.6967 1.28033L21.9393 5.52297L17.6967 9.76561C17.4038 10.0585 17.4038 10.5334 17.6967 10.8263C17.9896 11.1192 18.4645 11.1192 18.7574 10.8263L23.5303 6.0533ZM-6.55671e-08 6.27297L23 6.27297L23 4.77297L6.55671e-08 4.77297L-6.55671e-08 6.27297Z"
-                  fill="#7B7B7B" />
-              </svg>
+            <div class="content-text">
+              <p>We work with clients around the world from our headquarters in Charleston, South Carolina.</p>
+              <p>We focus on naming, branding, brand narratives, website design and development, and brand experiences.
+              </p>
             </div>
-          </hgroup>
-
-          <ul>
-            <li>
-              <img src="./assets/image/lamp.png" alt="lamp">
-              <span>Interface Design</span>
-              <time datetime="2020-06-08">8 June, 2020</time>
-              <h3>UX traffic light colours</h3>
-              <p>UI has to make a huge visual difference between warning, an alert and a success.</p>
-            </li>
-            <li>
-              <img src="./assets/image/arrow2.png" alt="arrow">
-              <span>Technology</span>
-              <time datetime="2020-05-06">6 May, 2020</time>
-              <h3>Using UX Design to Build a Sustainable Future</h3>
-              <p>UI has to make a huge visual difference between warning, an alert and a success.</p>
-            </li>
-            <li>
-              <img src="./assets/image/build2.png" alt="build">
-              <span>Visual Design</span>
-              <time datetime="2020-06-08">8 June, 2020</time>
-              <h3>Creativity vs. UX</h3>
-              <p>Is it possible to create a delightful user experience without following best UX practices?</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="most-popular">
-        <div class="container">
-          <hgroup>
-            <h3>Most Popular</h3>
-            <p>View All</p>
-            <div class="text-arrow">
-              <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M23.5303 6.0533C23.8232 5.76041 23.8232 5.28554 23.5303 4.99264L18.7574 0.219673C18.4645 -0.0732205 17.9896 -0.0732206 17.6967 0.219673C17.4038 0.512566 17.4038 0.98744 17.6967 1.28033L21.9393 5.52297L17.6967 9.76561C17.4038 10.0585 17.4038 10.5334 17.6967 10.8263C17.9896 11.1192 18.4645 11.1192 18.7574 10.8263L23.5303 6.0533ZM-6.55671e-08 6.27297L23 6.27297L23 4.77297L6.55671e-08 4.77297L-6.55671e-08 6.27297Z"
-                  fill="#7B7B7B" />
-              </svg>
-            </div>
-          </hgroup>
-          <ul>
-            <li>
-              <img src="./assets/image/lamp3.png" alt="lamp">
-              <span>Interface Design</span>
-              <time datetime="2020-06-08">8 June, 2020</time>
-              <h3>Mentorship Match — How a simple LinkedIn feature can boost diversity</h3>
-              <p>LinkedIn is on a clear mission to make professionals more successful by connecting the global workforce
-                and as we learned — diversity and success go hand in hand</p>
-            </li>
-            <li>
-              <img src="./assets/image/arrow3.png" alt="arrow">
-              <span>Visual Design</span>
-              <time datetime="2020-06-08">8 June, 2020</time>
-              <h3>Creativity vs. UX</h3>
-              <p>Is it possible to create a delightful user experience without following best UX practices?</p>
-            </li>
-          </ul>
-          <div class="most-popular-btn">
-            <button type="button">Load More</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="info">
-        <div class="container">
-          <div class="heading-text">
-            <p>Full-time UI/UX designer Head of Design at VeronaLabs.com</p>
-            <div class="text-arrow">
-              <svg width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M23.5303 6.0533C23.8232 5.76041 23.8232 5.28554 23.5303 4.99264L18.7574 0.219673C18.4645 -0.0732205 17.9896 -0.0732206 17.6967 0.219673C17.4038 0.512566 17.4038 0.98744 17.6967 1.28033L21.9393 5.52297L17.6967 9.76561C17.4038 10.0585 17.4038 10.5334 17.6967 10.8263C17.9896 11.1192 18.4645 11.1192 18.7574 10.8263L23.5303 6.0533ZM-6.55671e-08 6.27297L23 6.27297L23 4.77297L6.55671e-08 4.77297L-6.55671e-08 6.27297Z"
-                  fill="#7B7B7B" />
-              </svg>
-            </div>
-          </div>
-
-          <div class="content-text">
-            <p>We work with clients around the world from our headquarters in Charleston, South Carolina.</p>
-            <p>We focus on naming, branding, brand narratives, website design and development, and brand experiences.
-            </p>
           </div>
         </div>
       </section>
@@ -221,42 +303,80 @@
 
     <footer>
       <div class="container">
-        <div class="contacts">
-          <p>Need a project?</p>
-          <a href="tel:2395550108">(239) 555-0108</a>
-          <a href="mailto:tanya.hill@example.com">
-            tanya.hill@example.com
-          </a>
+        <div class="social-contacts">
+          <div class="contacts">
+            <p>Need a project?</p>
+            <a href="tel:2395550108">(239) 555-0108</a>
+            <a href="mailto:tanya.hill@example.com">
+              tanya.hill@example.com
+            </a>
+          </div>
+          <ul class="social-icon">
+            <li>
+              <a href="#">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="49" height="49" stroke="#565656" />
+                  <path
+                    d="M25.0029 18.8467C21.5969 18.8467 18.8496 21.594 18.8496 25C18.8496 28.406 21.5969 31.1533 25.0029 31.1533C28.4089 31.1533 31.1562 28.406 31.1562 25C31.1562 21.594 28.4089 18.8467 25.0029 18.8467ZM25.0029 29.0004C22.8019 29.0004 21.0025 27.2064 21.0025 25C21.0025 22.7936 22.7965 20.9996 25.0029 20.9996C27.2093 20.9996 29.0034 22.7936 29.0034 25C29.0034 27.2064 27.204 29.0004 25.0029 29.0004ZM32.8431 18.595C32.8431 19.3929 32.2005 20.0302 31.4079 20.0302C30.61 20.0302 29.9727 19.3876 29.9727 18.595C29.9727 17.8024 30.6153 17.1598 31.4079 17.1598C32.2005 17.1598 32.8431 17.8024 32.8431 18.595ZM36.9186 20.0517C36.8275 18.1291 36.3884 16.4261 34.9799 15.023C33.5768 13.6199 31.8738 13.1807 29.9513 13.0843C27.9698 12.9719 22.0307 12.9719 20.0492 13.0843C18.132 13.1754 16.429 13.6145 15.0205 15.0176C13.6121 16.4207 13.1783 18.1237 13.0819 20.0463C12.9694 22.0278 12.9694 27.9669 13.0819 29.9483C13.1729 31.8709 13.6121 33.5739 15.0205 34.977C16.429 36.3801 18.1266 36.8193 20.0492 36.9157C22.0307 37.0281 27.9698 37.0281 29.9513 36.9157C31.8738 36.8246 33.5768 36.3855 34.9799 34.977C36.383 33.5739 36.8222 31.8709 36.9186 29.9483C37.031 27.9669 37.031 22.0331 36.9186 20.0517ZM34.3587 32.0744C33.941 33.1241 33.1323 33.9327 32.0773 34.3558C30.4975 34.9824 26.7488 34.8378 25.0029 34.8378C23.2571 34.8378 19.503 34.977 17.9285 34.3558C16.8788 33.9381 16.0702 33.1294 15.6471 32.0744C15.0205 30.4946 15.1651 26.7458 15.1651 25C15.1651 23.2542 15.0259 19.5001 15.6471 17.9256C16.0648 16.8759 16.8735 16.0673 17.9285 15.6442C19.5083 15.0176 23.2571 15.1622 25.0029 15.1622C26.7488 15.1622 30.5029 15.023 32.0773 15.6442C33.127 16.0619 33.9356 16.8706 34.3587 17.9256C34.9853 19.5054 34.8407 23.2542 34.8407 25C34.8407 26.7458 34.9853 30.4999 34.3587 32.0744Z"
+                    fill="#565656" />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="49" height="49" stroke="#565656" />
+                  <path
+                    d="M30.5845 26.5L31.251 22.1566H27.0834V19.338C27.0834 18.1497 27.6656 16.9914 29.5321 16.9914H31.4268V13.2934C31.4268 13.2934 29.7074 13 28.0635 13C24.6313 13 22.3879 15.0803 22.3879 18.8463V22.1566H18.5728V26.5H22.3879V37H27.0834V26.5H30.5845Z"
+                    fill="#565656" />
+                </svg>
+
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="49" height="49" fill="" />
+                  <rect x="0.5" y="0.5" width="49" height="49" stroke="#565656" />
+                  <path
+                    d="M36.7376 18.9812C36.7564 19.2437 36.7564 19.5063 36.7564 19.7687C36.7564 27.775 30.6626 37 19.5251 37C16.0938 37 12.9064 36.0062 10.2251 34.2813C10.7126 34.3375 11.1813 34.3563 11.6876 34.3563C14.5188 34.3563 17.1251 33.4 19.2063 31.7688C16.5438 31.7125 14.3126 29.9688 13.5438 27.5687C13.9189 27.625 14.2938 27.6625 14.6876 27.6625C15.2313 27.6625 15.7751 27.5874 16.2814 27.4563C13.5064 26.8937 11.425 24.4562 11.425 21.5125V21.4375C12.2313 21.8875 13.1688 22.1688 14.1625 22.2062C12.5313 21.1187 11.4626 19.2625 11.4626 17.1625C11.4626 16.0375 11.7625 15.0062 12.2875 14.1062C15.2688 17.7812 19.7501 20.1812 24.775 20.4437C24.6813 19.9937 24.625 19.525 24.625 19.0563C24.625 15.7187 27.325 13 30.6813 13C32.425 13 34 13.7312 35.1063 14.9125C36.475 14.65 37.7875 14.1437 38.95 13.45C38.5 14.8563 37.5438 16.0375 36.2875 16.7875C37.5063 16.6563 38.6876 16.3187 39.775 15.85C38.9502 17.05 37.9189 18.1187 36.7376 18.9812Z"
+                    fill="#565656" />
+                </svg>
+
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="49.0007" height="49" stroke="#565656" />
+                  <path
+                    d="M18.3723 37H13.3964V20.9764H18.3723V37ZM15.8817 18.7907C14.2906 18.7907 13 17.4728 13 15.8817C13 15.1174 13.3036 14.3844 13.844 13.844C14.3844 13.3036 15.1174 13 15.8817 13C16.6459 13 17.3789 13.3036 17.9193 13.844C18.4597 14.3844 18.7633 15.1174 18.7633 15.8817C18.7633 17.4728 17.4722 18.7907 15.8817 18.7907ZM36.9952 37H32.0301V29.1998C32.0301 27.3409 31.9926 24.9569 29.443 24.9569C26.856 24.9569 26.4596 26.9766 26.4596 29.0659V37H21.4891V20.9764H26.2614V23.1622H26.331C26.9953 21.9032 28.618 20.5746 31.039 20.5746C36.0748 20.5746 37.0005 23.8908 37.0005 28.198V37H36.9952Z"
+                    fill="#565656" />
+                </svg>
+
+              </a>
+            </li>
+          </ul>
         </div>
 
-        <ul class="social-icon">
-          <li>
-            <a href="#">
-              <img src="./assets/image/instagram.svg" alt="instagram">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="./assets/image/facebook.svg" alt="facebook">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="./assets/image/twitter.svg" alt="twitter">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="./assets/image/linkedin.svg" alt="linkedin">
-            </a>
-          </li>
-        </ul>
-
-        <p>&copy; Copyright Manifest Theme. Allrights reserved</p>
+        <p class="copyright">&copy; Copyright Manifest Theme. Allrights reserved</p>
 
       </div>
     </footer>
   </div>
+
+
+  <script>
+    document.getElementById('hamb-btn').onclick = function () {
+      this.classList.add('is-active')
+      document.body.classList.add('mob-show')
+    }
+
+    document.querySelector('.overlay').onclick = function () {
+      document.getElementById('hamb-btn').classList.remove('is-active')
+      document.body.classList.remove('mob-show')
+    }
+  </script>
 </body>
 
 </html>
