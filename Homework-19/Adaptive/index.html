@@ -9,16 +9,50 @@
   <link rel="icon" type="image/svg+xml" href="./assets/SVG/lebid.svg">
 
   <!-- Styles -->
+  <link rel="stylesheet" href="./assets/css/animate.min.css">
+  <link rel="stylesheet" href="./assets/css/hamburgers.min.css">
   <link rel="stylesheet" href="./assets/css/fonts.css">
   <link rel="stylesheet" href="./assets/css/style.min.css">
 
   <!-- Scripts -->
-  <script src="js/script.js" defer></script>
+  <script src="./assets/js/" defer></script>
 
   <title>CASE STUDY</title>
 </head>
 
 <body>
+
+  <div class="overlay"></div>
+
+  <div class="mobile-panel">
+    <div class="logo-mobile">
+      <a href=""><img src="./assets/img/logo.svg" alt="CASE STUDY"></a>
+    </div>
+    <div class="search-btn">
+      <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M13.1017 11.0715L16.8788 14.6313C17.0475 14.8079 17.0391 15.0783 16.8599 15.2454L16.1989 15.8684C16.1102 15.9526 15.9896 16 15.8637 16C15.7378 16 15.6171 15.9526 15.5285 15.8684L11.7514 12.3085C11.6469 12.21 11.5521 12.1028 11.4681 11.9881L10.7599 11.0982C9.58814 11.9801 8.13301 12.4602 6.63347 12.4598C3.54346 12.4699 0.858359 10.461 0.167823 7.62231C-0.522714 4.78365 0.965611 1.87288 3.75166 0.613257C6.53772 -0.646363 9.87794 0.0813446 11.7948 2.36555C13.7117 4.64977 13.6937 7.88086 11.7514 10.1459L12.6957 10.76C12.8431 10.849 12.9794 10.9535 13.1017 11.0715ZM1.9126 6.23017C1.9126 8.68773 4.02641 10.68 6.63393 10.68C7.88611 10.68 9.087 10.2112 9.97242 9.37666C10.8578 8.54216 11.3553 7.41034 11.3553 6.23017C11.3553 3.77262 9.24145 1.78037 6.63393 1.78037C4.02641 1.78037 1.9126 3.77262 1.9126 6.23017Z"
+          fill="black" />
+      </svg>
+    </div>
+    <nav class="mobile-menu">
+      <ul>
+        <li>
+          <a href="#project-overview">Project Overview</a>
+        </li>
+        <li>
+          <a href="#sketches">Initial Sketches</a>
+        </li>
+        <li>
+          <a href="#final-design">Final Design</a>
+        </li>
+        <li>
+          <a href="#social-contacts">Contact Us</a>
+        </li>
+      </ul>
+
+    </nav>
+  </div>
 
   <div class="page-wrapper">
     <header>
@@ -55,7 +89,7 @@
               </svg>
             </div>
             <div class="hamburger-wrap">
-              <button id="hamb-btn" class="hamburger hamburger--spring" type="button">
+              <button id="hamb-btn" class="hamburger hamburger--boring" type="button">
                 <span class="hamburger-box">
                   <span class="hamburger-inner"></span>
                 </span>
@@ -69,22 +103,24 @@
     <main>
       <article>
         <div class="container">
-          <h1>AI Fashion Platform</h1>
-          <div class="img-wrapp">
+          <h1 class="wow animate__bounceInLeft">AI Fashion Platform</h1>
+          <div class="picture-wrapp first-screen-pic wow animate__rotateInDownLeft">
             <picture>
-              <source srcset="./assets/img/mob1.webp" media="(max-width: 500px)">
-              <source srcset="./assets/img/tablet1.webp" media="(max-width: 1024px)">
+              <source data-srcset="./assets/img/mob1.webp" media="(max-width: 500px)">
+              <source data-srcset="./assets/img/tablet1.webp" media="(max-width: 1024px)">
 
-              <img src="./assets/img/1.webp" alt="arrow">
+              <img class="lazy" data-src="./assets/img/1.webp"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII="
+                alt="arrow">
             </picture>
-
           </div>
         </div>
 
-        <section class="project-overview">
+        <section class="project-overview" id="project-overview">
           <div class="container">
-            <h2>Project Overview</h2>
-            <p>FashHanger is a bespoke sustainable high-fashion accessory company based out of Berlin, currently
+            <h2 class="wow animate__fadeInDown">Project Overview</h2>
+            <p class="first-paragraf">FashHanger is a bespoke sustainable high-fashion accessory company based out of
+              Berlin, currently
               operated
               by
               Siesly and her sister Ashely. They needed help for a big rebrand and wanted to relaunch their website.</p>
@@ -92,13 +128,160 @@
               every stage of the buyer’s journey.</p>
           </div>
         </section>
+
+        <section class="user" id="user">
+          <div class="container">
+            <h2 class="wow animate__fadeInDown">User Research and Personas</h2>
+
+            <div class="picture-wrapp wow animate__lightSpeedInRight">
+              <picture>
+                <source data-srcset="./assets/img/mob2.webp" media="(max-width: 500px)">
+                <source data-srcset="./assets/img/tablet2.webp" media="(max-width: 1024px)">
+
+                <img class="lazy" data-src="./assets/img/2.webp"
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII="
+                  alt="roof">
+              </picture>
+            </div>
+
+            <p class="first-paragraf">Who is your user? Indicate her KEY personality traits and help round out her
+              overall image.</p>
+            <p>Originally, the personality section of this persona was based off the Myers Briggs personality test.
+              According to the Myers Briggs, there are 16 potential user personality types. Our template integrates
+              questions from this online personality test example into a series of sliding bar graphics. If you’re
+              confused as to what the sliders mean, check out the Myers Briggs basics article. </p>
+          </div>
+        </section>
+
+        <section class="sketches" id="sketches">
+          <div class="container">
+            <h2 class="wow animate__fadeInDown">Initial Sketches</h2>
+
+            <div class="picture-wrapp wow animate__slideInLeft">
+              <picture>
+                <source data-srcset="./assets/img/mob3.webp" media="(max-width: 500px)">
+                <source data-srcset="./assets/img/tablet3.webp" media="(max-width: 1024px)">
+
+                <img class="lazy" data-src="./assets/img/3.webp"
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII="
+                  alt="build">
+              </picture>
+            </div>
+
+            <p class="first-paragraf">In the beginning, It’s just about brainstorming.</p>
+            <p>I list out a jumble of words and draw tiny sketches related to what I’m working on (and find the
+              parallels later). Personally, I prefer paper with a grid so I can convey things responsively. Most of the
+              time perfection isn’t an issue and the sketches are just for me.</p>
+
+          </div>
+        </section>
+
+        <section class="final-design" id="final-design">
+          <div class="container">
+            <h2 class="wow animate__fadeInDown">Final Design</h2>
+
+            <div class="picture-wrapp wow animate__lightSpeedInRight">
+              <picture>
+                <source data-srcset="./assets/img/mob4.webp" media="(max-width: 500px)">
+                <source data-srcset="./assets/img/tablet4.webp" media="(max-width: 1024px)">
+
+                <img class="lazy" data-src="./assets/img/4.webp"
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII="
+                  alt="lamp">
+              </picture>
+            </div>
+
+            <p>I played with adding a wireframe of the website flow that would lead you in to each screen. For each of
+              those screens I added a floating footer that allows users to see where they are in that particular flow
+              and
+              jump around as needed.” We’re digging this InVision-made wireframe.</p>
+          </div>
+        </section>
       </article>
     </main>
 
-    <footer>
+    <footer id="social-contacts">
+      <div class="container">
+        <div class="social-contacts">
+          <div class="contacts">
+            <p>Need a project?</p>
+            <a href="tel:2395550108">(239) 555-0108</a>
+            <a href="mailto:tanya.hill@example.com">
+              tanya.hill@example.com
+            </a>
+          </div>
+          <ul class="social-icon">
+            <li class="wow animate__tada">
+              <a href="https://www.instagram.com/" target="_blank" rel="noreferre, nofollow" title="Link to instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.0054 5.8467C8.59935 5.8467 5.85206 8.594 5.85206 12C5.85206 15.406 8.59935 18.1533 12.0054 18.1533C15.4114 18.1533 18.1587 15.406 18.1587 12C18.1587 8.594 15.4114 5.8467 12.0054 5.8467ZM12.0054 16.0004C9.80431 16.0004 8.00491 14.2064 8.00491 12C8.00491 9.7936 9.79895 7.99955 12.0054 7.99955C14.2118 7.99955 16.0058 9.7936 16.0058 12C16.0058 14.2064 14.2064 16.0004 12.0054 16.0004ZM19.8456 5.595C19.8456 6.39295 19.2029 7.03024 18.4104 7.03024C17.6124 7.03024 16.9751 6.38759 16.9751 5.595C16.9751 4.80241 17.6178 4.15977 18.4104 4.15977C19.2029 4.15977 19.8456 4.80241 19.8456 5.595ZM23.921 7.05166C23.83 5.12909 23.3908 3.42608 21.9824 2.02298C20.5793 0.619882 18.8763 0.180743 16.9537 0.0843468C14.9722 -0.0281156 9.03314 -0.0281156 7.05166 0.0843468C5.13444 0.175388 3.43144 0.614526 2.02298 2.01763C0.614527 3.42073 0.180743 5.12373 0.0843468 7.0463C-0.0281156 9.02778 -0.0281156 14.9669 0.0843468 16.9483C0.175388 18.8709 0.614527 20.5739 2.02298 21.977C3.43144 23.3801 5.12909 23.8193 7.05166 23.9157C9.03314 24.0281 14.9722 24.0281 16.9537 23.9157C18.8763 23.8246 20.5793 23.3855 21.9824 21.977C23.3855 20.5739 23.8246 18.8709 23.921 16.9483C24.0335 14.9669 24.0335 9.03314 23.921 7.05166ZM21.3612 19.0744C20.9434 20.1241 20.1348 20.9327 19.0798 21.3558C17.4999 21.9824 13.7512 21.8378 12.0054 21.8378C10.2595 21.8378 6.50541 21.977 4.93094 21.3558C3.88129 20.9381 3.07263 20.1294 2.64956 19.0744C2.02298 17.4946 2.16758 13.7458 2.16758 12C2.16758 10.2542 2.02834 6.50006 2.64956 4.92558C3.06728 3.87593 3.87593 3.06728 4.93094 2.6442C6.51077 2.01763 10.2595 2.16222 12.0054 2.16222C13.7512 2.16222 17.5053 2.02298 19.0798 2.6442C20.1294 3.06192 20.9381 3.87058 21.3612 4.92558C21.9877 6.50541 21.8431 10.2542 21.8431 12C21.8431 13.7458 21.9877 17.4999 21.3612 19.0744Z" />
+                </svg>
+              </a>
+            </li>
+            <li class="wow animate__tada">
+              <a href="https://www.facebook.com/" target="_blank" rel="noreferre, nofollow" title="Link to facebook">
+                <svg width="13" height="24" viewBox="0 0 13 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.0117 13.5L12.6783 9.15656H8.51062V6.33797C8.51062 5.14969 9.09281 3.99141 10.9594 3.99141H12.8541V0.293438C12.8541 0.293438 11.1347 0 9.49078 0C6.05859 0 3.81516 2.08031 3.81516 5.84625V9.15656H0V13.5H3.81516V24H8.51062V13.5H12.0117Z" />
+                </svg>
+              </a>
+            </li>
+            <li class="wow animate__tada">
+              <a href="https://x.com/" target="_blank" rel="noreferre, nofollow" title="Link to twitter">
+                <svg width="30" height="24" viewBox="0 0 30 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M26.5125 5.98123C26.5313 6.24372 26.5313 6.50626 26.5313 6.76875C26.5313 14.775 20.4375 24 9.30001 24C5.86874 24 2.68126 23.0062 0 21.2813C0.487518 21.3375 0.956221 21.3563 1.4625 21.3563C4.2937 21.3563 6.89999 20.4 8.98125 18.7688C6.31874 18.7125 4.08749 16.9688 3.31872 14.5687C3.69375 14.625 4.06873 14.6625 4.46252 14.6625C5.00625 14.6625 5.55004 14.5874 6.05626 14.4563C3.28127 13.8937 1.19995 11.4562 1.19995 8.51249V8.43752C2.00617 8.88752 2.94375 9.16877 3.93743 9.20622C2.30617 8.1187 1.23747 6.26247 1.23747 4.16246C1.23747 3.03748 1.53741 2.00623 2.06244 1.10622C5.04371 4.78122 9.52498 7.18118 14.5499 7.44372C14.4562 6.99372 14.3999 6.52502 14.3999 6.05626C14.3999 2.71872 17.0999 0 20.4562 0C22.1999 0 23.7749 0.731248 24.8812 1.9125C26.2499 1.65001 27.5624 1.14374 28.7249 0.450003C28.2749 1.85628 27.3187 3.03754 26.0624 3.78748C27.2812 3.6563 28.4625 3.31872 29.5499 2.85002C28.7251 4.04997 27.6938 5.11868 26.5125 5.98123Z" />
+                </svg>
+              </a>
+            </li>
+            <li class="wow animate__tada">
+              <a href="https://ua.linkedin.com/" target="_blank" rel="noreferre, nofollow" title="Link to linkedin">
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.37226 24H0.396437V7.97643H5.37226V24ZM2.88167 5.79066C1.29056 5.79066 0 4.47278 0 2.88167C1.13885e-08 2.1174 0.303604 1.38444 0.844022 0.844022C1.38444 0.303604 2.1174 0 2.88167 0C3.64594 0 4.3789 0.303604 4.91932 0.844022C5.45974 1.38444 5.76334 2.1174 5.76334 2.88167C5.76334 4.47278 4.47224 5.79066 2.88167 5.79066ZM23.9952 24H19.0301V16.1998C19.0301 14.3409 18.9926 11.9569 16.443 11.9569C13.856 11.9569 13.4596 13.9766 13.4596 16.0659V24H8.48912V7.97643H13.2614V10.1622H13.331C13.9953 8.90323 15.618 7.57463 18.039 7.57463C23.0748 7.57463 24.0005 10.8908 24.0005 15.198V24H23.9952Z" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
 
+        <p class="copyright">&copy; Copyright Manifest Theme. Allrights reserved</p>
+
+      </div>
     </footer>
   </div>
+
+  <script src="./assets/js/wow.min.js"></script>
+
+  <script>
+    wow = new WOW({
+
+      animateClass: 'animate__animated',
+
+    })
+    wow.init();
+  </script>
+
+  <script>
+    document.getElementById('hamb-btn').onclick = function () {
+      this.classList.add('is-active')
+      document.body.classList.add('mob-show')
+    }
+
+    document.querySelector('.overlay').onclick = function () {
+      document.getElementById('hamb-btn').classList.remove('is-active')
+      document.body.classList.remove('mob-show')
+    }
+  </script>
+
+  <script src="./assets/js/lazyload.min.js"></script>
+
+  <script>
+    var lazyLoadInstance = new LazyLoad({
+      // Your custom settings go here
+    });
+  </script>
 </body>
 
 </html>

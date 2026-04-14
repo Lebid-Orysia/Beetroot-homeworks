@@ -40,7 +40,9 @@ button {
   transition: all .2s ease;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: $font-secondary;
 }
 
@@ -62,7 +64,7 @@ body {
 }
 
 .container {
-  width: min(90%, 1600px);
+  width: min(90%, 1170px);
   margin: 0 auto;
 }
 
@@ -134,6 +136,7 @@ header {
   display: none;
 }
 
+
 .overlay {
   position: fixed;
   left: 0;
@@ -149,6 +152,7 @@ header {
   visibility: hidden;
   transition: all 1s ease;
 }
+
 
 .mobile-panel {
   width: 300px;
@@ -208,10 +212,224 @@ body.mob-show {
   }
 }
 
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+  background-color: $secondary-color;
+  width: 35px;
+  height: 4px;
+}
+
 .hamburger {
   padding: 0;
 }
 
 h1 {
   @include fz(48);
+  line-height: 133%;
+  letter-spacing: 0.05em;
+  margin-bottom: 57px;
 }
+
+.picture-wrapp {
+  aspect-ratio: 1170/500;
+  margin-bottom: 20px;
+}
+
+.first-screen-pic {
+  margin-bottom: 90px;
+}
+
+h2 {
+  font-weight: 600;
+  @include fz(28);
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  margin-bottom: 43px;
+}
+
+p {
+  @include fz(19);
+  line-height: 168%;
+  letter-spacing: 0.05em;
+  color: $secondary-color;
+}
+
+
+.first-paragraf {
+  margin-bottom: 30px;
+}
+
+.project-overview {
+  margin-bottom: 90px;
+
+  p {
+    width: 570px;
+  }
+}
+
+.user,
+.sketches,
+.final-design {
+  margin-bottom: 90px;
+}
+
+footer {
+  background: #f4f4f4;
+
+  .copyright {
+    @include fz(12);
+    line-height: 166%;
+    letter-spacing: 0.1%;
+    color: $text-color;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+}
+
+.social-contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+
+  .contacts {
+    padding-top: 70px;
+
+    p {
+      font-family: $font-secondary;
+      @include fz(48);
+      line-height: 133%;
+      letter-spacing: 5%;
+      color: $text-color;
+      margin-bottom: 26px;
+    }
+
+    a {
+      display: block;
+      line-height: 166%;
+      letter-spacing: 10%;
+      color: $text-color;
+      margin-bottom: 13px;
+    }
+  }
+
+
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 23px;
+
+    li a{
+      display: inline-flex;
+      width: 50px;
+      height: 50px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $secondary-color;
+      background-color: #fff;
+      transition: all .2 ease;
+
+      svg{
+        fill: $secondary-color;
+      }
+      &:hover{
+        background-color: $secondary-color;
+
+        svg{
+          fill: #fff;
+        }
+      }
+    }
+  }
+}
+  // .....................
+
+
+  @media screen and (max-width: 1024px) {
+    header {
+      height: 60px;
+    }
+
+    .header-wrapper {
+      margin-top: 20px;
+    }
+
+    .hamburger-wrap {
+      display: block;
+    }
+
+    .picture-wrapp {
+      aspect-ratio: 700/380;
+    }
+
+    .social-contacts {
+      flex-direction: column;
+      text-align: center;
+    }
+
+
+    h1 {
+      @include fz(33);
+      line-height: 152%;
+      margin-bottom: 50px;
+    }
+
+    .desktop-nav {
+      display: none;
+    }
+
+    .project-overview p {
+      width: 100%;
+    }
+
+    .nav-wrapper {
+      gap: 40px;
+    }
+
+  }
+
+
+
+  // .....................
+
+
+  @media screen and (max-width: 500px) {
+    .picture-wrapp {
+      aspect-ratio: 1;
+    }
+
+
+    h1 {
+      @include fz(30);
+      line-height: 167%;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      @include fz(26);
+      margin-bottom: 40px;
+    }
+
+    .first-screen-pic {
+      margin-bottom: 70px;
+    }
+
+    p {
+      line-height: 200%;
+      letter-spacing: 0.05em;
+    }
+
+    .first-paragraf {
+      margin-bottom: 35px;
+    }
+
+    .user,
+    .sketches,
+    .final-design {
+      margin-bottom: 70px;
+    }
+
+  }
