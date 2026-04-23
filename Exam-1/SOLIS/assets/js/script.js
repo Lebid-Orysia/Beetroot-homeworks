@@ -1,44 +1,50 @@
 
+// ================= VIDEO TOGGLE =================
 const checkbox = document.getElementById('videoToggle');
 const video = document.getElementById('bgVideo');
 const placeholder = document.querySelector('.image');
-const playIcon = document.querySelector('.play-icon');  
+const playIcon = document.querySelector('.play-icon');
 
-checkbox.addEventListener('change', () => {
-  if (checkbox.checked) {
-    video.style.visibility = 'visible';
-    placeholder.style.display = 'none';
-    playIcon.style.display = 'none'; 
-  } else {
-    video.style.visibility = 'hidden';
-    placeholder.style.display = 'block'; 
-    playIcon.style.display = 'block';
-  }
-});
+if (checkbox && video && placeholder && playIcon) {
+  checkbox.addEventListener('change', () => {
+    const isActive = checkbox.checked;
 
-// animation
-    
-    wow = new WOW({
-
-      animateClass: 'animate__animated',
-
-    })
-    wow.init();
+    video.style.visibility = isActive ? 'visible' : 'hidden';
+    placeholder.style.display = isActive ? 'none' : 'block';
+    playIcon.style.display = isActive ? 'none' : 'block';
+  });
+}
 
 
-// mobile menu
-    document.getElementById('hamb-btn').onclick = function () {
-      this.classList.add('is-active')
-      document.body.classList.add('mob-show')
-    }
-
-    document.querySelector('.overlay').onclick = function () {
-      document.getElementById('hamb-btn').classList.remove('is-active')
-      document.body.classList.remove('mob-show')
-    }
+// ================= WOW ANIMATION =================
+if (typeof WOW !== 'undefined') {
+  const wow = new WOW({
+    animateClass: 'animate__animated',
+  });
+  wow.init();
+}
 
 
-// lazy loading
-    var lazyLoadInstance = new LazyLoad({
-      // Your custom settings go here
-    });
+// ================= MOBILE MENU =================
+const hambBtn = document.getElementById('hamb-btn');
+const overlay = document.querySelector('.overlay');
+
+if (hambBtn) {
+  hambBtn.addEventListener('click', () => {
+    hambBtn.classList.add('is-active');
+    document.body.classList.add('mob-show');
+  });
+}
+
+if (overlay && hambBtn) {
+  overlay.addEventListener('click', () => {
+    hambBtn.classList.remove('is-active');
+    document.body.classList.remove('mob-show');
+  });
+}
+
+
+// ================= LAZY LOAD =================
+if (typeof LazyLoad !== 'undefined') {
+  new LazyLoad({});
+}
