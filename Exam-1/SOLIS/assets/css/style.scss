@@ -1,22 +1,49 @@
+
 $primary-dark-blue: #161926;
 $primary-grey: #BBBCC1;
 $secondary-green: #85BBB1;
 $secondary-green-neon: #53F3CD;
+$secondary-dark-green: #02E0AB;
 $secondary-coral: #F1897B;
 $secondary-coral-dark: #E54F3A;
 $primary-white: #FFFFFF;
 $primary-medium-blue: #515773;
 $dolar-color: #e4e4e4;
+$secondary-blue: #689FF2;
 
 $lato: 'Lato';
 $playfair-display: 'Playfair Display';
+
+:root {
+  --bg-color: #{$primary-white};
+  --text-color: #{$primary-dark-blue};
+  --accent-color: #{$secondary-green};
+  --border-color: #{$primary-grey};
+  --btn-text-color: #{$secondary-coral};
+  --btn-hover-color: #{$secondary-coral-dark};
+  --dolar-color: #{$dolar-color};
+  --line-color: #{$dolar-color};
+  --mobile-hover-color: #{$secondary-green};
+}
+body.dark-theme {
+  --bg-color: #{$primary-dark-blue};
+  --text-color: #{$primary-white};
+  --accent-color: #{$secondary-blue};
+  --border-color: #{$primary-medium-blue};
+  --btn-text-color: #{$secondary-green-neon};
+  --btn-hover-color: #{$secondary-dark-green};
+  --dolar-color: #{$primary-white};
+  --line-color: #{$primary-medium-blue};
+  --mobile-hover-color: #{$primary-dark-blue};
+}
+
 
 @mixin fz($px) {
   font-size: ($px/16)*1rem;
 }
 
 %accent-color {
-  color: $secondary-green;
+  color: var(--accent-color);
   font-style: italic;
 }
 
@@ -26,7 +53,7 @@ $playfair-display: 'Playfair Display';
   @include fz(20);
   line-height: 20px;
   letter-spacing: 8%;
-  color: $secondary-coral;
+  color: var(--btn-text-color);
   text-transform: uppercase;
   border: none;
   background: none;
@@ -36,7 +63,7 @@ $playfair-display: 'Playfair Display';
   display: block;
   width: 112px;
   height: 13px;
-  background: $secondary-coral;
+  background: var(--btn-text-color);
   opacity: 0.3;
   position: relative;
   top: -10px;
@@ -93,6 +120,8 @@ body {
   color: $primary-dark-blue;
   background: url(../image/first-screen-image.webp) top/100% no-repeat;
   aspect-ratio: 1440/993;
+  background-color: var(--bg-color);
+
 }
 
 .page-wrapper {
@@ -146,7 +175,7 @@ header {
       position: relative;
       display: inline-block;
       text-transform: capitalize;
-      color: $primary-dark-blue;
+      color: var(--text-color);
       @include fz(14);
       line-height: 171%;
       letter-spacing: 3%;
@@ -160,7 +189,7 @@ header {
         transform: translateX(-50%) scaleX(0);
         width: 44px;
         height: 3px;
-        background: $secondary-coral;
+        background: var(--btn-text-color);
         opacity: 30%;
         transition: transform 0.3s ease;
       }
@@ -181,7 +210,7 @@ header {
     font-family: $playfair-display;
     @include fz(44);
     line-height: 52px;
-    color: $primary-dark-blue;
+    color: var(--text-color);
     font-weight: 400;
     max-width: 523px;
     margin-bottom: 20px;
@@ -196,7 +225,7 @@ header {
     font-weight: 300;
     @include fz(18);
     line-height: 26px;
-    color: $primary-dark-blue;
+    color: var(--text-color);
     opacity: 80%;
     letter-spacing: 1%;
     max-width: 439px;
@@ -217,12 +246,12 @@ header {
 
     &:hover {
       button {
-        color: $secondary-coral-dark;
+        color: var(--btn-hover-color);
       }
 
       &::after {
         content: '';
-        background: $secondary-coral-dark;
+        background: var(--btn-hover-color);
       }
     }
   }
@@ -245,7 +274,7 @@ header {
     max-width: 770px;
     position: absolute;
     left: 400px;
-    background: $primary-white;
+    background: var(--bg-color);
     opacity: 90%;
     padding: 45px 0;
     z-index: 1;
@@ -264,7 +293,7 @@ header {
         @include fz(68);
         line-height: 74px;
         text-align: center;
-        color: $primary-dark-blue;
+        color: var(--text-color);
         margin-bottom: 12px;
       }
     }
@@ -275,9 +304,7 @@ header {
       @include fz(40);
       line-height: 50px;
       text-align: center;
-      color: $dolar-color;
-
-
+      color: var(--dolar-color);
     }
 
     span {
@@ -285,7 +312,7 @@ header {
       @include fz(18);
       line-height: 26px;
       text-align: center;
-      color: $primary-dark-blue;
+      color: var(--text-color);
       opacity: 0.8;
     }
 
@@ -304,7 +331,7 @@ header {
     font-weight: 300;
     @include fz(18);
     line-height: 26px;
-    color: $primary-dark-blue;
+    color: var(--text-color);
     margin-bottom: 30px;
     letter-spacing: 1.2%;
 
@@ -331,12 +358,12 @@ header {
 
     &:hover {
       button {
-        color: $secondary-coral-dark;
+        color: var(--btn-hover-color);
       }
 
       &::after {
         content: '';
-        background: $secondary-coral-dark;
+        background: var(--btn-hover-color);
       }
     }
   }
@@ -354,7 +381,7 @@ header {
     gap: 60px 30px;
 
     li {
-      border-top: 1px solid $dolar-color;
+      border-top: 1px solid var(--line-color);
       padding: 50px 0 0 35px;
 
       h3 {
@@ -362,7 +389,7 @@ header {
         font-family: $playfair-display;
         @include fz(40);
         line-height: 48px;
-        color: $primary-dark-blue;
+        color: var(--text-color);
         margin-bottom: 30px;
 
         span {
@@ -376,7 +403,7 @@ header {
         font-weight: 300;
         @include fz(18);
         line-height: 26px;
-        color: $primary-dark-blue;
+        color: var(--text-color);
         opacity: .8;
         letter-spacing: .8%;
         margin-bottom: 50px;
@@ -443,7 +470,7 @@ header {
   max-width: 970px;
   height: 601px;
   margin: 0 0 52px 100px;
-  border: 1px solid $dolar-color;
+  border: 1px solid var(--line-color);
   border-radius: 32px;
   position: relative;
 
@@ -452,7 +479,7 @@ header {
     display: block;
     width: 13px;
     height: 13px;
-    border: 1px solid $dolar-color;
+    border: 1px solid var(--line-color);
     border-radius: 50%;
     position: absolute;
     top: 293px;
@@ -464,7 +491,7 @@ header {
     display: block;
     width: 35px;
     height: 35px;
-    border: 1px solid $dolar-color;
+    border: 1px solid var(--line-color);
     border-radius: 50%;
     position: absolute;
     top: 283px;
@@ -522,7 +549,7 @@ header {
     font-family: $playfair-display;
     @include fz(40);
     line-height: 120%;
-    color: $primary-dark-blue;
+    color: var(--text-color);
     margin-bottom: 26px;
 
     span {
@@ -534,7 +561,7 @@ header {
     font-weight: 300;
     @include fz(18);
     line-height: 144%;
-    color: $primary-dark-blue;
+    color: var(--text-color);
     opacity: 0.8;
     letter-spacing: .7%;
   }
@@ -558,7 +585,8 @@ header {
     grid-template-columns: repeat(2, 1fr);
     gap: 57px;
     position: absolute;
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--bg-color);
+    opacity: .9;
     top: 45px;
     right: 0;
     padding: 75px 70px;
@@ -579,7 +607,7 @@ header {
       font-family: $playfair-display;
       @include fz(24);
       line-height: 200%;
-      color: $primary-dark-blue;
+      color: var(--text-color);
       margin-bottom: 7px;
     }
 
@@ -587,7 +615,7 @@ header {
       font-weight: 300;
       @include fz(18);
       line-height: 144%;
-      color: $primary-dark-blue;
+      color: var(--text-color);
       opacity: 0.8;
       margin-bottom: 10px;
       letter-spacing: .6%;
@@ -603,7 +631,7 @@ header {
     button {
       @extend %button-style;
       background: none;
-      border: 1px solid $dolar-color;
+      border: 1px solid var(--line-color);
       padding: 34px 95px 34px 90px
     }
 
@@ -616,13 +644,13 @@ header {
 
     &:hover {
       button {
-        color: $secondary-coral-dark;
-        border: 1px solid $secondary-coral-dark;
+        color: var(--btn-hover-color);
+        border: 1px solid var(--btn-hover-color);
       }
 
       &::after {
         content: '';
-        background: $secondary-coral-dark;
+        background: var(--btn-hover-color);
       }
     }
   }
@@ -638,7 +666,7 @@ header {
       font-family: $playfair-display;
       @include fz(40);
       line-height: 120%;
-      color: $primary-dark-blue;
+      color: var(--text-color);
       margin-bottom: 20px;
 
       span {
@@ -652,7 +680,7 @@ header {
       font-weight: 300;
       @include fz(18);
       line-height: 144%;
-      color: $primary-dark-blue;
+      color: var(--text-color);
       opacity: 0.8;
       letter-spacing: .8%;
       margin-bottom: 50px;
@@ -727,14 +755,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid $dolar-color;
+    border-top: 1px solid var(--line-color);
     padding-top: 56px;
 
     h3 {
       font-family: $playfair-display;
       @include fz(40);
       line-height: 120%;
-      color: $primary-dark-blue;
+      color: var(--text-color);
       margin-bottom: 24px;
 
       span {
@@ -748,7 +776,7 @@ header {
       font-weight: 300;
       font-size: 18px;
       line-height: 144%;
-      color: #262a3f;
+      color: var(--text-color);
       letter-spacing: 1.1%;
 
       &:last-of-type {
@@ -782,12 +810,12 @@ header {
 
         &:hover {
           button {
-            color: $secondary-coral-dark;
+            color: var(--btn-hover-color);
           }
 
           &::after {
             content: '';
-            background: $secondary-coral-dark;
+            background: var(--btn-hover-color);
           }
         }
       }
@@ -806,7 +834,7 @@ header {
   @include fz(18);
   line-height: 111%;
   letter-spacing: 0.08em;
-  color: $primary-dark-blue;
+  color: var(--text-color);
   opacity: 0.5;
   position: absolute;
   pointer-events: none;
@@ -821,9 +849,10 @@ header {
   border: none;
   @include fz(18);
   height: 36px;
-  color: $primary-dark-blue;
+  color: var(--text-color);
   opacity: 0.8;
-  border-bottom: 1px solid $dolar-color;
+  border-bottom: 1px solid var(--line-color);
+   background-color: transparent;
 
   &:focus {
     outline: none;
@@ -854,7 +883,7 @@ input[type="email"] {
 // ........FOOTER..........
 
 .footer-wrapp {
-  border-top: 1px solid $dolar-color;
+  border-top: 1px solid var(--line-color);
   padding: 30px 0;
   display: flex;
   justify-content: space-between;
@@ -865,7 +894,7 @@ input[type="email"] {
     gap: 38px;
 
     a {
-      color: $primary-dark-blue;
+      color: var(--text-color);
       @include fz(14);
       line-height: 171%;
       letter-spacing: 3%;
@@ -880,12 +909,12 @@ input[type="email"] {
     font-weight: 300;
     @include fz(14);
     line-height: 186%;
-    color: $primary-dark-blue;
+    color: var(--text-color);
     letter-spacing: -2.1%;
     opacity: 0.8;
 
     span {
-      color: $primary-dark-blue;
+      color: var(--text-color);
       @include fz(14);
       font-weight: 400;
       line-height: 171%;
@@ -922,7 +951,7 @@ input[type="email"] {
 .mobile-panel {
   width: 300px;
   height: 100dvh;
-  background-color: $dolar-color;
+  background-color: var(--mobile-hover-color);
   transform: translateX(-100%);
   transition: all 1s ease;
   position: fixed;
@@ -940,14 +969,14 @@ input[type="email"] {
       a {
         display: inline-block;
         width: 100%;
-        color: $primary-dark-blue;
+        color: var(--text-color);
         text-decoration: none;
         text-transform: uppercase;
         padding: 20px;
         background-color: transparent;
 
         &:hover {
-          background-color: $secondary-green;
+          background-color: var(--line-color);
           color: #fff;
         }
       }
@@ -1139,6 +1168,7 @@ body.mob-show {
 @media screen and (max-width: 1024px) {
   body {
     background: url(../image/first-screen-image-tablet.webp) top/100% no-repeat;
+    background-color: var(--bg-color);
   }
 
   header {
@@ -1254,6 +1284,7 @@ body.mob-show {
 @media screen and (max-width: 768px) {
   body {
     background: url(../image/first-screen-image-mobile.webp) top/100% no-repeat;
+    background-color: var(--bg-color);
   }
 
   .first-screen {

@@ -44,4 +44,20 @@ if (overlay && hambBtn) {
 
 if (typeof LazyLoad !== 'undefined') {
   new LazyLoad({});
+} // ================= THEME TOGGLE =================
+
+
+var themeToggle = document.getElementById('themeToggle');
+var savedTheme = localStorage.getItem('theme');
+
+if (savedTheme === 'dark') {
+  document.body.classList.add('dark-theme');
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', function () {
+    document.body.classList.toggle('dark-theme');
+    var isDark = document.body.classList.contains('dark-theme');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
 }
