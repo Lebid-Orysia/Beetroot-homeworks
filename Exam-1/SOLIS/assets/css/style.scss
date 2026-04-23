@@ -989,7 +989,43 @@ body.mob-show {
   padding: 0;
 }
 
+// ........ABOUT US, PRODUCTS, USE CASES, PRICING, RESOURCES........
+.helper-h1 {
+  font-family: $playfair-display;
+  @include fz(48);
+  line-height: 120%;
+  margin-bottom: 20px;
+  @extend %accent-color;
+  margin-top: 50px;
+  margin-left: 10px;
+  text-align: center;
 
+}
+
+.helper-p {
+  font-weight: 600;
+  @include fz(18);
+  line-height: 144%;
+  color: $primary-dark-blue;
+  opacity: 0.8;
+  letter-spacing: .7%;
+  text-align: center;
+  max-width: 600px;
+  margin: 50px auto 70px auto;
+}
+
+.helper-img {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 50%;
+  }
+}
+
+.helper-img .pricing {
+  width: 30%;
+}
 
 // ...........MEDIA QUERIES.........
 @media screen and (max-width: 1200px) {
@@ -1277,6 +1313,13 @@ body.mob-show {
 
     ul {
       gap: 20px;
+    }
+  }
+
+
+  .helper-img {
+    img {
+      width: 70%;
     }
   }
 }
