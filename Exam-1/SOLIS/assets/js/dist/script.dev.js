@@ -19,8 +19,7 @@ checkbox.addEventListener('change', function () {
 wow = new WOW({
   animateClass: 'animate__animated'
 });
-wow.init(); 
-// mobile menu
+wow.init(); // mobile menu
 
 document.getElementById('hamb-btn').onclick = function () {
   this.classList.add('is-active');
@@ -30,5 +29,8 @@ document.getElementById('hamb-btn').onclick = function () {
 document.querySelector('.overlay').onclick = function () {
   document.getElementById('hamb-btn').classList.remove('is-active');
   document.body.classList.remove('mob-show');
-}; 
-// lazy loading
+}; // lazy loading
+
+
+var lazyLoadInstance = new LazyLoad({// Your custom settings go here
+});
