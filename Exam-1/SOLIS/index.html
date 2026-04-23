@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/hamburgers.min.css">
+  <link rel="stylesheet" href="./assets/css/animate.min.css">
   <link rel="stylesheet" href="./assets/css/fonts.css">
   <link rel="stylesheet" href="./assets/css/style.min.css">
   <title>SOLIS</title>
@@ -91,7 +92,8 @@
       <section class="first-screen">
         <div class="container">
           <hgroup>
-            <h1>A peer-to-peer stablecoin <span class="accent-color">clearinghouse</span> for the new economy</h1>
+            <h1 class="wow animate__slideInDown">A peer-to-peer stablecoin <span class="accent-color">clearinghouse</span> for
+              the new economy</h1>
             <p>We are bringing real solutions to the payments world by leveraging public blockchains.</p>
           </hgroup>
 
@@ -110,13 +112,13 @@
             </div>
             <div class="info__text">
               <div class="digitl-data">
-                <p><span class="dollar">$ </span>1 tril</p>
+                <p class="wow animate__headShake"><span class="dollar">$ </span>1 tril</p>
                 <span>Market cap potential</span>
                 <hr>
-                <p><span class="dollar">$ </span>3.65 mil</p>
+                <p class="wow animate__headShake"><span class="dollar">$ </span>3.65 mil</p>
                 <span>Deposited to platform</span>
                 <hr>
-                <p>12</p>
+                <p class="wow animate__headShake">12</p>
                 <span>Stablecoins</span>
               </div>
               <div class="info__context">
@@ -148,7 +150,7 @@
 
           <ul class="benefits__item">
             <li>
-              <h3>Qualified <span class="accent-color">traders</span> and liquidty
+              <h3 class="wow animate__slideInDown">Qualified <span class="accent-color">traders</span> and liquidty
                 <span class="accent-color">solutions</span>
               </h3>
               <p>Trade easily and efficiently between 12 stablecoins, including USDT, TrueUSD, Dai, Eurs and Gemini
@@ -156,18 +158,18 @@
             </li>
 
             <li>
-              <h3>Settlement/OTC API and <span class="accent-color">integration</span>
+              <h3 class="wow animate__slideInDown">Settlement/OTC API and <span class="accent-color">integration</span>
               </h3>
               <p>Integrate OTC operations and settlements using our efficient API.</p>
             </li>
             <li>
-              <h3>The best <span class="accent-color">payments solutions</span></h3>
+              <h3 class="wow animate__slideInDown">The best <span class="accent-color">payments solutions</span></h3>
               <p>For all stablecoin payments, from point-of-sale transactions to website solutions. If you use
                 stablecoins in your business, Stablehouse is for you.
               </p>
             </li>
             <li>
-              <h3><span class="accent-color">Treasury</span> and <span class="accent-color">returns</span> for
+              <h3 class="wow animate__slideInDown"><span class="accent-color">Treasury</span> and <span class="accent-color">returns</span> for
                 stablecoin stores</h3>
               <p>Automate your stablecoin store with instant payments and on-the-fly conversion between different
                 stablecoins.
@@ -215,7 +217,7 @@
               </iframe>
               <label for="videoToggle" class="toggle">
                 <input type="checkbox" id="videoToggle" hidden>
-                  <img src="./assets/image/icon-play.webp" alt="Play" class="play-icon">
+                <img src="./assets/image/icon-play.webp" alt="Play" class="play-icon">
               </label>
               <div class="image-wrapp">
                 <img src="./assets/image/screensaver-video.webp" alt="video" class="image">
@@ -224,7 +226,7 @@
           </div>
 
           <div class="video-context">
-            <h3>A <span class="accent-color">powerful API</span> , easy to use user interface</h3>
+            <h3 class="wow animate__slideInDown">A <span class="accent-color">powerful API</span> , easy to use user interface</h3>
             <p>Our API allows all members to interact with Stablehouse’s platform, from effecting
               transfers to deposits, withdrawals, creation and redemption and reporting.
             </p>
@@ -274,7 +276,7 @@
       <section class="reviews">
         <div class="container">
           <hgroup>
-            <h3>Client <span class="accent-color">reviews</span></h3>
+            <h3 class="wow animate__slideInDown">Client <span class="accent-color">reviews</span></h3>
             <p>Happy clients, happy us. Read our client reviews about the work process and results.</p>
           </hgroup>
 
@@ -314,7 +316,7 @@
         <div class="container">
           <div class="contacts-wrapp">
             <hgroup>
-              <h3> Contact <span class="accent-color">our sales team</span></h3>
+              <h3 class="wow animate__slideInDown"> Contact <span class="accent-color">our sales team</span></h3>
               <p>Our team is happy to answer your sales questions.</p>
               <p>Fill out the form and we’ll be in touch as soon as
                 possible.</p>
@@ -369,20 +371,9 @@
       </div>
     </footer>
   </div>
-
+  <script src="./assets/js/wow.min.js"></script>
+  <script src="./assets/js/lazyload.min.js"></script>
   <script src="./assets/js/script.js"></script>
-
-  <script>
-    document.getElementById('hamb-btn').onclick = function () {
-      this.classList.add('is-active')
-      document.body.classList.add('mob-show')
-    }
-
-    document.querySelector('.overlay').onclick = function () {
-      document.getElementById('hamb-btn').classList.remove('is-active')
-      document.body.classList.remove('mob-show')
-    }
-  </script>
 </body>
 
 </html>
