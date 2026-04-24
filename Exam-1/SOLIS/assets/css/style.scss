@@ -1037,9 +1037,9 @@ body.mob-show {
   align-items: center;
   border: none;
   background: none;
-  svg path{
-    fill: #eafaf6;
-    stroke: #161926;
+
+  svg {
+    fill: var(--text-color);
   }
 }
 
