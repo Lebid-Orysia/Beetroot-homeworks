@@ -166,7 +166,7 @@ header {
 .header-wrapp {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 
   .image-wrapp {
     width: 107px;
@@ -185,6 +185,7 @@ header {
       @include fz(14);
       line-height: 171%;
       letter-spacing: 3%;
+      margin-top: 4px;
 
 
       &::after {
@@ -890,7 +891,7 @@ input[type="email"] {
 
 .footer-wrapp {
   border-top: 1px solid var(--line-color);
-  padding: 30px 0;
+  padding: 28px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
