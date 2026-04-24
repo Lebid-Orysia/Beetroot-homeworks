@@ -94,7 +94,8 @@ ol {
 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   vertical-align: top;
 }
 
@@ -154,7 +155,9 @@ header {
       rgba(255, 255, 255, 0) 30%,
       rgba(255, 255, 255, 0) 100%),
     rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  position: -webkit-sticky;
   position: sticky;
   left: 0;
   top: 0;
