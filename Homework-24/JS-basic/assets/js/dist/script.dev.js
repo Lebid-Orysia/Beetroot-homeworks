@@ -58,7 +58,8 @@ function getUserName() {
   }
 
   alert('Hello, ' + userName);
-}
+} // ...........................
+
 
 function getUserAge() {
   var CURRENT_YEAR = new Date().getFullYear();
@@ -84,7 +85,8 @@ function getUserAge() {
 
   var age = CURRENT_YEAR - birthYear;
   var currentAge = alert('Your age is ' + age);
-}
+} // ......................................
+
 
 function calcSquare() {
   var sideSquare = prompt("Enter the length of the side");
@@ -109,7 +111,8 @@ function calcSquare() {
 
   var sqr = +sideSquare * 4;
   alert('The perimeter of the square is ' + sqr);
-}
+} // ........................................
+
 
 function calcRadius() {
   var radius = prompt("Type the radius of the circle?");
@@ -134,7 +137,8 @@ function calcRadius() {
 
   var circleArea = Math.PI * Math.pow(radius, 2);
   alert('The area of the circle is ' + circleArea);
-}
+} // ....................................
+
 
 function calcDistance() {
   var distance = Number(prompt("Enter distance (km):"));
@@ -149,7 +153,8 @@ function calcDistance() {
   }
 
   alert("Required speed: ".concat(speed, " km/h"));
-}
+} // ....................................
+
 
 function converter() {
   var dollar = +prompt("Type the amount of dollars?");

@@ -69,7 +69,8 @@ function getUserName(){
    alert('Hello, ' + userName)
   }
    
-  
+  // ...........................
+
   function getUserAge() {
     const CURRENT_YEAR = new Date().getFullYear()
     let birthYear = prompt("What is your birth year?")
@@ -93,6 +94,7 @@ function getUserName(){
    const currentAge = alert('Your age is ' + age)
 }
 
+// ......................................
 
   function calcSquare() {
     let sideSquare = prompt("Enter the length of the side")
@@ -117,6 +119,7 @@ function getUserName(){
     alert('The perimeter of the square is ' + sqr)
   }
 
+// ........................................
 
     function calcRadius() {
       let radius = prompt("Type the radius of the circle?")
@@ -142,6 +145,7 @@ function getUserName(){
       alert('The area of the circle is ' + circleArea)
     }
 
+// ....................................
 
     function calcDistance() {
       let distance = Number(prompt("Enter distance (km):"))
@@ -159,7 +163,7 @@ function getUserName(){
      alert(`Required speed: ${speed} km/h`)
     }
 
-
+// ....................................
     function converter() {
       let dollar = +(prompt("Type the amount of dollars?"))
       let euro = dollar * 0.85;
