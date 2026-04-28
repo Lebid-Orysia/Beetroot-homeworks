@@ -9,6 +9,7 @@
   <link rel="icon" type="image/svg+xml" href="./assets/SVG/lebid.svg">
   <!-- Styles -->
   <link rel="stylesheet" href="./assets/css/pico.min.css">
+  <link rel="stylesheet" href="./assets/css/pico.colors.min.css">
   <!-- Scripts -->
   <script src="./assets/js/script.js" defer></script>
 
@@ -16,7 +17,81 @@
 </head>
 
 <body>
-  <button type="button" >im here</button>
+  <section class="container">
+    <article>
+      <h4>Створи HTML-файл, в ньому пропиши всі можливі способи використання JS;</h4>
+      <ul>
+        <li>
+          <h5>1. Вбудований JS у HTML
+          </h5>
+          <p>
+            &lt;script&gt;
+            console.log("Hello JS");
+            &lt;/script&gt;
+          </p>
+        </li>
+        <li>
+          <h5> 2. Підключення зовнішнього файлу у head або перед закриваючим body</h5>
+          <p>
+            &lt;script&gt; src="external.js" defer>&lt;/script&gt;
+          </p>
+        </li>
+        <li>
+          <h5> 3. В атрибуті HTML</h5>
+          <p>
+            &lt;button onclick="alert('Привіт!')"&gt;Натисни мене&lt;/button&gt;
+          </p>
+        </li>
+      </ul>
+    </article>
+
+    <article>
+      <h4>Зберегти ім’я та прізвище в змінній, придумай до 4-х імен змінних, що потрібні тобі для даної задачі. Також
+        напиши до 5 неправильних імен (неправильні імена повинні бути закоментовані);</h4>
+      <img src="./assets/img/hom1.png" alt="variables" width=600>
+    </article>
+
+    <article>
+      <h4>Bсі можливі способи коментування коду;</h4>
+      <img src="./assets/img/hom2.png" alt="comments" width=600>
+    </article>
+
+    <article>
+      <h4>Cтилі написання імен змінних</h4>
+      <img src="./assets/img/hom3.png" alt="name-variables" width=600>
+    </article>
+
+    <article>
+      <h4>Запитай ім’я користувача та виведи у відповідь “Привіт, *ім’я*”;</h4>
+      <button type="button" class="secondary" onclick="getUserName()">Nice to meet you</button>
+    </article>
+
+    <article>
+      <h4>Запитай рік народження користувача, порахуй його/її вік і виведи результат. Поточний рік вкажи в коді як
+        константу;</h4>
+      <button type="button" class="secondary" onclick="getUserAge()">How old are you?</button>
+    </article>
+
+    <article>
+      <h4>Запитай у користувача довжину сторони квадрату і виведи периметр цього квадрата</h4>
+      <button type="button" class="secondary" onclick="calcSquare()">Enter the number</button>
+    </article>
+
+    <article>
+      <h4>Запитай у користувача радіус кола і виведи площу такої окружності.</h4>
+      <button type="button" class="secondary" onclick="calcRadius()">Enter the number</button>
+    </article>
+
+    <article>
+      <h4>Запитай у користувача відстань в кілометрах між двома містами і за скільки годин він хоче дістатися. Порахуй швидкість, з якою необхідно рухатися, щоб встигнути вчасно.</h4>
+      <button type="button" class="secondary" onclick="calcDistance()">Enter the distance and time</button>
+    </article>
+
+     <article>
+      <h4>Реалізуй конвертор валют. Користувач вводить долари, програма переводить їх в євро. Курс валют зберігається в константі.</h4>
+      <button type="button" class="secondary" onclick="converter()">How much money do you have?</button>
+    </article>
+  </section>
 </body>
 
 </html>
