@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/SVG/lebid.svg">
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets/css/pico.min.css">
+  <link rel="stylesheet" href="./assets/css/pico.colors.min.css">
+  <!-- Scripts -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <title>Data-types&operators</title>
+</head>
+
+<body>
+  <section class="container">
+    <article class="pico-background-lime-600">
+      <h4 class="pico-color-zinc-50">Виконай додавання 0,1 і 0,2 добийся математично правильної відповіді.</h4>
+      <input type="number" name="number" id="first-num" placeholder="add first number" aria-label="Number">
+      <input type="number" name="number" id="second-num" placeholder="add second number" aria-label="Number">
+      <button type="button" onclick="calcSum()" class="contrast">Порахувати</button>
+      
+      <p id="result"></p>
+    </article>
+
+    <article class="pico-background-lime-600">
+      <h4 class="pico-color-zinc-50">Виконай додавання рядка "1" і цифри 2 (обидві операнди повинні бути в змінних),
+        добийся математично правильної відповіді.
+      </h4>
+      <input type="text" name="text" id="num1" placeholder="Text" aria-label="Text">
+      <input type="number" name="number" id="num2" placeholder="Number" aria-label="Number">
+      <button type="button" onclick="calcSum2()" class="contrast">Порахувати</button>
+      <p id="error"></p>
+      <p id="result2"></p>
+    </article>
+
+    <article class="pico-background-lime-600">
+      <h4 class="pico-color-zinc-50">Користувач вказує обсяг флешки в Гб. Програма повинна порахувати скільки файлів
+        розміром в 820 Мб поміщається на флешку.
+      </h4>
+      <input type="number" name="number" id="usb" placeholder="Обсяг флешки" aria-label="Number">
+      <button type="button" onclick="calcFiles()" class="contrast">Порахувати</button>
+      <p id="files"></p>
+    </article>
+
+    <article class="pico-background-lime-600">
+      <h4 class="pico-color-zinc-50">Користувач вводить суму грошей в гаманці і ціну однієї шоколадки. Програма виводить
+        скільки шоколадок може купити користувач і скільки здачі у нього залишиться.
+      </h4>
+      <input type="number" name="number" id="money" placeholder="сума грошей в гаманці" aria-label="Money">
+      <input type="number" name="number" id="chocolate" placeholder="ціна однієї шоколадки" aria-label="Price">
+      <button type="button" onclick="calcChange()" class="contrast">Порахувати</button>
+      <p id="changeResult"></p>
+    </article>
+
+    <article class="pico-background-lime-600">
+      <h4 class="pico-color-zinc-50">Запитай у користувача тризначне число і виведи його задом наперед. Для вирішення
+        завдання тобі знадобиться оператор % (залишок від ділення).
+      </h4>
+      <input type="number" name="number" id="userNum" placeholder="введіть тризначне число" aria-label="Number">
+
+      <button type="button" onclick="changeUserNum()" class="contrast">Зробити це зараз</button>
+      <p id="reverse-error"></p>
+      <p id="reverseUserNum"></p>
+    </article>
+
+    <article class="pico-background-lime-600">
+      <h4 class="pico-color-zinc-50">Користувач вводить суму вкладу в банк на 2 місяці, з процентною ставкою депозиту 5%
+        річних. Вивести суму нарахованих відсотків.
+      </h4>
+      <input type="number" name="number" id="deposit" placeholder="сума вкладу на 2 місяці" aria-label="Number">
+  
+      <button type="button" onclick="calcInvestSum()" class="contrast">Порахувати суму</button>
+    
+      <p id="interest"></p>
+    </article>
+  </section>
+</body>
+
+</html>

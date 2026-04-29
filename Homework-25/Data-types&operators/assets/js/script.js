@@ -1,51 +1,68 @@
-// // Виконай додавання 0,1 і 0,2 добийся математично правильної відповіді.
-// // Виконай додавання рядка "1" і цифри 2 (обидві операнди повинні бути в змінних), добийся математично правильної відповіді.
-// // Користувач вказує обсяг флешки в Гб. Програма повинна порахувати скільки файлів розміром в 820 Мб поміщається на флешку.
 
-// let a = 0.1;
-// let b = 0.2;
-// let c = a + b;
-// console.log(c.toFixed(1));
+function calcSum(a, b) {
+  const firstNum = document.getElementById('first-num').value
+  const secondNum = document.getElementById('second-num').value
+  const sum = +(firstNum) + +(secondNum)
+  document.getElementById("result").textContent = sum.toFixed(1);
+}
 
-// let d = "1";
-// let e = 2;
-// let f = Number(d) + e;
-// console.log(f);
+// ............................
 
+function calcSum2(a, b) {
+  const firstNum = document.getElementById('num1').value
+  const secondNum = document.getElementById('num2').value
 
-// let usb = prompt("Введіть обсяг флешки в Гб:");
-// usb = usb * 1024;
-// let files = Math.floor(usb / 820);
-
-// alert("На флешку поміститься " + files + " файлів по 820 Мб");
-
-
-// // Користувач вводить суму грошей в гаманці і ціну однієї шоколадки. 
-// // Програма виводить скільки шоколадок може купити користувач і скільки здачі у нього залишиться
-
-// // Запитай у користувача тризначне число і виведи його задом наперед.Для вирішення завдання тобі знадобиться оператор % (залишок від ділення).
-
-// let money = Number(prompt("Введіть суму грошей в гаманці:"));
-// let chocolate = Number(prompt("Введіть ціну однієї шоколадки:"));
-// let chocolates = Math.floor(money / chocolate);
-// let change = money % chocolate;
-
-// alert("Ви можете купити " + chocolates + " шоколадок. Здача: " + change);
+  if (isNaN(firstNum)) {
+    const error = document.getElementById('error').textContent = 'You are trying to add letters '
+  }
+  else {
+    const sum = +(firstNum) + +(secondNum)
+    document.getElementById("result2").textContent = sum;
+  }
+}
 
 
-// let number = Number(prompt("Type a number:"));
-// let reverseNumber = number.toString().split('').reverse().join('');
-// alert(reverseNumber);
+// .....................................
+function calcFiles() {
+  let usb = document.getElementById('usb').value
+  usb = usb * 1024
+  const files = Math.floor(usb / 820)
+  document.getElementById('files').textContent = files + " файли поміститься на флешці"
+}
 
-// 2 && 0 && 3  → 0
-// 2 || 0 || 3  → 2
-// 2 && 0 || 3  → 3
 
+// ...................................
 
-// // Користувач вводить суму вкладу в банк на 2 місяці, з процентною ставкою депозиту 5% річних. Вивести суму нарахованих відсотків.
+function calcChange() {
+  let money = document.getElementById('money').value
+  let priceChocolate = document.getElementById('chocolate').value
+  let chocolates = Math.floor(money / priceChocolate)
+  let change = money % priceChocolate
+  document.getElementById('changeResult').textContent = "Ви можете купити " + chocolates + " шоколадок. Здача: " + change
+}
 
-// let deposit = prompt("Введіть суму вкладу:");
-// let rate = 0.05;
-// let months = 2;
-// let interest = deposit * rate * months / 12;
-// alert("Сума нарахованих відсотків: " + interest.toFixed(2));
+// ..............................
+
+function changeUserNum() {
+  let number = document.getElementById('userNum').value
+  if (number.length < 3 || number.length > 4) {
+    document.getElementById('reverse-error').textContent = "Число має бути тризначне"
+  }
+  else {
+    let reverseNumber = number.toString().split('').reverse().join('');
+    document.getElementById('reverseUserNum').textContent = reverseNumber
+  }
+}
+
+// ..............................
+function calcInvestSum() {
+  let deposit = +(document.getElementById('deposit').value)
+  const rate = 0.05
+  const months = 2
+  if (isNaN(deposit)) {
+    document.getElementById('interest').textContent = "Введи коректне число";
+    return;
+  }
+  let interest = deposit * rate * months / 12;
+  document.getElementById('interest').textContent = "Сума нарахованих відсотків: " + interest.toFixed(2)
+}
