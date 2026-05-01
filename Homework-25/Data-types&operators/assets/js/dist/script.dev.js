@@ -39,13 +39,16 @@ function calcChange() {
 
 
 function changeUserNum() {
-  var number = document.getElementById('userNum').value;
+  var number = +document.getElementById('userNum').value;
 
-  if (number.length < 3 || number.length > 4) {
+  if (number < 100 || number > 999) {
     document.getElementById('reverse-error').textContent = "Число має бути тризначне";
   } else {
-    var reverseNumber = number.toString().split('').reverse().join('');
-    document.getElementById('reverseUserNum').textContent = reverseNumber;
+    var hundreds = Math.floor(number / 100);
+    var tens = Math.floor(number % 100 / 10);
+    var ones = number % 10;
+    var reversed = ones * 100 + tens * 10 + hundreds;
+    document.getElementById('reverseUserNum').textContent = reversed;
   }
 } // ..............................
 

@@ -42,18 +42,21 @@ function calcChange() {
 }
 
 // ..............................
-
 function changeUserNum() {
-  let number = document.getElementById('userNum').value
-  if (number.length < 3 || number.length > 4) {
+  let number = +document.getElementById('userNum').value
+
+  if (number < 100 || number > 999) {
     document.getElementById('reverse-error').textContent = "Число має бути тризначне"
-  }
-  else {
-    let reverseNumber = number.toString().split('').reverse().join('');
-    document.getElementById('reverseUserNum').textContent = reverseNumber
+  } else {
+    let hundreds = Math.floor(number / 100)    
+    let tens = Math.floor((number % 100) / 10)  
+    let ones = number % 10                     
+
+    let reversed = ones * 100 + tens * 10 + hundreds
+
+    document.getElementById('reverseUserNum').textContent = reversed
   }
 }
-
 // ..............................
 function calcInvestSum() {
   let deposit = +(document.getElementById('deposit').value)
