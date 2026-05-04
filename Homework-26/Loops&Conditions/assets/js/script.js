@@ -228,7 +228,7 @@ function changeUserNum() {
     }
 
 //................................................
-    function showNextDay(params) {
+    function showNextDay() {
         let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
         let index = 0
     
