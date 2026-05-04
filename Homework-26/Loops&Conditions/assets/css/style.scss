@@ -1,0 +1,72 @@
+#wrapper {
+  display: inline-grid;
+  grid-template-columns: repeat(11, 1fr);
+  gap: 2px;
+  background-color: antiquewhite;
+
+  div {
+    $size: 50px;
+    font-size: 1.2rem;
+    width: $size;
+    aspect-ratio: 1;
+    background-color: lightcoral;
+    color: white;
+    font-weight: bold;
+    line-height: $size;
+    text-align: center;
+
+    &[data-index="0_1"],
+    &[data-index="1_0"] {
+      background-color: darkorange;
+    }
+
+    &[data-index="0_2"],
+    &[data-index="2_0"] {
+      background-color: rgb(250, 163, 82);
+    }
+
+    &[data-index="0_3"],
+    &[data-index="3_0"] {
+      background-color: rgb(229, 229, 31);
+    }
+
+    &[data-index="0_4"],
+    &[data-index="4_0"] {
+      background-color: rgb(2, 161, 2);
+    }
+
+    &[data-index="0_5"],
+    &[data-index="5_0"] {
+      background-color: rgb(29, 119, 29);
+    }
+
+    &[data-index="0_6"],
+    &[data-index="6_0"] {
+      background-color: rgb(29, 119, 129);
+    }
+
+    &[data-index="0_7"],
+    &[data-index="7_0"] {
+      background-color: rgb(4, 79, 192);
+    }
+
+    &[data-index="0_8"],
+    &[data-index="8_0"] {
+      background-color: rgb(4, 17, 122);
+    }
+
+    &[data-index="0_9"],
+    &[data-index="9_0"] {
+      background-color: rgb(77, 4, 122);
+    }
+
+    &[data-index="0_10"],
+    &[data-index="10_0"] {
+      background-color: rgb(151, 5, 159);
+    }
+  }
+
+  .accent {
+    background-color: red;
+  }
+}

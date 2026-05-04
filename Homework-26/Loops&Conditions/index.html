@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/SVG/lebid.svg">
+  <!-- Styles -->
+  <link rel="stylesheet" href="./assets/css/pico.min.css">
+  <link rel="stylesheet" href="./assets/css/pico.colors.min.css">
+
+  <link rel="stylesheet" href="./assets/css/style.min.css">
+  <!-- Scripts -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <title>Loops and Conditions</title>
+</head>
+
+<body>
+
+  <section class="container">
+    <article class="pico-background-purple-750">
+      <h4 class="pico-color-zinc-50">Запитай у користувача його вік і визначи, ким він є: <br>
+        дитиною (0-11), <br>підлітком (12-17), <br>дорослим (18_59) або пенсіонером (60 ...), <br>передбач можливість
+        введення невірних даних.</h4>
+      <input type="number" name="number" id="userAge" placeholder="напиши свій вік" aria-label="Number">
+      <button type="button" onclick="findAge()" class="contrast">Визначити</button>
+
+      <p id="answ"></p>
+    </article>
+
+    <article class="pico-background-purple-750">
+      <h4 class="pico-color-zinc-50">Запитай у користувача число від 0 до 9 і виведи йому спецсимвол, який розташований
+        на цій клавіші (1 !, 2 @, 3 # і т. д).</h4>
+      <input type="number" name="number" id="num" placeholder="напиши число від 0 до 9" aria-label="Number">
+      <button type="button" onclick="getCharacter()" class="contrast">Визначити</button>
+
+      <p id="character"></p>
+    </article>
+
+
+    <article class="pico-background-purple-750">
+      <h4 class="pico-color-zinc-50">Підрахуй суму всіх чисел в заданому користувачем діапазоні.</h4>
+      <input type="number" name="number" id="num1" placeholder="add first number" aria-label="Number">
+      <input type="number" name="number" id="num2" placeholder="add second number" aria-label="Number">
+      <button type="button" onclick="calcRange()" class="contrast">Порахувати</button>
+
+      <p id="result"></p>
+    </article>
+
+    <article class="pico-background-purple-750">
+      <h4 class="pico-color-zinc-50">Запитай у користувача 2 числа і знайди найбільший спільний дільник.</h4>
+      <input type="number" name="number" id="first-num" placeholder="add first number" aria-label="Number">
+      <input type="number" name="number" id="second-num" placeholder="add second number" aria-label="Number">
+      <button type="button" onclick="calcDivider()" class="contrast">Порахувати</button>
+
+      <p id="divider"></p>
+    </article>
+
+    <article class="pico-background-purple-750">
+      <h4 class="pico-color-zinc-50">Запитай у користувача число і виведи всі дільники цього числа.</h4>
+      <input type="number" name="number" id="number" placeholder="введіть число" aria-label="Number">
+
+      <button type="button" onclick="showDividers()" class="contrast">Порахувати</button>
+
+      <p id="divider2"></p>
+    </article>
+
+    <article class="pico-background-purple-750">
+      <h4 class="pico-color-zinc-50">Запитай у користувача п’ятирозрядне число і визначи, чи є воно паліндромом.
+      </h4>
+      <input type="number" name="number" id="userNum" placeholder="введіть пʼятизначне число" aria-label="Number">
+
+      <button type="button" onclick="changeUserNum()" class="contrast">GO</button>
+      <p id="reverseUserNum"></p>
+    </article>
+
+    <article class="pico-background-purple-750">
+      <h4 class="pico-color-zinc-50">Запитай у користувача суму покупки і виведи суму до оплати зі знижкою: <br>
+        від 200 до 300 - знижка буде 3%; <br>
+        від 300 до 500 - 5%; <br>
+        від 500 і вище - 7%.</h4>
+      <input type="number" name="number" id="sum" placeholder="введіть суму покупки" aria-label="Number">
+
+      <button type="button" onclick="calcDiscount()" class="contrast">Порахувати</button>
+
+      <p id="discount"></p>
+    </article>
+
+    <article class="pico-background-purple-750">
+      <h4 class="pico-color-zinc-50">Запитай у користувача 10 чисел і порахуй, скільки він ввів додатніх, від’ємних і
+        нулів. При цьому також порахуй, скільки з них парних і непарних. Виведи статистику на екран.</h4>
+  
+      <button type="button" onclick="calcQuantity()" class="contrast">Порахувати</button>
+
+      <p id="statistics"></p>
+    </article>
+
+    <article class="pico-background-purple-750">
+      <h4 class="pico-color-zinc-50">Зацикли відображення днів тижня таким чином: «День тижня. Хочеш побачити наступний день? » і так до тих пір, поки користувач натискає OK.</h4>
+
+      <button type="button" onclick="showNextDay()" class="contrast">Show days</button>
+    </article>
+
+    <article class="pico-background-purple-750">
+      <h4 class="pico-color-zinc-50">Гра «Вгадай число». Запропонуй користувачеві загадати число від 0 до 100 і відгадай його наступним способом: кожну ітерацію циклу діли діапазон чисел навпіл, записуй результат в N і питай у користувача «Ваше число> N, N або == N?». Залежно від того що вказав користувач, зменшуй діапазон. Початковий діапазон від 0 до 100, поділи навпіл і отримай 50. Якщо користувач вказав, що його число> 50, то зміни діапазон на від 50 до 100. І так до тих пір, поки користувач не вибере == N (буде корисним почитати про алгоритм: "бінарний пошук").</h4>
+
+      <button type="button" onclick="guessNum()" class="contrast">Почати гру</button>
+    </article>
+
+    <article class="pico-background-grey-800">
+      <div class="container">
+        <h4 class="pico-color-zinc-50">Виведи таблицю множення для всіх чисел від 2 до 9. Кожне число необхідно помножити на числа від 1 до 10.</h4>
+        <div id ="wrapper">
+      
+        </div>
+      </div>
+    </article>
+
+    <article class="pico-background-purple-750">
+      <h4 class="pico-color-zinc-50">Запитай дату (день, місяць, рік) і виведи наступну за нею дату. Враховуй можливість переходу на наступний місяць, рік, а також високосний рік.</h4>
+
+      <button type="button" onclick="getNextDay()" class="contrast">Дізнатись наступну дату</button>
+    </article>
+  </section>
+</body>
+
+</html>
