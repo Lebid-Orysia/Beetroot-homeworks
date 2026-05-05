@@ -265,12 +265,69 @@ for (var i = 0; i <= size; i++) {
 
 document.getElementById('wrapper').innerHTML = html; // ...............................................
 
+function isLeapYear(year) {
+  if (year % 400 === 0 || year % 4 === 0 && year % 100 !== 0) return true;
+  return false;
+}
+
+function addZero(n) {
+  if (n < 10) return '0' + n;
+  return n;
+}
+
 function getNextDay() {
-  var day = +prompt('Напишіть день');
-  var month = +prompt('Напишіть місяць');
-  var year = +prompt('Напишіть рік у форматі "yyyy"');
-  nextDay = day + 1;
-  nextMonth = month;
-  nextYear = year;
-  alert("\u041D\u0430\u0441\u0442\u0443\u043F\u043D\u0430 \u0434\u0430\u0442\u0430 ".concat(nextDay, "-").concat(nextMonth, "-").concat(nextYear));
-} // зробила все що могла
+  var day = prompt('Напишіть день');
+  var month = prompt('Напишіть місяць');
+  var year = prompt('Напишіть рік у форматі "yyyy"');
+  var nextDay = +day + 1;
+  var nextMonth = month;
+  var nextYear = year;
+
+  switch (month) {
+    case '1':
+    case '3':
+    case '5':
+    case '7':
+    case '8':
+    case '10':
+    case '12':
+      if (nextDay == 32) {
+        nextDay = 1;
+        nextMonth = +month + 1;
+      }
+
+      break;
+
+    case '4':
+    case '6':
+    case '9':
+    case '11':
+      if (nextDay == 31) {
+        nextDay = 1;
+        nextMonth = +month + 1;
+      }
+
+      break;
+
+    case '2':
+      if (isLeapYear(year)) {
+        if (nextDay == 30) {
+          nextDay = 1;
+          nextMonth = +month + 1;
+        }
+      } else {
+        if (nextDay == 29) {
+          nextDay = 1;
+          nextMonth = +month + 1;
+        }
+      }
+
+  }
+
+  if (nextMonth == 13) {
+    nextMonth = 1;
+    nextYear = +year + 1;
+  }
+
+  alert("\u041D\u0430\u0441\u0442\u0443\u043F\u043D\u0430 \u0434\u0430\u0442\u0430 ".concat(addZero(nextDay), "/").concat(addZero(nextMonth), "/").concat(nextYear));
+}
