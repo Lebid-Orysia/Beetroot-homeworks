@@ -16,7 +16,35 @@
 
   <title>Function</title>
 </head>
+
 <body>
-  
+  <section class="container">
+    <article class="pico-background-blue-300">
+      <h4 class="pico-color-zinc-750">
+        Напиши всі можливі варіанти створення функцій.</h4>
+      <img src="./assets/img/func.png" alt="fucntions">
+    </article>
+
+    <article class="pico-background-blue-300">
+      <h4 class="pico-color-zinc-750">Створи функцію, яка буде виводити кількість переданих їй аргументів.</h4>
+      <input type="text" name="text" id="args" placeholder="напишть тут будь-що" aria-label="Text">
+      <button type="button" onclick="countArgs()" class="contrast">Визначити кількість</button>
+
+      <p id="count" class="pico-color-zinc-750"></p>
+    </article>
+
+    <article class="pico-background-blue-300">
+      <h4 class="pico-color-zinc-750">Напиши функцію, яка приймає 2 числа і повертає : <br>
+        -1, якщо перше число менше, ніж друге; <br>
+        1 - якщо перше число більше, ніж друге; <br>
+        0 - якщо числа рівні.</h4>
+      <input type="number" name="number" id="num1" placeholder="add first number" aria-label="Number">
+      <input type="number" name="number" id="num2" placeholder="add second number" aria-label="Number">
+      <button type="button" onclick="takeNambers()" class="contrast">Дізнатися</button>
+
+      <p id="result"></p>
+    </article>
+  </section>
 </body>
+
 </html>
