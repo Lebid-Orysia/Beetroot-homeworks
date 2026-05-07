@@ -22,12 +22,12 @@
     <article class="pico-background-blue-300">
       <h4 class="pico-color-zinc-750">
         Напиши всі можливі варіанти створення функцій.</h4>
-      <img src="./assets/img/func.png" alt="fucntions">
+      <img src="./assets/img/func.png" alt="fucntions" width="800">
     </article>
 
     <article class="pico-background-blue-300">
       <h4 class="pico-color-zinc-750">Створи функцію, яка буде виводити кількість переданих їй аргументів.</h4>
-      <input type="text" name="text" id="args" placeholder="напишть тут будь-що" aria-label="Text">
+      <input type="text" name="text" id="args" placeholder="аргументи писати тут" aria-label="Text">
       <button type="button" onclick="countArgs()" class="contrast">Визначити кількість</button>
 
       <p id="count" class="pico-color-zinc-750"></p>
@@ -42,7 +42,56 @@
       <input type="number" name="number" id="num2" placeholder="add second number" aria-label="Number">
       <button type="button" onclick="takeNambers()" class="contrast">Дізнатися</button>
 
-      <p id="result"></p>
+      <p id="result" class="pico-color-zinc-750"></p>
+    </article>
+
+    <article class="pico-background-blue-300">
+      <h4 class="pico-color-zinc-750">Напиши функцію, яка обчислює факторіал переданого їй числа.</h4>
+      <input type="number" name="number" id="number" placeholder="напишіть число" aria-label="Number">
+      <button type="button" onclick="showFactorial()" class="contrast">Визначити кількість</button>
+
+      <p id="factorial" class="pico-color-zinc-750"></p>
+    </article>
+
+    <article class="pico-background-blue-300">
+      <h4 class="pico-color-zinc-750">Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне число.
+        Наприклад: цифри 1, 4, 9 перетворяться в число 149.</h4>
+      <input type="number" name="number" id="number1" placeholder="напишіть число" aria-label="Number">
+      <input type="number" name="number" id="number2" placeholder="напишіть число" aria-label="Number">
+      <input type="number" name="number" id="number3" placeholder="напишіть число" aria-label="Number">
+      <button type="button" onclick="showCombNum()" class="contrast">Перетворити</button>
+
+      <p id="combNum" class="pico-color-zinc-750"></p>
+    </article>
+
+    <article class="pico-background-blue-300">
+      <h4 class="pico-color-zinc-750">Напиши функцію, яка приймає довжину і ширину прямокутника і обчислює його площу.
+        Якщо в функцію передали 1 параметр, то вона обчислює площу квадрата.</h4>
+      <input type="number" name="number" id="length" placeholder="напишіть число" aria-label="Number">
+      <input type="number" name="number" id="width" placeholder="напишіть число" aria-label="Number">
+      <button type="button" onclick="calcArea()" class="contrast">Обчислити</button>
+
+      <p id="area" class="pico-color-zinc-750"></p>
+    </article>
+
+    <article class="pico-background-blue-300">
+      <h4 class="pico-color-zinc-750">Напиши функцію, яка перевіряє, чи є передане їй число “досконалим числом”.
+        Досконале число - це число, яке дорівнює сумі всіх своїх дільників.</h4>
+      <input type="number" name="number" id="perfectNum" placeholder="напишіть число" aria-label="Number">
+      <button type="button" onclick="findPerfectNumber()" class="contrast">Дізнатись</button>
+
+      <p id="perfect-number" class="pico-color-zinc-750"></p>
+    </article>
+
+    <article class="pico-background-blue-300">
+      <h4 class="pico-color-zinc-750">Напиши функцію, яка приймає мінімальне і максимальне значення для діапазону, і
+        виводить тільки ті числа з діапазону, які є досконалими. Використовуй написану раніше функцію, щоб дізнатися, чи
+        є це число досконалим.</h4>
+      <input type="number" name="number" id="min-value" placeholder="min value" aria-label="Number">
+      <input type="number" name="number" id="mix-value" placeholder="max value" aria-label="Number">
+      <button type="button" onclick="getRange()" class="contrast">Вивести досконалі числа</button>
+
+      <p id="perfect-number2" class="pico-color-zinc-750"></p>
     </article>
   </section>
 </body>

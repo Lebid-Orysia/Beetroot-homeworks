@@ -1,135 +1,179 @@
 "use strict";
 
-// Function Declaration
-function sayHi() {
-  alert("Привіт");
-} // // Function Expression
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+// // Function Declaration
+// function sayHi() {
+//   alert( "Привіт" );
+// }
+// // // Function Expression
+// let sayHello = function() {
+//   alert( "Привіт" );
+// };
+// // // Стрілкова функція
+// () => {}
+// // // Чиста функція
+// function add(a, b) {
+//   return a + b;
+// }
+// // // Анонімна функція 
+// const sum = function(a, b) { return a + b; };
+// // Callback функція 
+// // функція, яка передається як аргумент в іншу функцію і викликається («викликається назад») після завершення певної операції
+// // Асинхронна функція
+//   async function fetchData() {
+//   const response = await fetch('https://api.example.com/data'); 
+//   const data = await response.json(); 
+//   return data;
+// }
+// // Рекурсивна функція
+// function recursiveFunction(data) {
+//   if (умова_зупинки) {
+//     return кінцевий_результат;
+//   }
+//   return recursiveFunction(modifiedData);
+// }
+// // Функція замикання
+// function createCrate() {
+//   let secretValue = "змінна всередині"; 
+//   return function() {
+//     console.log(secretValue);
+//   };
+// }
+// const myClosure = createCrate(); 
+// myClosure();
+// ............................................
+function countGivenArgs() {
+  return arguments.length;
+}
+
+function countArgs() {
+  var text = document.getElementById('args').value.trim();
+
+  if (text === "") {
+    document.getElementById('count').innerHTML = 0;
+    return;
+  }
+
+  var parts = text.split(/\s+/);
+  var result = countGivenArgs.apply(void 0, _toConsumableArray(parts));
+  document.getElementById('count').innerHTML = result;
+} // ................................................
 
 
-var sayHello = function sayHello() {
-  alert("Привіт");
-}; // // Стрілкова функція
+function takeNambers() {
+  var num1 = +document.getElementById('num1').value;
+  var num2 = +document.getElementById('num2').value;
+  var result;
+
+  if (num1 < num2) {
+    result = -1;
+  } else if (num1 > num2) {
+    result = 1;
+  } else {
+    result = 0;
+  }
+
+  document.getElementById('result').innerHTML = result;
+} // ..............................................
 
 
-(function () {}); // // Чиста функція
+function countFactorial(n) {
+  if (n < 0) return "не можливо визначити";
+  if (n === 0 || n === 1) return 1;
+  var factResult = 1;
 
+  for (var i = 2; i <= n; i++) {
+    factResult *= i;
+  }
 
-function add(a, b) {
-  return a + b;
-} // // Анонімна функція 
+  return factResult;
+}
 
-
-var sum = function sum(a, b) {
-  return a + b;
-}; // Callback функція 
-// функція, яка передається як аргумент в іншу функцію і викликається («викликається назад») після завершення певної операції
-// Асинхронна функція
-
-
-function fetchData() {
-  var response, data;
-  return regeneratorRuntime.async(function fetchData$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          _context.next = 2;
-          return regeneratorRuntime.awrap(fetch('https://api.example.com/data'));
-
-        case 2:
-          response = _context.sent;
-          _context.next = 5;
-          return regeneratorRuntime.awrap(response.json());
-
-        case 5:
-          data = _context.sent;
-          return _context.abrupt("return", data);
-
-        case 7:
-        case "end":
-          return _context.stop();
-      }
-    }
-  });
+function showFactorial() {
+  var inptEl = document.getElementById('number');
+  var factNumb = +inptEl.value;
+  var finalResult = countFactorial(factNumb);
+  document.getElementById('factorial').innerHTML = "\u0424\u0430\u043A\u0442\u043E\u0440\u0456\u0430\u043B ".concat(factNumb, " \u0434\u043E\u0440\u0456\u0432\u043D\u044E\u0454: ").concat(finalResult);
 } // ............................................
 
 
-function countArgs() {
-  var someArgs = document.getElementById('args').value;
-  document.getElementById('count').innerHTML = someArgs.length;
-} // або
-
-
-function countArgs2() {
-  console.log(arguments.length);
+function combineNumb(n1, n2, n3) {
+  var comb = String(n1) + String(n2) + String(n3);
+  return Number(comb);
 }
 
-countArgs(10, 20, 30);
-countArgs("milk", "cherry"); // ................................................
+function showCombNum() {
+  var n1 = document.getElementById('number1').value;
+  var n2 = document.getElementById('number2').value;
+  var n3 = document.getElementById('number3').value;
+  var combResult = combineNumb(n1, n2, n3);
+  document.getElementById('combNum').innerHTML = "\u0420\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442: ".concat(combResult);
+} // ..............................................
 
-function takeNambers() {
-  var num1 = document.getElementById('num1').value;
-  var num2 = document.getElementById('num2').value;
-  var result = '';
 
-  if (num1 < num2) {
-    return result = -1;
-  } else if (num1 > num2) {
-    return result = 1;
+function area(length, width) {
+  if (!width) {
+    return length * length;
   } else {
-    return result = 0;
+    return length * width;
+  }
+}
+
+function calcArea() {
+  var length = +document.getElementById('length').value;
+  var width = +document.getElementById('width').value;
+  var areaResult = area(length, width);
+  document.getElementById('area').innerHTML = "\u041F\u043B\u043E\u0449\u0430 \u0434\u043E\u0440\u0456\u0432\u043D\u044E\u0454: ".concat(areaResult);
+} // ............................................
+
+
+function isPerfectNumb(inputNumb) {
+  if (inputNumb <= 0) return false;
+  var rslt = 0;
+
+  for (var i = 1; i <= inputNumb / 2; i++) {
+    if (inputNumb % i === 0) {
+      rslt += i;
+    }
   }
 
-  document.getElementById('result').innerHTML = "".concat(result);
-} // // Напиши функцію, яка обчислює факторіал переданого їй числа.
-// function factorial(n) {
-//     if (n === 0 || n === 1) {
-//         return 1;
-//     } else {
-//         return n * factorial(n - 1);
-//     }
-// }
-// console.log(factorial(5)); // 120
-// console.log(factorial(0)); // 1
-// // Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне число. 
-// // Наприклад: цифри 1, 4, 9 перетворяться в число 149.
-// function join(a, b, c) {
-//    const arr = [a, b, c];
-//     const joinNum = arr.join('');
-//     const number = +(joinNum);
-//     return number;
-// }
-// join(1, 4, 9); // 149
-// join(0, 0, 7); // 7
-// // Напиши функцію, яка приймає довжину і ширину прямокутника і обчислює його площу.
-// // Якщо в функцію передали 1 параметр, то вона обчислює площу квадрата.
-// function area(length, width) {
-//     if (width === undefined) {
-//         return length * length;
-//     } else {
-//         return length * width;
-//     }
-// }
-// area(5, 10); // 50
-// area(4); // 16
-// // Напиши функцію, яка перевіряє, чи є передане їй число “досконалим числом”. Досконале число - це число, яке дорівнює сумі всіх своїх дільників.
-// function isPerfectNumber(num) {
-//     let sum = 0;
-//     for (let i = 1; i <= num / 2; i++) {
-//         if (num % i === 0) {
-//             sum += i;
-//         }
-//     }
-//     return sum === num;
-// }
-// isPerfectNumber(6); // true
-// isPerfectNumber(28); // true
-// isPerfectNumber(12); // false
-// // Напиши функцію, яка приймає мінімальне і максимальне значення для діапазону, і виводить тільки ті числа з діапазону, які є досконалими.
-// function perfectNumbersInRange(min, max) {
-//     for (let i = min; i <= max; i++) {
-//         if (isPerfectNumber(i)) {
-//             console.log(i);
-//         }
-//     }
-// }
-// perfectNumbersInRange(1, 1000); // 6, 28, 496
+  return rslt === inputNumb;
+}
+
+function findPerfectNumber() {
+  var inputNumb = +document.getElementById('perfectNum').value;
+  var perfectNumbResult = isPerfectNumb(inputNumb);
+  document.getElementById('perfect-number').innerHTML = "\u0427\u0438\u0441\u043B\u043E ".concat(inputNumb, ": ").concat(perfectNumbResult);
+} // ..........................................
+
+
+function getRange() {
+  var min = +document.getElementById('min-value').value;
+  var max = +document.getElementById('mix-value').value;
+  var rangeList = '';
+
+  for (var i = min; i <= max; i++) {
+    if (isPerfectNumb(i)) {
+      if (rangeList !== '') {
+        rangeList += ', ';
+      }
+
+      rangeList += i;
+    }
+  }
+
+  var rangeNumbResult = document.getElementById('perfect-number2');
+
+  if (rangeList !== '') {
+    rangeNumbResult.innerHTML = "\u0414\u043E\u0441\u043A\u043E\u043D\u0430\u043B\u0456 \u0447\u0438\u0441\u043B\u0430: ".concat(rangeList);
+  } else {
+    rangeNumbResult.innerHTML = "\u0414\u043E\u0441\u043A\u043E\u043D\u0430\u043B\u0438\u0445 \u0447\u0438\u0441\u0435\u043B \u043D\u0435\u043C\u0430\u0454";
+  }
+}

@@ -1,121 +1,183 @@
-// Function Declaration
-function sayHi() {
-  alert( "Привіт" );
-}
+// // Function Declaration
+// function sayHi() {
+//   alert( "Привіт" );
+// }
 
-// // Function Expression
-let sayHello = function() {
-  alert( "Привіт" );
-};
+// // // Function Expression
+// let sayHello = function() {
+//   alert( "Привіт" );
+// };
 
-// // Стрілкова функція
-() => {}
+// // // Стрілкова функція
+// () => {}
 
-// // Чиста функція
-function add(a, b) {
-  return a + b;
-}
+// // // Чиста функція
+// function add(a, b) {
+//   return a + b;
+// }
 
-// // Анонімна функція 
-const sum = function(a, b) { return a + b; };
+// // // Анонімна функція 
+// const sum = function(a, b) { return a + b; };
 
-// Callback функція 
-// функція, яка передається як аргумент в іншу функцію і викликається («викликається назад») після завершення певної операції
+// // Callback функція 
+// // функція, яка передається як аргумент в іншу функцію і викликається («викликається назад») після завершення певної операції
 
-// Асинхронна функція
-  async function fetchData() {
-  const response = await fetch('https://api.example.com/data'); 
-  const data = await response.json(); 
-  return data;
-}
+// // Асинхронна функція
+//   async function fetchData() {
+//   const response = await fetch('https://api.example.com/data'); 
+//   const data = await response.json(); 
+//   return data;
+// }
+
+// // Рекурсивна функція
+// function recursiveFunction(data) {
+//   if (умова_зупинки) {
+//     return кінцевий_результат;
+//   }
+
+//   return recursiveFunction(modifiedData);
+// }
+// // Функція замикання
+// function createCrate() {
+//   let secretValue = "змінна всередині"; 
+//   return function() {
+//     console.log(secretValue);
+//   };
+// }
+
+// const myClosure = createCrate(); 
+// myClosure();
 // ............................................
 
-function countArgs() {
-  let someArgs = document.getElementById('args').value
-  document.getElementById('count').innerHTML =  someArgs.length
+function countGivenArgs(...args) {
+  return args.length;
 }
 
-// або
-function countArgs2(...args) {
-  console.log(args.length);
+function countArgs() {
+  const text = document.getElementById('args').value.trim();
+  
+  if (text === "") {
+    document.getElementById('count').innerHTML = 0;
+    return;
+  }
+  const parts = text.split(/\s+/); 
+
+  const result = countGivenArgs(...parts); 
+
+  document.getElementById('count').innerHTML = result;
 }
-countArgs(10, 20, 30);
-countArgs("milk", "cherry");
 
 // ................................................
 
 function takeNambers() {
-  let num1 = document.getElementById('num1').value
-  let num2 = document.getElementById('num2').value
-  let result = ''
+  let num1 = +document.getElementById('num1').value;
+  let num2 = +document.getElementById('num2').value;
+  let result;
     if (num1 < num2) {
-        return result = -1;
+      result = -1;
     }
     else if (num1 > num2) {
-        return result = 1;
+      result = 1;
     }
     else {
-        return result = 0;
+      result = 0;
     }
-    document.getElementById('result').innerHTML = `${result}`
+    document.getElementById('result').innerHTML = result;
+}
+// ..............................................
+function countFactorial(n) {
+  if (n < 0) return "не можливо визначити";
+  if (n === 0 || n === 1) return 1;
+
+  let factResult = 1;
+  for (let i = 2; i <= n; i++) {
+    factResult *= i;
+  }
+  return factResult;
 }
 
+function showFactorial() {
+  const inptEl = document.getElementById('number');
+  const factNumb = +inptEl.value;
 
-// // Напиши функцію, яка обчислює факторіал переданого їй числа.
-// function factorial(n) {
-//     if (n === 0 || n === 1) {
-//         return 1;
-//     } else {
-//         return n * factorial(n - 1);
-//     }
-// }
-// console.log(factorial(5)); // 120
-// console.log(factorial(0)); // 1
+  const finalResult = countFactorial(factNumb);
 
-// // Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне число. 
-// // Наприклад: цифри 1, 4, 9 перетворяться в число 149.
-// function join(a, b, c) {
-//    const arr = [a, b, c];
-//     const joinNum = arr.join('');
-//     const number = +(joinNum);
-//     return number;
-// }
-// join(1, 4, 9); // 149
-// join(0, 0, 7); // 7
+  document.getElementById('factorial').innerHTML = `Факторіал ${factNumb} дорівнює: ${finalResult}`
+}
 
-// // Напиши функцію, яка приймає довжину і ширину прямокутника і обчислює його площу.
-// // Якщо в функцію передали 1 параметр, то вона обчислює площу квадрата.
-// function area(length, width) {
-//     if (width === undefined) {
-//         return length * length;
-//     } else {
-//         return length * width;
-//     }
-// }
-// area(5, 10); // 50
-// area(4); // 16
+// ............................................
+function combineNumb(n1, n2, n3) {
+  let comb = String(n1) + String(n2) + String(n3);
+  return Number(comb);
+}
 
-// // Напиши функцію, яка перевіряє, чи є передане їй число “досконалим числом”. Досконале число - це число, яке дорівнює сумі всіх своїх дільників.
-// function isPerfectNumber(num) {
-//     let sum = 0;
-//     for (let i = 1; i <= num / 2; i++) {
-//         if (num % i === 0) {
-//             sum += i;
-//         }
-//     }
-//     return sum === num;
-// }
-// isPerfectNumber(6); // true
-// isPerfectNumber(28); // true
-// isPerfectNumber(12); // false
+function showCombNum() {
+  const n1 = document.getElementById('number1').value;
+  const n2 = document.getElementById('number2').value;
+  const n3 = document.getElementById('number3').value;
 
-// // Напиши функцію, яка приймає мінімальне і максимальне значення для діапазону, і виводить тільки ті числа з діапазону, які є досконалими.
-// function perfectNumbersInRange(min, max) {
-//     for (let i = min; i <= max; i++) {
-//         if (isPerfectNumber(i)) {
-//             console.log(i);
-//         }
-//     }
-// }
-// perfectNumbersInRange(1, 1000); // 6, 28, 496
+  const combResult = combineNumb(n1, n2, n3);
+
+  document.getElementById('combNum').innerHTML = `Результат: ${combResult}`
+}
+// ..............................................
+
+function area(length, width) {
+    if (!width) {
+        return length * length;
+    } else {
+        return length * width;
+    }
+}
+
+function calcArea() {
+  const length = +document.getElementById('length').value;
+  const width = +document.getElementById('width').value;
+
+  const areaResult = area(length, width);
+  document.getElementById('area').innerHTML = `Площа дорівнює: ${areaResult}`;
+}
+
+// ............................................
+function isPerfectNumb(inputNumb) {
+  if (inputNumb <= 0) return false;
+  let rslt = 0;
+
+  for (let i = 1; i <= inputNumb/2; i++) {
+     if (inputNumb % i === 0) {
+        rslt += i;
+     }
+  }
+  return rslt === inputNumb;
+}
+
+function findPerfectNumber() {
+  const inputNumb = +document.getElementById('perfectNum').value;
+
+  const perfectNumbResult = isPerfectNumb(inputNumb);
+
+  document.getElementById('perfect-number').innerHTML = `Число ${inputNumb}: ${perfectNumbResult}`;
+}
+
+// ..........................................
+function getRange() {
+  const min = +document.getElementById('min-value').value;
+  const max = +document.getElementById('mix-value').value;
+  let rangeList = '';
+
+  for (let i = min; i <= max; i++) {
+    if (isPerfectNumb(i)) {
+      if (rangeList !== '') {
+        rangeList += ', ';
+      }
+      rangeList += i;
+    }
+  }
+  const rangeNumbResult = document.getElementById('perfect-number2');
+  if (rangeList !== '') {
+    rangeNumbResult.innerHTML = `Досконалі числа: ${rangeList}`;
+  } else {
+    rangeNumbResult.innerHTML = `Досконалих чисел немає`;
+  }
+}
 
