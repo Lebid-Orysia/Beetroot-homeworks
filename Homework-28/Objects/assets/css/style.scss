@@ -1,50 +1,63 @@
 #info-list {
-      margin: 0 auto;
-      width: 700px;
-      padding: 10px;
-    }
+  margin: 0 auto;
+  width: 700px;
+  padding: 10px;
+}
 
-    dl {
-      display: grid;
-      grid-template-columns: 150px 1fr;
-      justify-content: center;
-      gap: 20px;
-      padding-left: 100px;
+dl {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 100px;
 
-      dt {
-        font-weight: 600;
-        text-transform: capitalize;
-      } 
-    }
-    .my-toast {
-      position: fixed;
-      left: 300px;
-      top: 20px;
-      border-radius: 5px;
-      padding: 10px;
-      color: aliceblue;
-      min-width: 200px;
-      background-color: rgb(122, 122, 122);
-     
-      &.success {
-        background-color: rgb(95, 163, 95);
-      }
+  dt {
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+}
 
-      &.error {
-        background-color: rgb(196, 59, 59);
-      }
-    }
+.my-toast {
+  position: fixed;
+  left: 300px;
+  top: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  color: aliceblue;
+  min-width: 200px;
+  background-color: rgb(122, 122, 122);
 
-    button{
-      margin-left: 620px;
-     }
+  &.success {
+    background-color: rgb(95, 163, 95);
+  }
 
-    .driverBtn{
-      margin-left: 0;
-    }
+  &.error {
+    background-color: rgb(196, 59, 59);
+  }
+}
 
-     input{
-      max-width: 400px;
-      margin-left: 375px;
-      margin-top: 40px;
-     }
+.outline {
+  margin-left: 620px;
+}
+
+.driverBtn {
+  margin-left: 0;
+}
+
+input {
+  max-width: 400px;
+  margin-left: 375px;
+  margin-top: 40px;
+}
+
+.time {
+  height: 250px;
+  width: 700px;
+  margin: 100px auto;
+  padding: 30px 0 30px 30px;
+}
+
+#clock-display {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}

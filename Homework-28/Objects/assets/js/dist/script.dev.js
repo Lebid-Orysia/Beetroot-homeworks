@@ -88,4 +88,49 @@ function calculateTripHandler() {
   } else {
     toast.error("Будь ласка, введіть коректне число");
   }
-}
+} // ................................................
+
+
+var time = {
+  hours: 20,
+  minutes: 59,
+  seconds: 45,
+  showTime: function showTime(elId) {
+    var addZero = function addZero(n) {
+      return n < 10 ? '0' + n : '' + n;
+    };
+
+    var timeString = "".concat(addZero(this.hours), ":").concat(addZero(this.minutes), ":").concat(addZero(this.seconds));
+
+    if (elId) {
+      var container = document.getElementById(elId);
+
+      if (container) {
+        container.innerHTML = "<p>".concat(timeString, "</p>");
+      }
+    }
+
+    return timeString;
+  },
+  normalizeTime: function normalizeTime(totalSeconds) {
+    if (totalSeconds < 0) totalSeconds = 0;
+    this.seconds = totalSeconds % 60;
+    var totalMinutes = Math.floor(totalSeconds / 60);
+    this.minutes = totalMinutes % 60;
+    this.hours = Math.floor(totalMinutes / 60) % 24;
+  },
+  addSeconds: function addSeconds(s) {
+    var currentTotalSeconds = this.hours * 3600 + this.minutes * 60 + this.seconds;
+    this.normalizeTime(currentTotalSeconds + s);
+  },
+  addMinutes: function addMinutes(m) {
+    this.addSeconds(m * 60);
+  },
+  addHours: function addHours(h) {
+    this.addSeconds(h * 3600);
+  }
+};
+
+window.onload = function () {
+  time.showTime('clock-display');
+};

@@ -97,3 +97,46 @@ function calculateTripHandler() {
     toast.error("Будь ласка, введіть коректне число");
   }
 }
+// ................................................
+
+const time = {
+  hours: 20,
+  minutes: 59,
+  seconds: 45,
+
+  showTime(elId) {
+    const addZero = n => n < 10 ? '0' + n : '' + n;
+    const timeString = `${addZero(this.hours)}:${addZero(this.minutes)}:${addZero(this.seconds)}`
+    
+    if (elId) {
+      const container = document.getElementById(elId)
+      if (container) {
+        container.innerHTML = `<p>${timeString}</p>`
+      }
+    }
+    return timeString
+  },
+  normalizeTime(totalSeconds) {
+    if (totalSeconds < 0) totalSeconds = 0
+
+    this.seconds = totalSeconds % 60
+    let totalMinutes = Math.floor(totalSeconds / 60)
+    this.minutes = totalMinutes % 60
+    this.hours = Math.floor(totalMinutes / 60) % 24
+  },
+
+  addSeconds(s) {
+    let currentTotalSeconds = this.hours * 3600 + this.minutes * 60 + this.seconds
+    this.normalizeTime(currentTotalSeconds + s)
+  },
+  addMinutes(m) {
+    this.addSeconds(m * 60)
+  },
+  addHours(h) {
+    this.addSeconds(h * 3600)
+  }
+}
+
+window.onload = () => {
+  time.showTime('clock-display');
+};

@@ -26,14 +26,24 @@
 
     </div>
     <button class="outline secondary" onclick="myCar.showInfo('info-list')">Car info</button><br>
-    <input type="text" id="driverName"  class="pico-background-slate-350" placeholder="add name">
-    
+    <input type="text" id="driverName" class="pico-background-slate-350" placeholder="add name">
+
     <button class="outline secondary driverBtn" onclick="addDriverHandler()">Add driver</button>
-     <button class="outline secondary driverBtn" onclick="checkDriverHendler()">Check driver</button>
-     <br>
-      <input type="number" id="distance" placeholder="add distance" class="pico-background-slate-350">
-     <button class="outline secondary driverBtn" onclick="calculateTripHandler() ">Calculate time and fuel</button>
+    <button class="outline secondary driverBtn" onclick="checkDriverHendler()">Check driver</button>
+    <br>
+    <input type="number" id="distance" placeholder="add distance" class="pico-background-slate-350">
+    <button class="outline secondary driverBtn" onclick="calculateTripHandler() ">Calculate time and fuel</button>
+
+
+    <div class="pico-background-slate-450 time" >
+      <h4 class="pico-color-zinc-200">Робота з часом</h4>
+      <div id="clock-display"></div>
+      <button  onclick="time.addSeconds(30); time.showTime('clock-display')" class="secondary">Додати 30 сек</button>
+      <button onclick="time.addMinutes(75); time.showTime('clock-display')" class="secondary">Додати 75 хв</button>
+    </div>
   </section>
+
+
 </body>
 
 </html>
