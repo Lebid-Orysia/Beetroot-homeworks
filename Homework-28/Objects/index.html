@@ -10,15 +10,27 @@
   <!-- Styles -->
   <link rel="stylesheet" href="./assets/css/pico.min.css">
   <link rel="stylesheet" href="./assets/css/pico.colors.min.css">
+  <link rel="stylesheet" href="./assets/css/style.min.css">
 
   <!-- Scripts -->
+  <script src="./assets/js/toast.js"></script>
   <script src="./assets/js/script.js" defer></script>
 
   <title>Function</title>
 </head>
 
 <body>
+  <section class="container">
 
+    <div class="pico-background-slate-650" id="info-list">
+
+    </div>
+    <button class="outline secondary" onclick="myCar.showInfo('info-list')">Car info</button><br>
+    <input type="text" id="driverName"  class="pico-background-slate-350">
+    
+    <button class="outline secondary driverBtn" onclick="addDriverHandler()">Add driver</button>
+     <button class="outline secondary driverBtn" onclick="checkDriverHendler()">Check driver</button>
+  </section>
 </body>
 
 </html>

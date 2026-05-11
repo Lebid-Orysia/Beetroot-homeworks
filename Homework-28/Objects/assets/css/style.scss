@@ -1,0 +1,50 @@
+#info-list {
+      margin: 0 auto;
+      width: 700px;
+      padding: 10px;
+    }
+
+    dl {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      justify-content: center;
+      gap: 40px;
+      padding-left: 100px;
+
+      dt {
+        font-weight: 600;
+        text-transform: capitalize;
+      } 
+    }
+    .my-toast {
+      position: fixed;
+      left: 300px;
+      top: 20px;
+      border-radius: 5px;
+      padding: 10px;
+      color: aliceblue;
+      min-width: 200px;
+      background-color: rgb(122, 122, 122);
+     
+      &.success {
+        background-color: rgb(95, 163, 95);
+      }
+
+      &.error {
+        background-color: rgb(196, 59, 59);
+      }
+    }
+
+    button{
+      margin-left: 620px;
+     }
+
+    .driverBtn{
+      margin-left: 0;
+    }
+
+     input{
+      max-width: 400px;
+      margin-left: 375px;
+      margin-top: 40px;
+     }
