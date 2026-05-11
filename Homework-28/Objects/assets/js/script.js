@@ -41,6 +41,21 @@ const myCar = {
   },
   checkDriver(driverName) {
     return this.drivers.includes(driverName)
+  },
+  calculateTrip(distance) {
+    const pureTime = distance / this.info.avgSpeed
+    const restHours = Math.floor((pureTime - 0.01) / 4)
+    const totalTimeDecimal = pureTime + restHours
+    const hours = Math.floor(totalTimeDecimal) 
+    const minutes = Math.round((totalTimeDecimal - hours) * 60)
+ 
+    const fuelNeeded = (distance / 100) * this.info.fuelConsume
+
+    return {
+      hours: hours,
+      minutes: minutes,
+      fuel: fuelNeeded.toFixed(1)
+    }
   }
 }
 
@@ -64,5 +79,21 @@ function checkDriverHendler(){
     toast.success('Driver in list')
   } else{
      toast.error('Driver not in list')
+  }
+}
+
+function calculateTripHandler() {
+  const distance = document.getElementById('distance').value
+  
+ if (distance && !isNaN(distance) && distance > 0) {
+    const result = myCar.calculateTrip(Number(distance))
+    
+    toast.success(
+      `Для подолання ${distance} км потрібно:\n` +
+      `Час: ${result.hours} год ${result.minutes} хв\n` + 
+      `Паливо: ${result.fuel} л`
+    );
+  } else {
+    toast.error("Будь ласка, введіть коректне число");
   }
 }

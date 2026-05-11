@@ -26,10 +26,13 @@
 
     </div>
     <button class="outline secondary" onclick="myCar.showInfo('info-list')">Car info</button><br>
-    <input type="text" id="driverName"  class="pico-background-slate-350">
+    <input type="text" id="driverName"  class="pico-background-slate-350" placeholder="add name">
     
     <button class="outline secondary driverBtn" onclick="addDriverHandler()">Add driver</button>
      <button class="outline secondary driverBtn" onclick="checkDriverHendler()">Check driver</button>
+     <br>
+      <input type="number" id="distance" placeholder="add distance" class="pico-background-slate-350">
+     <button class="outline secondary driverBtn" onclick="calculateTripHandler() ">Calculate time and fuel</button>
   </section>
 </body>
 
