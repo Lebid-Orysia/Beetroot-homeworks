@@ -1,0 +1,19 @@
+.my-toast {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  color: aliceblue;
+  min-width: 200px;
+  background-color: rgb(122, 122, 122);
+  z-index: 10000;
+
+  &.success {
+    background-color: rgb(95, 163, 95);
+  }
+
+  &.error {
+    background-color: rgb(196, 59, 59);
+  }
+}
