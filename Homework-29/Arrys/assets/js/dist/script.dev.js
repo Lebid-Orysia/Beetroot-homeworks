@@ -81,9 +81,11 @@ function showProductList() {
   var html = '';
 
   if (CART.length) {
-    CART.forEach(function (item, index) {
-      var status = "<span class = \"tag is-".concat(item.isBuy ? 'success' : 'dark', "\">").concat(item.isBuy ? 'Yes' : 'No', "</span>");
-      html += "<tr>\n      <td>".concat(index + 1, "</td>\n      <td>").concat(item.title, "</td>\n      <td>").concat(status, "</td>\n      <td>").concat(item.price.toFixed(2), "</td>\n      <td>").concat(item.qty, "</td>\n      <td>").concat((item.price * item.qty).toFixed(2), "</td>\n      <td>\n        ").concat(!item.isBuy ? '<button class="button is-success is-dark is-rounded is-small">Buy</button>' : '', "\n      </td>\n      </tr>");
+    CART.toSorted(function (a, b) {
+      return a.isBuy - b.isBuy;
+    }).forEach(function (item, index) {
+      var status = "<span class = \"tag is-".concat(item.isBuy ? 'success' : 'danger', "\">").concat(item.isBuy ? '✔️' : '✖️', "</span>");
+      html += "<tr>\n      <td>".concat(index + 1, "</td>\n      <td>").concat(item.title, "</td>\n      <td>").concat(status, "</td>\n      <td>").concat(item.price.toFixed(2), "</td>\n      <td>\n          <button class=\"button is-success is-dark is-rounded is-small\" onclick=\"actionProduct('").concat(item.title, "', 'decQty')\"> - </button>\n          <input class=\"input qty-input\" type=\"number\" min=\"1\" value=\"").concat(item.qty, "\" />\n          <button class=\"button is-success is-dark is-rounded is-small\" onclick=\"actionProduct('").concat(item.title, "', 'incQty')\"> + </button>\n      </td>\n      <td>").concat((item.price * item.qty).toFixed(2), "</td>\n      <td>\n        ").concat(!item.isBuy ? '<button class="button is-success is-dark is-rounded is-small" onclick="actionProduct(\'' + item.title + '\', \'buy\')">Buy</button>' : '', "\n        ").concat(!item.isBuy ? '<button class="button is-danger is-dark is-rounded is-small" onclick="actionProduct(\'' + item.title + '\', \'delete\')">Remove</button>' : '', "\n      </td>\n      </tr>");
     });
   } else {
     html = "<tr>\n    <td colspan='5'>No products in cart</td>\n    </tr>";
@@ -101,6 +103,45 @@ function showProductList() {
   }, 0);
   getEl('products_list').innerHTML = html;
   calcCartTotal();
+}
+
+function removeProduct(ind) {
+  if (confirm("Do you want delete \"".concat(CART[ind].title, "\" from list?"))) {
+    CART.splice(ind, 1);
+  }
+}
+
+function actionProduct(title) {
+  var action = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+  if (!action) return;
+  var ind = CART.findIndex(function (el) {
+    return el.title === title;
+  });
+
+  switch (action) {
+    case 'delete':
+      removeProduct(ind);
+      break;
+
+    case 'buy':
+      CART[ind].isBuy = true;
+      break;
+
+    case 'incQty':
+      CART[ind].qty += 1;
+      break;
+
+    case 'decQty':
+      if (CART[ind].qty > 1) {
+        CART[ind].qty -= 1;
+      } else if (CART[ind].qty == 1) {
+        actionProduct(title, 'delete');
+      }
+
+      break;
+  }
+
+  showProductList();
 }
 
 function calcCartTotal() {

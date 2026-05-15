@@ -83,17 +83,23 @@ if(findedEl){
 function showProductList() {
   let html = ''
   if(CART.length) {
-    CART.forEach((item, index) => {
-      const status = `<span class = "tag is-${item.isBuy ? 'success' : 'dark'}">${item.isBuy ? 'Yes' : 'No'}</span>`
+    CART.toSorted((a,b) => a.isBuy - b.isBuy)
+        .forEach((item, index) => {
+      const status = `<span class = "tag is-${item.isBuy ? 'success' : 'danger'}">${item.isBuy ? '✔️' : '✖️'}</span>`
       html += `<tr>
       <td>${index + 1}</td>
       <td>${item.title}</td>
       <td>${status}</td>
       <td>${item.price.toFixed(2)}</td>
-      <td>${item.qty}</td>
+      <td>
+          <button class="button is-success is-dark is-rounded is-small" onclick="actionProduct('${item.title}', 'decQty')"> - </button>
+          <input class="input qty-input" type="number" min="1" value="${item.qty}" />
+          <button class="button is-success is-dark is-rounded is-small" onclick="actionProduct('${item.title}', 'incQty')"> + </button>
+      </td>
       <td>${(item.price * item.qty).toFixed(2)}</td>
       <td>
-        ${!item.isBuy ? '<button class="button is-success is-dark is-rounded is-small">Buy</button>' : ''}
+        ${!item.isBuy ? '<button class="button is-success is-dark is-rounded is-small" onclick="actionProduct(\''+item.title+'\', \'buy\')">Buy</button>' : ''}
+        ${!item.isBuy ? '<button class="button is-danger is-dark is-rounded is-small" onclick="actionProduct(\''+item.title+'\', \'delete\')">Remove</button>' : ''}
       </td>
       </tr>`
     })
@@ -112,6 +118,38 @@ function showProductList() {
 
   getEl('products_list').innerHTML = html
   calcCartTotal()
+}
+
+function removeProduct(ind) {
+  if (confirm(`Do you want delete "${CART[ind].title}" from list?`)) {
+    CART.splice(ind, 1)
+  }
+}
+
+function actionProduct(title, action = '') {
+  if(!action) return
+
+  const ind = CART.findIndex(el => el.title === title)
+  switch(action){
+    case 'delete':
+      removeProduct(ind)
+      break
+    case 'buy':
+      CART[ind].isBuy = true
+      break
+    case 'incQty':
+      CART[ind].qty += 1
+      break
+    case 'decQty':
+      if(CART[ind].qty > 1) {
+        CART[ind].qty -= 1
+      }else if(CART[ind].qty == 1) {
+        actionProduct(title, 'delete')
+      }
+      break
+  }
+
+  showProductList()
 }
 
 function calcCartTotal() {
