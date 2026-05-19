@@ -1,7 +1,3 @@
-body{
-  display: flex;
-  justify-content: space-around;
-}
 #list-container {
   font-family: monospace;
   font-size: 1.4rem;
@@ -12,7 +8,7 @@ body{
   align-items: center;
   flex-direction: column;
   border-radius: 10px;
-
+  margin: 0 auto;
 
   ol {
     display: flex;
@@ -99,6 +95,7 @@ img {
   background-color: #3fa7ab;
   color: rgb(76, 75, 75);
   cursor: pointer;
+  margin: 100px auto;
   font-family: monospace;
   font-size: 1rem;
   transition: scale 0.2s;
@@ -108,62 +105,3 @@ img {
   }
 
 }
-
-
-    .traffic-light {
-      background-color: #222;
-      width: 200px;
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      align-items: center;
-      margin-bottom: 30px;
-    }
-    .lamp {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background-color: #444; /* Колір вимкненої лампи */
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-
-    .lamp.red.active {
-      background-color: #ff3b30;
-      box-shadow: 0 0 20px #ff3b30;
-    }
-
-    .lamp.yellow.active {
-      background-color: #ffcc00;
-      box-shadow: 0 0 20px #ffcc00;
-    }
-
-    .lamp.green.active {
-      background-color: #34c759;
-      box-shadow: 0 0 20px #34c759;
-    }
-
-    #toggleBtn {
-      width: 150px;
-      height: 80px;
-      font-size: 14px;
-      color: white;
-      background-color: #3e6f6f;
-      border: none;
-      margin-top: 30px;
-   
-      cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0, 123, 255, 0.2);
-      transition: background-color 0.2s, transform 0.1s;
-    }
-
-    #toggleBtn:hover {
-      background-color: #616c78;
-    }
-
-    #toggleBtn:active {
-      transform: scale(0.97);
-    }

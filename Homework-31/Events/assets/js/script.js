@@ -54,10 +54,10 @@ container.appendChild(ol);
 
 
 const modal = document.getElementById("mainModal");
-const btnModal = document.getElementById("myBtn");
+const btn = document.getElementById("myBtn");
 const closeX = document.querySelector(".close-trigger");
 
-btnModal.onclick = function () {
+btn.onclick = function () {
   modal.style.display = "block";
 }
 
@@ -70,22 +70,3 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 }
-
-
-    const red = document.getElementById('redLamp');
-    const yellow = document.getElementById('yellowLamp');
-    const green = document.getElementById('greenLamp');
-    const btn = document.getElementById('toggleBtn');
-
-  
-    const lamps = [red, yellow, green];
-    let currentLightIndex = 0; 
-
-    btn.addEventListener('click', () => {
-      
-      lamps[currentLightIndex].classList.remove('is-open', 'active');
-
-      currentLightIndex = (currentLightIndex + 1) % lamps.length;
-
-      lamps[currentLightIndex].classList.add('active');
-    });

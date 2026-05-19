@@ -37,10 +37,10 @@ playList.forEach(function (item) {
 });
 container.appendChild(ol);
 var modal = document.getElementById("mainModal");
-var btnModal = document.getElementById("myBtn");
+var btn = document.getElementById("myBtn");
 var closeX = document.querySelector(".close-trigger");
 
-btnModal.onclick = function () {
+btn.onclick = function () {
   modal.style.display = "block";
 };
 
@@ -53,15 +53,3 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
-
-var red = document.getElementById('redLamp');
-var yellow = document.getElementById('yellowLamp');
-var green = document.getElementById('greenLamp');
-var btn = document.getElementById('toggleBtn');
-var lamps = [red, yellow, green];
-var currentLightIndex = 0;
-btn.addEventListener('click', function () {
-  lamps[currentLightIndex].classList.remove('is-open', 'active');
-  currentLightIndex = (currentLightIndex + 1) % lamps.length;
-  lamps[currentLightIndex].classList.add('active');
-});
