@@ -9,29 +9,81 @@
   <link rel="icon" type="image/svg+xml" href="./assets/SVG/lebid.svg">
   <!-- Styles -->
   <link rel="stylesheet" href="./assets/css/style.min.css">
- 
+
 
   <!-- Scripts -->
   <script src="./assets/js/script.js" defer></script>
 
-  <title>DOM</title>
+  <title>Events</title>
 </head>
 
 <body>
-  <div id="list-container">
+
+</body>
+<div class="container">
+  <div class="wrapper1">
+    <div class="manipulation-instructions">
+      Натисніть <code>Ctrl + E</code> для редагування. <br>
+      Натисніть <code>Ctrl + S</code> для збереження.
+    </div>
+    <div id="text-view">Це початковий текст, який можна відредагувати. Натисни комбінацію клавіш, щоб спробувати!</div>
+    <textarea id="text-edit" class="hidden"></textarea>
   </div>
 
+  <div class="wrapper2">
+    <h2>Список товарів (Клікніть на заголовок для сортування)</h2>
 
-  <!-- Modal window -->
-  <button id="myBtn">Open <br>modal window</button>
-  <div class="modal-bg" id="mainModal">
-    <div class="modal-content">
-      <p>This is modal window</p>
-      <span class="close-trigger">&#10008;
-      </span>
-      <img src="./assets/image/1.png" alt="">
+    <table id="sortable-table">
+      <thead>
+        <tr>
+          <th data-type="number">ID</th>
+          <th data-type="string">Назва товару</th>
+          <th data-type="number">Кількість</th>
+          <th data-type="number">Ціна (грн)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>4</td>
+          <td>Зубна паста ферментна Curaprox Enzycal 1450 ppm 75 мл</td>
+          <td>15</td>
+          <td>444.00</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Шампунь-філер L`Oreal Paris Elseve Hyaluron Plump для волосся, яке потребує зволоження та об'єму 1 л</td>
+          <td>5</td>
+          <td>329.00</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Рідке крем-мило Dove Краса та догляд 750 мл</td>
+          <td>42</td>
+          <td>229.00</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Зволожувальний аква-гель CeraVe з Гіалуроновою кислотою 48 мл</td>
+          <td>8</td>
+          <td>830.00</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Крем для надання сяйва шкірі обличчя L'Oreal Paris Revitalift Filler Glass Skin Liquid Cream 50 мл </td>
+          <td>30</td>
+          <td>555.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="wrapper3">
+    <div class="resizable-box" id="box">
+      <h3>Контейнер із текстом</h3>
+      <p>Затисніть та потягніть коло у правому нижньому кутку, щоб змінити ширину та висоту блоку.</p>
+      <div class="resizer" id="resizer"></div>
     </div>
   </div>
-</body>
+</div>
 
 </html>
