@@ -314,3 +314,61 @@ header {
 }
 
 
+.footer {
+  background-color: $brown-dark;
+  
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 0 85px 0;
+
+    .footer__logo {
+      margin-bottom: 35px;
+    }
+
+    .footer-nav-list {
+      display: grid;
+      gap: 10px;
+
+      li a {
+        font-weight: 500;
+        @include fz(20);
+        color: $brown-light;
+
+        &:hover {
+          color: $tomato-light;
+        }
+      }
+    }
+  }
+
+  .contacts p,
+  a {
+    font-weight: 500;
+    @include fz(26);
+    color: $brown-light;
+    text-transform: capitalize;
+    margin-bottom: 48px;
+  }
+
+
+  .social-icon {
+    display: flex;
+    margin-bottom: 32px;
+
+    .soc-icon {
+      width: 60px;
+      height: 30px;
+    }
+
+  }
+
+  .footer-text {
+    font-weight: 500;
+    @include fz(14);
+    color: $brown-light;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
