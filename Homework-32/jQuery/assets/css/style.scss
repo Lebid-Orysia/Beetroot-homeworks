@@ -58,7 +58,7 @@ body {
 }
 
 .container {
-  width: min(90%, 1600px);
+  width: min(90%, 1200px);
   margin: 0 auto;
 }
 
@@ -84,6 +84,7 @@ header {
 
   .nav-list {
     display: flex;
+    margin-right: 80px;
 
     a {
       padding: 28px 15px;
@@ -140,7 +141,7 @@ header {
 .first-screen-context {
   position: absolute;
   top: 120px;
-  right: 104px;
+  right: 70px;
   width: 400px;
   text-align: center;
 
@@ -149,7 +150,7 @@ header {
     text-transform: uppercase;
     font-weight: 700;
     color: $brown-light;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
 
   .first-screen-btn {
@@ -170,11 +171,11 @@ header {
 
   .lSPager.lSpg {
     position: absolute;
-    bottom: 50px;
-    left: 50%;
+    bottom: 45px;
+    left: 51.4%;
     transform: translateX(-50%);
     display: flex;
-    gap: 30px;
+    gap: 20px;
   }
 
 }
@@ -211,7 +212,7 @@ header {
     }
 
     img {
-      padding: 20px 10px 10px 10px;
+      padding: 34px 10px 22px;
     }
 
     .catalog-item-title {
@@ -269,25 +270,25 @@ header {
 }
 
 #goToPrevSlide {
-  top: 320px;
-  left: 25px;
+  top: 275px;
+  left: 40px;
 }
 
 #goToNextSlide {
-  top: 320px;
-  right: 25px;
+  top: 275px;
+  right: 40px;
 }
 
 .partners {
   background: $brown-light;
-  padding: 70px 0;
+  padding: 73px 0 68px;
   position: relative;
 }
 
 
 #partnerSlider li img {
-  width: 80%;
-  height: 80px;
+  width: 90%;
+  height: 60px;
   object-fit: contain;
   display: block;
 }
@@ -304,24 +305,24 @@ header {
 }
 
 #goToPrevSlide2 {
-  top: 155px;
-  left: 25px;
+  top: 150px;
+  left: 40px;
 }
 
 #goToNextSlide2 {
-  top: 155px;
-  right: 25px;
+  top: 150px;
+  right: 40px;
 }
 
 
 .footer {
   background-color: $brown-dark;
-  
+
 
   .footer-content {
     display: flex;
     justify-content: space-between;
-    padding: 70px 0 85px 0;
+    padding: 70px 32px 85px;
 
     .footer__logo {
       margin-bottom: 35px;
