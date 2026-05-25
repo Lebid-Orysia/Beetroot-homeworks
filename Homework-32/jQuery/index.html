@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -10,6 +10,7 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="./assets/css/fonts.css">
+  <link rel="stylesheet" href="./plugins/lightSlider/css/lightslider.min.css">
   <link rel="stylesheet" href="./assets/css/style.min.css">
 
   <title>On Wave</title>
@@ -35,10 +36,22 @@
           </nav>
           <div class="header__btns">
             <button type="button" class="search-btn btn">
-              <img src="./assets/img/search-icon.svg" alt="Search Icon">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M36 34.1172L25.944 24.0611C28.3605 21.1601 29.5655 17.439 29.3084 13.6721C29.0513 9.90519 27.3518 6.38241 24.5635 3.83662C21.7751 1.29083 18.1127 -0.0819787 14.338 0.00378988C10.5633 0.0895584 6.96692 1.6273 4.29711 4.29711C1.6273 6.96692 0.0895584 10.5633 0.00378988 14.338C-0.0819787 18.1127 1.29083 21.7751 3.83662 24.5635C6.38241 27.3518 9.90519 29.0513 13.6721 29.3084C17.439 29.5655 21.1601 28.3605 24.0611 25.944L34.1172 36L36 34.1172ZM2.71076 14.6949C2.71076 12.3246 3.41361 10.0076 4.73045 8.03686C6.04728 6.06608 7.91894 4.53004 10.1088 3.62299C12.2986 2.71594 14.7082 2.47862 17.0329 2.94103C19.3576 3.40344 21.4929 4.54482 23.1689 6.22083C24.845 7.89684 25.9863 10.0322 26.4487 12.3569C26.9112 14.6816 26.6738 17.0912 25.7668 19.281C24.8597 21.4708 23.3237 23.3425 21.3529 24.6593C19.3821 25.9762 17.0651 26.679 14.6949 26.679C11.5176 26.6755 8.47142 25.4117 6.22472 23.1651C3.97802 20.9184 2.71428 17.8722 2.71076 14.6949Z"
+                  fill="black" />
+              </svg>
+
             </button>
             <button type="button" class="profile-btn btn">
-              <img src="./assets/img/profile-icon.svg" alt="Profile Icon">
+              <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19 1C9.0586 1 1 9.0586 1 19C1 28.9414 9.0586 37 19 37C28.9414 37 37 28.9414 37 19C37 9.0586 28.9414 1 19 1Z"
+                  stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M5 30C5 30 9.03726 24.9286 18.9991 24.9286C28.9609 24.9286 33 30 33 30H5ZM18.9991 18.6917C20.4402 18.6917 21.8223 18.1285 22.8413 17.126C23.8603 16.1234 24.4328 14.7637 24.4328 13.3459C24.4328 11.9281 23.8603 10.5683 22.8413 9.56577C21.8223 8.56322 20.4402 8 18.9991 8C17.558 8 16.1759 8.56322 15.1569 9.56577C14.1378 10.5683 13.5654 11.9281 13.5654 13.3459C13.5654 14.7637 14.1378 16.1234 15.1569 17.126C16.1759 18.1285 17.558 18.6917 18.9991 18.6917V18.6917Z"
+                  stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
             </button>
           </div>
         </div>
@@ -47,28 +60,37 @@
 
     <main class="main">
       <section class="first-screen">
-        <div class="slider-container">
-          <div class="slider">
-            <div class="slide active">
-              <img src="./assets/img/hero1.png" alt="Slide 1">
+        <div id="lightSlider">
+          <div class="first-screen-item">
+            <div class="first-screen-context">
+              <h2 class="first-screen-title">discover new options
+              </h2>
+              <button class="first-screen-btn">view more</button>
             </div>
-            <div class="slide">
-              <img src="./assets/img/hero2.png" alt="Slide 2">
-            </div>
-            <div class="slide">
-              <img src="./assets/img/hero3.png" alt="Slide 3">
-            </div>
+            <img src="./assets/img/hero1.png" alt="first-screen-1">
           </div>
-          <div class="first-screen-content">
-            <h1 class="first-screen-title">Find your own style</h1>
-            <button class="first-screen-btn btn">view more</button>
+          <div class="first-screen-item">
+            <div class="first-screen-context">
+              <h2 class="first-screen-title">expand your horizons
+              </h2>
+              <button class="first-screen-btn">view more</button>
+            </div>
+            <img src="./assets/img/hero2.png" alt="first-screen-2">
+          </div>
+          <div class="first-screen-item">
+            <div class="first-screen-context">
+              <h2 class="first-screen-title">Find your own style
+              </h2>
+              <button class="first-screen-btn">view more</button>
+            </div>
+            <img src="./assets/img/hero3.png" alt="first-screen-3">
           </div>
       </section>
 
       <section class="catalog">
         <div class="container">
-
-          <div class="catalog-items">
+          <h2 class="catalog-title">new arrivals</h2>
+          <div class="catalog-slider" id="catalogSlider">
             <div class="catalog-item">
               <img src="./assets/img/gitar-bordo.png" alt="gitar-bordo">
               <h3 class="catalog-item-title">Hagstrom Alvar Limited Edition</h3>
@@ -95,6 +117,9 @@
               <p class="catalog-item-price">€1.499,00</p>
             </div>
           </div>
+          <button id="goToPrevSlide"><img src="./plugins/lightSlider/img/prev.svg" alt=""></button>
+          <button id="goToNextSlide"><img src="./plugins/lightSlider/img/next.svg" alt=""></button>
+
 
           <button class="catalog-btn btn">view more</button>
         </div>
@@ -103,32 +128,37 @@
       <section class="partners">
         <div class="container">
           <h2 class="partners-title">Our partners</h2>
-            <ul class="partners-logos">
-              <li>
-                <a href=""> <img src="./assets/img/epiphone.svg" alt="Partner 1"></a>
-              </li>
-              <li>
-                <a href=""> <img src="./assets/img/esp.svg" alt="Partner 2"></a>
-              </li>
-              <li>
-                <a href=""> <img src="./assets/img/gibson.svg" alt="Partner 3"></a>
-              </li>
-              <li>
-                <a href=""> <img src="./assets/img/roland.svg" alt="Partner 4"></a>
-              </li>
-              <li>
-                <a href=""> <img src="./assets/img/fender.svg" alt="Partner 5"></a>
-              </li>
-              <li>
-                <a href=""> <img src="./assets/img/peavey.svg" alt="Partner 6"></a>
-              </li>
-              <li>
-                <a href=""> <img src="./assets/img/marshal.svg" alt="Partner 7"></a>
-              </li>
-              <li>
-                <a href=""> <img src="./assets/img/orange.svg" alt="Partner 8"></a>
-              </li>
-            </ul>
+          <ul class="partners-logos" id="partnerSlider">
+            <li>
+              <a href=""> <img src="./assets/img/epiphone.svg" alt="Partner 1"></a>
+            </li>
+            <li>
+              <a href=""> <img src="./assets/img/esp.svg" alt="Partner 2"></a>
+            </li>
+            <li>
+              <a href=""> <img src="./assets/img/gibson.svg" alt="Partner 3"></a>
+            </li>
+            <li>
+              <a href=""> <img src="./assets/img/engl.svg" alt="Partner 3"></a>
+            </li>
+            <li>
+              <a href=""> <img src="./assets/img/roland.svg" alt="Partner 4"></a>
+            </li>
+            <li>
+              <a href=""> <img src="./assets/img/fender.svg" alt="Partner 5"></a>
+            </li>
+            <li>
+              <a href=""> <img src="./assets/img/peavey.svg" alt="Partner 6"></a>
+            </li>
+            <li>
+              <a href=""> <img src="./assets/img/marshal.svg" alt="Partner 7"></a>
+            </li>
+            <li>
+              <a href=""> <img src="./assets/img/orange.svg" alt="Partner 8"></a>
+            </li>
+          </ul>
+          <button id="goToPrevSlide2"><img src="./plugins/lightSlider/img/prev.svg" alt=""></button>
+          <button id="goToNextSlide2"><img src="./plugins/lightSlider/img/next.svg" alt=""></button>
         </div>
       </section>
 
@@ -145,23 +175,54 @@
               <li><a href="#">Contacts</a></li>
             </ul>
           </nav>
-          
-          <div class="footer-socials">
-            <h3 class="footer-socials-title">Contact us</h3>
-            <a href="#"><img src="./assets/img/instagram.svg" alt="Instagram"></a>
-            <a href="#"><img src="./assets/img/facebook.svg" alt="Facebook"></a>
-            <a href="#"><img src="./assets/img/pinterest.svg" alt="Pinterest"></a>
-            <a href="#"><img src="./assets/img/twitter.svg" alt="Twitter"></a>
-            <a href="#"><img src="./assets/img/youtube.svg" alt="YouTube"></a>
-          </div>
+
+          <ul id="partnerSlider">
+            <li>
+              <a href="#">
+                <svg class="soc-icon">
+                  <use href="assets/img/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg class="soc-icon">
+                  <use href="assets/img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg class="soc-icon">
+                  <use href="assets/img/sprite.svg#icon-pinterest"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg class="soc-icon">
+                  <use href="assets/img/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg class="soc-icon">
+                  <use href="assets/img/sprite.svg#icon-youtube"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
           <p class="footer-text">© 2024 On Wave. All rights reserved.</p>
         </div>
       </div>
-      
+
     </footer>
   </div>
 
 
+  <script src="./jquery-4.0.0.min.js"></script>
+  <script src="./plugins/lightSlider/js/lightslider.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
 

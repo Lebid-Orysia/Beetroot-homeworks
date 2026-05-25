@@ -68,6 +68,7 @@ header {
   left: 0;
   top: 0;
   background-color: $brown-light;
+  z-index: 100;
 }
 
 .header__content {
@@ -116,6 +117,200 @@ header {
   margin-top: 80px;
 }
 
-.catalog-items {
-width: calc(100vw + 80px);
+@mixin btn {
+  padding: 15px 57px;
+  width: 227px;
+  height: 50px;
+  font-weight: 500;
+  @include fz(18);
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  background-color: transparent;
 }
+
+.first-screen {
+  margin-bottom: 70px;
+}
+
+.first-screen-item {
+  position: relative;
+}
+
+.first-screen-context {
+  position: absolute;
+  top: 120px;
+  right: 104px;
+  width: 400px;
+  text-align: center;
+
+  h2 {
+    @include fz(50);
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $brown-light;
+    margin-bottom: 50px;
+  }
+
+  .first-screen-btn {
+    @include btn;
+    border: 2px solid $brown-light;
+    color: $brown-light;
+
+    &:hover {
+      border: 2px solid $tomato-light;
+      background-color: $tomato-light;
+      color: $brown-light;
+    }
+  }
+}
+
+.lSSlideOuter {
+  position: relative;
+
+  .lSPager.lSpg {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
+  }
+
+}
+
+.lSSlideOuter .lSPager.lSpg>li a {
+  width: 20px;
+  height: 20px;
+  background: rgba(248, 241, 234, 0.7);
+
+  &:hover {
+    background: $dark-dot-inactive;
+  }
+}
+
+.lSSlideOuter .lSPager.lSpg>li.active a {
+  background: $tomato-light;
+  width: 20px;
+  height: 20px;
+}
+
+
+.catalog {
+  margin-bottom: 70px;
+  position: relative;
+
+  .catalog-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid $brown-light;
+
+    &:hover {
+      border: 1px solid $tomato-light;
+    }
+
+    img {
+      padding: 20px 10px 10px 10px;
+    }
+
+    .catalog-item-title {
+      text-align: center;
+      font-weight: 600;
+      @include fz(16);
+      color: $black;
+      margin-bottom: 10px;
+      width: 204px;
+    }
+
+    .catalog-item-price {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      text-align: center;
+      color: #000;
+      margin-bottom: 20px;
+    }
+
+  }
+
+  .catalog-btn {
+    @include btn;
+    display: block;
+    margin: 50px auto;
+
+    &:hover {
+      border: 2px solid $tomato-light;
+      background-color: $tomato-light;
+      color: $brown-light;
+    }
+  }
+}
+
+.catalog-title,
+.partners-title {
+  @include fz(32);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: $black;
+  margin-bottom: 50px;
+}
+
+
+#goToPrevSlide,
+#goToNextSlide,
+#goToPrevSlide2,
+#goToNextSlide2 {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+}
+
+#goToPrevSlide {
+  top: 320px;
+  left: 80px;
+}
+
+#goToNextSlide {
+  top: 320px;
+  right: 80px;
+}
+
+.partners {
+  background: $brown-light;
+  padding: 70px 0;
+  position: relative;
+}
+
+
+#partnerSlider li img {
+  width: 80%;
+  height: 80px;
+  object-fit: contain;
+  display: block;
+}
+
+#partnerSlider li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#partnerSlider li a {
+  display: block;
+  width: 100%;
+}
+
+#goToPrevSlide2 {
+  top: 165px;
+  left: 80px;
+}
+
+#goToNextSlide2 {
+  top: 165px;
+  right: 80px;
+}
+
+
