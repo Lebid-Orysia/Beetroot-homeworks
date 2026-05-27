@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="gradL" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f9a8d4"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Група букв по центру для фавікону -->
+  <g transform="translate(100,120) scale(3)">
+    <!-- Літера O темно-сіра з рожевою обводкою -->
+    <text x="0" y="0" text-anchor="middle"
+          font-family="Playfair Display, serif"
+          font-size="56" font-weight="700"
+          fill="#777"
+          stroke="#f9a8d4"
+          stroke-width="0.5">O</text>
+
+    <!-- Літера L рожевий градієнт з чорною обводкою -->
+    <text x="8" y="12" text-anchor="middle"
+          font-family="Playfair Display, serif"
+          font-size="56" font-weight="700"
+          fill="url(#gradL)"
+          stroke="#000000"
+          stroke-width="0.5"
+          fill-opacity="0.85">L</text>
+  </g>
+</svg>
