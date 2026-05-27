@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
   $("#lightSlider").lightSlider({
     item: 1,              // Показувати по 1 слайду на екрані
     mode: 'slide',        // Саме гортання вбік
@@ -14,7 +14,7 @@ $(document).ready(function() {
 });
 
 
-$(document).ready(function() {
+$(function() {
   const catalogSlider = $("#catalogSlider").lightSlider({
     item: 5,              // Показувати 5 елементів одночасно на великих екранах
     loop: true,           // Безкінечне коло (циклічне гортання)
@@ -31,14 +31,16 @@ $(document).ready(function() {
         breakpoint: 1024, // Для екранів менше 1024px (планшети)
         settings: {
           item: 3,        // Показувати 3 елементи
-          slideMove: 1
+          slideMove: 1,
+          pager: false
         }
       },
       {
         breakpoint: 768,  // Для екранів менше 768px (смартфони)
         settings: {
           item: 1,        // Показувати по 1 елементу
-          slideMove: 1
+          slideMove: 1,
+          pager: true
         }
       }
     ]
@@ -53,8 +55,7 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function() {
-  // 1. Спочатку просто ініціалізуємо слайдер
+$(function() {
     const partnerSlider = $("#partnerSlider").lightSlider({
     item: 9,              
     loop: true,           
@@ -63,28 +64,28 @@ $(document).ready(function() {
     speed: 600,           
     slideMargin: 30,      
     pager: false,         
-    controls: false, // Власні стрілки, тому стандартні вимкнені
+    controls: false, 
     
     responsive: [
       {
         breakpoint: 1024, 
         settings: {
           item: 6,        
-          slideMove: 1
+          slideMove: 1,
+          pager: false
         }
       },
       {
         breakpoint: 768,  
         settings: {
           item: 2,        
-          slideMove: 1
+          slideMove: 1,  
+          pager: true
         }
       }
     ]
-  }); // <-- Тут закрили налаштування слайдера
+  }); 
 
-
-  // 3. Вішаємо події на ваші кастомні кнопки
   $('#goToPrevSlide2').click(function() {
     partnerSlider.goToPrevSlide(); 
   });

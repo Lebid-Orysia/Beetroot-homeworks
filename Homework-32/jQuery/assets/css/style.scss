@@ -183,7 +183,7 @@ header {
 .lSSlideOuter .lSPager.lSpg>li a {
   width: 20px;
   height: 20px;
-  background: rgba(248, 241, 234, 0.7);
+  background: $dark-dot-inactive;
 
   &:hover {
     background: $dark-dot-inactive;
@@ -371,5 +371,108 @@ header {
     color: $brown-light;
     text-align: center;
     margin-bottom: 20px;
+  }
+}
+
+
+@media screen and (max-width: 1230px) {
+
+  #goToNextSlide,
+  #goToNextSlide2,
+  #goToPrevSlide,
+  #goToPrevSlide2 {
+    width: 16px;
+    height: 30px;
+  }
+
+
+  #goToPrevSlide,
+  #goToPrevSlide2 {
+    left: 15px;
+  }
+
+  #goToNextSlide,
+  #goToNextSlide2 {
+    right: 15px;
+  }
+
+  #goToPrevSlide2,
+  #goToNextSlide2 {
+    top: 170px;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  .first-screen-context {
+    top: 50px;
+    right: 59px;
+    width: 210px;
+  }
+
+  .first-screen-context h2 {
+    @include fz(26);
+    margin-bottom: 20px;
+  }
+
+  .first-screen-btn {
+    width: 154px;
+    height: 40px;
+    padding: 10px 16px;
+  }
+
+  .lSSlideOuter .lSPager.lSpg {
+    bottom: 20px;
+  }
+
+  .lSSlideOuter .lSPager.lSpg>li a {
+    width: 12px;
+    height: 12px;
+  }
+
+  .lSSlideOuter .lSPager.lSpg>li.active a {
+    width: 12px;
+    height: 12px;
+  }
+
+  .catalog-title, .partners-title {
+    @include fz(20);
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  #goToNextSlide,
+  #goToNextSlide2,
+  #goToPrevSlide,
+  #goToPrevSlide2 {
+    display: none;
+  }
+
+
+  .header__content .nav-list {
+    display: none;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer .social-icon .soc-icon {
+    width: 42px;
+    height: 25px;
+  }
+
+  .footer__logo {
+    width: 80%;
+  }
+
+  .header__content {
+    height: 60px;
+  }
+
+  .main {
+    margin-top: 60px;
   }
 }
