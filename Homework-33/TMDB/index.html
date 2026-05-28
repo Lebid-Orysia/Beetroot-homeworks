@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/SVG/lebid.svg">
+
+  <!-- Styles -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<link rel="stylesheet" href="./assets/css/fonts.css">
+<link rel="stylesheet" href="./assets/css/style.min.css">
+
+<title>Сatch-movie</title>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <div class="img-wrapper">
+            <a href="#" class="header__logo">
+              <img src="./assets/SVG/catch-movie.svg" alt="catch-movie Logo">
+            </a>
+          </div>
+          <nav class="header__nav">
+            <ul class="nav-list">
+              <li><a href="#"><img src="./assets/img/film_frames.png" alt="">Movies</a></li>
+              <li><a href="#"><img src="./assets/img/clapper.png" alt="">Series</a></li>
+              <li><a href="#"><img src="./assets/img/clown_face.png" alt="">Cartoons</a></li>
+              <li><a href="#"><img src="./assets/img/heart_on_fire.png" alt="">Doramas</a></li>
+            </ul>
+          </nav>
+          <div class="header__btns">
+            <button type="button" class="search-btn btn">
+              <svg width="30" height="30" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M36 34.1172L25.944 24.0611C28.3605 21.1601 29.5655 17.439 29.3084 13.6721C29.0513 9.90519 27.3518 6.38241 24.5635 3.83662C21.7751 1.29083 18.1127 -0.0819787 14.338 0.00378988C10.5633 0.0895584 6.96692 1.6273 4.29711 4.29711C1.6273 6.96692 0.0895584 10.5633 0.00378988 14.338C-0.0819787 18.1127 1.29083 21.7751 3.83662 24.5635C6.38241 27.3518 9.90519 29.0513 13.6721 29.3084C17.439 29.5655 21.1601 28.3605 24.0611 25.944L34.1172 36L36 34.1172ZM2.71076 14.6949C2.71076 12.3246 3.41361 10.0076 4.73045 8.03686C6.04728 6.06608 7.91894 4.53004 10.1088 3.62299C12.2986 2.71594 14.7082 2.47862 17.0329 2.94103C19.3576 3.40344 21.4929 4.54482 23.1689 6.22083C24.845 7.89684 25.9863 10.0322 26.4487 12.3569C26.9112 14.6816 26.6738 17.0912 25.7668 19.281C24.8597 21.4708 23.3237 23.3425 21.3529 24.6593C19.3821 25.9762 17.0651 26.679 14.6949 26.679C11.5176 26.6755 8.47142 25.4117 6.22472 23.1651C3.97802 20.9184 2.71428 17.8722 2.71076 14.6949Z"
+                  fill="black" />
+              </svg>
+
+            </button>
+            <button type="button" class="profile-btn btn">
+              <svg width="30" height="30" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19 1C9.0586 1 1 9.0586 1 19C1 28.9414 9.0586 37 19 37C28.9414 37 37 28.9414 37 19C37 9.0586 28.9414 1 19 1Z"
+                  stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M5 30C5 30 9.03726 24.9286 18.9991 24.9286C28.9609 24.9286 33 30 33 30H5ZM18.9991 18.6917C20.4402 18.6917 21.8223 18.1285 22.8413 17.126C23.8603 16.1234 24.4328 14.7637 24.4328 13.3459C24.4328 11.9281 23.8603 10.5683 22.8413 9.56577C21.8223 8.56322 20.4402 8 18.9991 8C17.558 8 16.1759 8.56322 15.1569 9.56577C14.1378 10.5683 13.5654 11.9281 13.5654 13.3459C13.5654 14.7637 14.1378 16.1234 15.1569 17.126C16.1759 18.1285 17.558 18.6917 18.9991 18.6917V18.6917Z"
+                  stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="bg-img">
+        <div class="container">
+          <div class="container text-center">
+            <form id="search_movies_form">
+              <!-- https://api.themoviedb.org/3/search/movie
+             ?query=batman
+             &
+             include_adult=false
+             &
+             language=en-US
+             &
+             page=1 -->
+              <input type="hidden" name="include_adult" value="false">
+              <input type="hidden" name="language" value="en-US">
+              <input type="hidden" name="page" value="1">
+
+              <div class="input-group mb-5 input-group input-group-lg">
+                <input type="text" class="form-control" name="query" placeholder="search..." id="title" required>
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">
+                  <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M36 34.1172L25.944 24.0611C28.3605 21.1601 29.5655 17.439 29.3084 13.6721C29.0513 9.90519 27.3518 6.38241 24.5635 3.83662C21.7751 1.29083 18.1127 -0.0819787 14.338 0.00378988C10.5633 0.0895584 6.96692 1.6273 4.29711 4.29711C1.6273 6.96692 0.0895584 10.5633 0.00378988 14.338C-0.0819787 18.1127 1.29083 21.7751 3.83662 24.5635C6.38241 27.3518 9.90519 29.0513 13.6721 29.3084C17.439 29.5655 21.1601 28.3605 24.0611 25.944L34.1172 36L36 34.1172ZM2.71076 14.6949C2.71076 12.3246 3.41361 10.0076 4.73045 8.03686C6.04728 6.06608 7.91894 4.53004 10.1088 3.62299C12.2986 2.71594 14.7082 2.47862 17.0329 2.94103C19.3576 3.40344 21.4929 4.54482 23.1689 6.22083C24.845 7.89684 25.9863 10.0322 26.4487 12.3569C26.9112 14.6816 26.6738 17.0912 25.7668 19.281C24.8597 21.4708 23.3237 23.3425 21.3529 24.6593C19.3821 25.9762 17.0651 26.679 14.6949 26.679C11.5176 26.6755 8.47142 25.4117 6.22472 23.1651C3.97802 20.9184 2.71428 17.8722 2.71076 14.6949Z"
+                      fill="black" />
+                  </svg></button>
+              </div>
+            </form>
+
+            <div>
+              <div class="row gy-4 pb-5 " id="result-wrapp">
+                <template id="movie_list_item">
+                  <div class="col">
+                    <div class="card mt-6" style="width: 20rem;">
+                      <img src="" class="card-img-top" alt="" height="100">
+                      <div class="card-body">
+                        <h4 class="title"></h4>
+                        <p class="subtitle"></p>
+                        <p class="content"></p>
+                        <button type="button" class="btn btn-secondary more_info">More info</button>
+                      </div>
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </div>
+          <div class="wait-img-wrapper" id="wait"><img src="./assets/img/wait.png" alt=""></div>
+        </div>
+      </div>
+
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="img-wrapper">
+            <a href="#" class="footer__logo">
+              <img src="./assets/SVG/catch-movie.svg" alt="catch-movie Logo">
+            </a>
+          </div>
+          <nav class="footer-nav">
+            <ul class="footer-nav-list">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Catalog</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Contacts</a></li>
+            </ul>
+          </nav>
+
+          <div class="contacts">
+            <p>contact us</p>
+            <ul class="social-icon">
+              <li>
+                <a href="#">
+                  <svg class="soc-icon">
+                    <use href="assets/img/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="soc-icon">
+                    <use href="assets/img/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="soc-icon">
+                    <use href="assets/img/sprite.svg#icon-pinterest"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="soc-icon">
+                    <use href="assets/img/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="soc-icon">
+                    <use href="assets/img/sprite.svg#icon-youtube"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <a href="tel:+08003004040">0800 300 4040</a>
+          </div>
+        </div>
+        <p class="footer-text">© 2026 Catch-movie. All rights reserved.</p>
+      </div>
+
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+  </script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
