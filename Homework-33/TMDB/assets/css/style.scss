@@ -87,7 +87,7 @@ header {
   height: 100px;
 
   .header__logo img {
-    padding-bottom: 25px;
+    width: 120px;
   }
 
 
@@ -123,6 +123,10 @@ header {
       border: none;
       background-color: transparent;
       cursor: pointer;
+
+      &:hover{
+        scale: 1.1;
+      }
     }
   }
 }
@@ -166,8 +170,7 @@ header {
       display: block;
 
       img {
-
-        filter: invert(80%);
+        width: 120px;
       }
     }
 
@@ -204,6 +207,10 @@ header {
     .soc-icon {
       width: 60px;
       height: 30px;
+
+      &:hover{
+        scale: 1.1;
+      }
     }
 
   }
