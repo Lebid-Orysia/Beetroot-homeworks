@@ -1,5 +1,5 @@
 import { AUTH_TOKEN, DEV_MODE, BASE_URL } from "./env.js";
-import { loader, formatDate } from "./helpers.js";
+import { loader, formatDate, toast } from "./helpers.js";
 
 function showPage(name) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -47,14 +47,13 @@ async function search() {
   const formData = new FormData(form);
   const serializedString = new URLSearchParams(formData).toString();
   const url = DEV_MODE
-    ? '/mocks/movies.json'
+    ? './mocks/movies.json'
     : BASE_URL + 'search/movie?' + serializedString
   const response = await authFetch(url)
   if (response.isOK) {
     showResult(response.data)
   } else {
-    //TODO: replace with error toast
-    alert("Some error occured. Try again, please")
+    toast.error('Some error occured. Try again, please')
   }
   
 }
@@ -82,19 +81,20 @@ async function getMovieDetail(id){
     return JSON.parse(localStorage.getItem('movie_'+id))
   }
   const url = DEV_MODE
-    ? '/mocks/detail.json'
+    ? './mocks/detail.json'
     : 'https://api.themoviedb.org/3/movie/' + id
   const response = await authFetch(url)
-  if (response.isOK) {
-     return response.data
-  } else {
-    //TODO: replace with error toast
-    alert("Some error occured. Try again, please")
+  if (!response.isOK) {
+    toast.error('Some error occured. Try again, please')
+    return null
   }
+  localStorage.setItem('movie_'+id, JSON.stringify(response.data))
+     return response.data
 }
 
 async function showDetail(id) {
   const item = await getMovieDetail(id)
+  if (!item) return
   const detail = document.getElementById('page-detail')
 
   detail.querySelector('.hero-bg').style.backgroundImage = `url('https://image.tmdb.org/t/p/w1280${item.backdrop_path}')`
