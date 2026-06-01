@@ -523,9 +523,11 @@ h1.hero-title em {
   justify-content: center;
   gap: 8px;
   margin-top: 48px;
+  list-style: none;
 }
 
-.page-btn {
+.page-btn,
+.page-sep {
   width: 36px;
   height: 36px;
   border-radius: var(--radius-sm);
@@ -537,17 +539,33 @@ h1.hero-title em {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   transition: all 0.15s;
   font-family: 'DM Sans', sans-serif;
 }
 
-.page-btn:hover {
+.page-btn {
+  cursor: pointer;
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+}
+
+.page-btn:not(:disabled):hover {
   border-color: var(--accent);
   color: var(--accent);
 }
 
-.page-btn.active {
+.page-active {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border2);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
   background: var(--accent);
   border-color: var(--accent);
   color: #0C0E14;
@@ -917,4 +935,26 @@ body.loading::after {
 }
 
 
-.my-toast{position:fixed;left:20px;top:20px;border-radius:5px;padding:10px;color:#f0f8ff;min-width:200px;background-color:#7a7a7a;z-index:10000}.my-toast.success{background-color:#5fa35f}.my-toast.error{background-color:#c43b3b}.input.qty-input{width:60px}
+.my-toast {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  color: #f0f8ff;
+  min-width: 200px;
+  background-color: #7a7a7a;
+  z-index: 10000
+}
+
+.my-toast.success {
+  background-color: #5fa35f
+}
+
+.my-toast.error {
+  background-color: #c43b3b
+}
+
+.input.qty-input {
+  width: 60px
+}

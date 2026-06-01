@@ -92,7 +92,7 @@ function search() {
         case 0:
           formData = new FormData(form);
           serializedString = new URLSearchParams(formData).toString();
-          url = _env.DEV_MODE ? './mocks/movies.json' : _env.BASE_URL + 'search/movie?' + serializedString;
+          url = _env.DEV_MODE ? './mocks/movies.json?' + serializedString : _env.BASE_URL + 'search/movie?' + serializedString;
           _context2.next = 5;
           return regeneratorRuntime.awrap(authFetch(url));
 
@@ -116,6 +116,7 @@ function search() {
 function showResult(data) {
   var tmpl = document.getElementById('movie_list_item');
   var result = document.getElementById('result-wrap');
+  result.innerHTML = '';
   data.results.forEach(function (item) {
     var clone = document.importNode(tmpl.content, true);
     var img = clone.querySelector('.movie-poster img');
@@ -127,6 +128,7 @@ function showResult(data) {
     clone.querySelector('.movie-info button').dataset.id = item.id;
     result.appendChild(clone);
   });
+  buildPagination(data.page, data.total_pages);
 }
 
 function getMovieDetail(id) {
@@ -215,3 +217,59 @@ document.addEventListener('click', function (e) {
     showDetail(e.target.dataset.id);
   }
 });
+
+function goToPage(newPage) {
+  document.getElementById('page_val').value = newPage;
+  search();
+  console.log('goTOPage: ', newPage);
+}
+
+window.goToPage = goToPage;
+
+function buildPagination(page, totalPages) {
+  var from = 1;
+  var to = totalPages;
+  var showFirst = true;
+  var showLast = true;
+
+  if (totalPages <= 6) {
+    showFirst = showLast = false;
+  } else {
+    if (page >= 1 && page <= 4) {
+      to = 5;
+      showFirst = false;
+    } else if (page >= 5 && page <= totalPages - 4) {
+      from = page - 2;
+      to = page + 2;
+    } else if (page >= totalPages - 4) {
+      from = totalPages - 4;
+      showLast = false;
+    }
+  }
+
+  var items = '';
+  items += "<li>\n      <button class=\"page-btn\" ".concat(page == 1 ? 'disabled' : '', " onclick=\"goToPage(").concat(page - 1, ")\">\n        <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n            <polyline points=\"15 18 9 12 15 6\" />\n         </svg>\n      </button>\n    </li>");
+
+  if (showFirst) {
+    items += "<li>\n      <button class=\"page-btn\" onclick=\"goToPage(1)\">1</button>\n      </li>\n      <li>\n      <button class=\"page-sep\">\u2026</button>\n      </li>";
+  }
+
+  for (var i = from; i <= to; i++) {
+    items += '<li>';
+
+    if (page === i) {
+      items += "<span class=\"page-active\">".concat(i, "</span>");
+    } else {
+      items += "<button class=\"page-btn\" onclick=\"goToPage(".concat(i, ")\">").concat(i, "</button>");
+    }
+
+    items += '</li>';
+  }
+
+  if (showLast) {
+    items += "<li>\n      <button class=\"page-sep\">\u2026</button>\n      </li>\n      <li>\n      <button class=\"page-btn\" onclick=\"goToPage(".concat(totalPages, ")\">").concat(totalPages, "</button>\n      </li>");
+  }
+
+  items += "<li>\n      <button class=\"page-btn\" ".concat(page == totalPages ? 'disabled' : '', " onclick=\"goToPage(").concat(page + 1, ")\">\n        <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\">\n            <polyline points=\"9 18 15 12 9 6\" />\n        </svg>\n      </button>\n        </li>\n    ");
+  document.querySelector('.pagination').innerHTML = items;
+}

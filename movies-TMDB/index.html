@@ -76,7 +76,7 @@
         -->
           <input type="hidden" name="include_adult" value="false">
           <input type="hidden" name="language" value="uk-UA">
-          <input type="hidden" name="page" value="1">
+          <input id="page_val" type="hidden" name="page" value="1">
           <div class="search-bar">
             <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               stroke-width="2">
@@ -128,23 +128,28 @@
       <div class="movie-grid" id="result-wrap"></div>
 
       <!-- Pagination -->
-      <div class="pagination">
-        <div class="page-btn">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
-        </div>
-        <div class="page-btn active">1</div>
-        <div class="page-btn">2</div>
-        <div class="page-btn">3</div>
-        <div class="page-btn">…</div>
-        <div class="page-btn">24</div>
-        <div class="page-btn">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
-        </div>
-      </div>
+      <ul class="pagination">
+        <li>
+          <button class="page-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button class="page-btn active">1</button>
+        </li>
+        <li>
+          <button class="page-sep">…</button>
+        </li>
+        <li>
+          <button class="page-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+        </li>
+      </ul>
     </div>
 
   </div>

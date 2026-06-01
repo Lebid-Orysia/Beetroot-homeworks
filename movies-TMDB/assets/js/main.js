@@ -47,7 +47,7 @@ async function search() {
   const formData = new FormData(form);
   const serializedString = new URLSearchParams(formData).toString();
   const url = DEV_MODE
-    ? './mocks/movies.json'
+    ? './mocks/movies.json?' + serializedString
     : BASE_URL + 'search/movie?' + serializedString
   const response = await authFetch(url)
   if (response.isOK) {
@@ -61,6 +61,7 @@ async function search() {
 function showResult(data){
   const tmpl = document.getElementById('movie_list_item')
   const result = document.getElementById('result-wrap')
+  result.innerHTML = ''
   data.results.forEach(item => {
     const clone = document.importNode(tmpl.content, true)
    
@@ -74,6 +75,7 @@ function showResult(data){
 
     result.appendChild(clone)
   })
+  buildPagination(data.page, data.total_pages)
 }
 
 async function getMovieDetail(id){
@@ -107,7 +109,6 @@ async function showDetail(id) {
   detail.querySelector('.detail-overview').innerText = item.overview
 
   
-
   showPage('detail')
 }
 
@@ -118,5 +119,80 @@ document.addEventListener('click', (e)=>{
 })
 
 
+function goToPage(newPage) {
+  document.getElementById('page_val').value = newPage
+  search()
+  console.log('goTOPage: ', newPage); 
+}
 
+window.goToPage = goToPage
+
+function buildPagination(page, totalPages) {
+  let from = 1
+  let to = totalPages
+  let showFirst = true
+  let showLast = true
+
+  if (totalPages <= 6) {
+    showFirst = showLast = false
+  } else {
+      if (page >= 1 && page<= 4){
+      to = 5
+      showFirst = false
+    } else if (page >= 5 && page<= totalPages - 4){
+      from = page - 2
+      to = page + 2
+    } else if (page >= totalPages - 4){
+      from = totalPages - 4
+      showLast = false
+    }
+  }
+
+  let items = ''
+    items +=  `<li>
+      <button class="page-btn" ${page == 1 ? 'disabled' : ''} onclick="goToPage(${page-1})">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6" />
+         </svg>
+      </button>
+    </li>`
+
+    if (showFirst) {
+      items += `<li>
+      <button class="page-btn" onclick="goToPage(1)">1</button>
+      </li>
+      <li>
+      <button class="page-sep">…</button>
+      </li>`
+    }
+
+    for (let i = from; i <= to; i++) {
+      items += '<li>'
+      if (page === i) {
+        items += `<span class="page-active">${i}</span>`
+      } else{
+        items += `<button class="page-btn" onclick="goToPage(${i})">${i}</button>`
+      }
+      items +=  '</li>'
+    }
+
+     if (showLast) {
+      items += `<li>
+      <button class="page-sep">…</button>
+      </li>
+      <li>
+      <button class="page-btn" onclick="goToPage(${totalPages})">${totalPages}</button>
+      </li>`
+    }
+
+    items += `<li>
+      <button class="page-btn" ${page == totalPages ? 'disabled' : ''} onclick="goToPage(${page+1})">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </button>
+        </li>
+    `
+  document.querySelector('.pagination').innerHTML = items
+}
 
