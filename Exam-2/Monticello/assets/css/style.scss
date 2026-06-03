@@ -413,8 +413,6 @@ button {
   }
 }
 
-
-/* Контейнер для автора та дати */
 #news-container {
   display: flex;
   justify-content: center;
@@ -638,11 +636,13 @@ button {
   }
 }
 
-
 .gallery-item.large {
   grid-row: span 2;
   grid-column: span 2;
 }
+
+
+// map section
 
 
 footer {
