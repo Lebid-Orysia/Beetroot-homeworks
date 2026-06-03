@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "SEE THE UNMATCHED BEAUTY OF THE GREAT.",
+    "summary": "Free directories: directories are perfect for customers that are searching for...",
+    "image": "./assets/image/news1.webp",
+    "date": "20 Jan 2020",
+    "author": {
+      "name": "ALJA BRUN",
+      "avatar":  "./assets/image/news-people1.webp"
+    }
+  },
+  {
+    "id": 2,
+    "title": "EFFECTIVE ADVERTISING POINTERS.",
+    "summary": "Having a home based business is a wonderful asset to your life...",
+    "image": "./assets/image/news2.webp",
+    "date": "13 Dec 2019",
+    "author": {
+      "name": "DOMINIC FREEMAN",
+      "avatar": "./assets/image/news-people2.webp"
+    }
+  },
+    {
+    "id": 3,
+    "title": "HYPNOTIZE YOURSELF INTO THE GHOST.",
+    "summary": "There are many things that are important to catalog design...",
+    "image": "./assets/image/news3.webp",
+    "date": "30 Nov 2019",
+    "author": {
+      "name": "ALICE WARD",
+      "avatar": "./assets/image/news-people3.webp"
+    }
+  },
+   {
+    "id": 3,
+    "title": "Never give up, or how I made this block.",
+    "summary": "It all started with disbelief that I was doing it wrong, but...",
+    "image": "./assets/image/news4.webp",
+    "date": "02 Jun 2026",
+    "author": {
+      "name": "ORYSIA LEBID",
+      "avatar": "./assets/image/orysia.webp"
+    }
+  }
+]

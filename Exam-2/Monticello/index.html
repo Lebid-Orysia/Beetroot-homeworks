@@ -12,6 +12,8 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/plugins/lightGallery/css/lightgallery-bundle.min.css">
+  <link rel="stylesheet" href="./assets/plugins/lightSlider/css/lightslider.min.css">
   <link rel="stylesheet" href="./assets/css/fonts.css">
   <link rel="stylesheet" href="./assets/css/style.min.css">
 
@@ -129,7 +131,7 @@
                 <p>Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth
                   is, our thoughts are very powerful.</p>
                 <button type="button">more details</button>
-                <p class="info">New York City, United States - 1776 feet</span>
+                <p class="info">New York City, United States - 1776 feet</p>
               </div>
             </div>
 
@@ -143,7 +145,7 @@
                 <p>Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and
                   how a digital advertising network may help.</p>
                 <button type="button">more details</button>
-                <p class="info">Hong Kong - 1588 feet</>
+                <p class="info">Hong Kong - 1588 feet</p>
               </div>
             </div>
           </div>
@@ -153,11 +155,43 @@
       <!-- section news -->
       <section class="news">
         <div class="container">
-          <div id="news">
-            <h2>
-              latest news
-            </h2>
+          <h2>latest news</h2>
+          <div id="news-container">
+            <ul id="lightSlider"></ul>
+            <button id="goToPrevSlide"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFF"
+                stroke-width="2">
+                <polyline points="15 18 9 12 15 6" />
+              </svg></button>
+            <button id="goToNextSlide"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFF"
+                stroke-width="2">
+                <polyline points="9 18 15 12 9 6" />
+              </svg></button>
           </div>
+        </div>
+      </section>
+
+      <!-- section gallery -->
+      <section class="gallery">
+        <div class="container">
+          <h2 class="gallery-heading">gallery</h2>
+          <div id="lightgallery">
+            <a href="./assets/image/amir-hosseini-3cl6impBd_8-unsplash.webp" data-lg-size="1600-2400" class="gallery-item large">
+              <img alt="modern office in Italy" src="./assets/image/amir-hosseini-3cl6impBd_8-unsplash.webp" />
+            </a>
+            <a href="./assets/image/joel-filipe-D1S4F_SKY2I-unsplash.webp" data-lg-size="1024-800" class="gallery-item">
+              <img alt="modern office in Finland" src="./assets/image/joel-filipe-D1S4F_SKY2I-unsplash.webp" />
+            </a>
+            <a href="./assets/image/kimon-maritz-mQiZnKwGXW0-unsplash.webp" data-lg-size="1024-800" class="gallery-item">
+              <img alt="modern office in France" src="./assets/image/kimon-maritz-mQiZnKwGXW0-unsplash.webp" />
+            </a>
+            <a href="./assets/image/low-angle-shot-grey-concrete-building-representing-modern-architecture.webp" data-lg-size="1024-800" class="gallery-item">
+              <img alt="modern office in Denmark" src="./assets/image/low-angle-shot-grey-concrete-building-representing-modern-architecture.webp" />
+            </a>
+            <a href="./assets/image/low-angle-tall-glass-designed-building.webp" data-lg-size="1024-800" class="gallery-item">
+              <img alt="modern office in Ukraine" src="./assets/image/low-angle-tall-glass-designed-building.webp" />
+            </a>
+          </div>
+          <button type="button">see more</button>
         </div>
       </section>
     </main>
@@ -166,7 +200,9 @@
 
     </footer>
   </div>
-
+  <script src="./jquery-4.0.0.min.js"></script>
+  <script src="./assets/plugins/lightGallery/lightgallery.min.js"></script>
+  <script src="./assets/plugins/lightSlider/js/lightslider.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
