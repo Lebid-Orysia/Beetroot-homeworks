@@ -605,15 +605,15 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: $gray; 
+    background-color: $gray;
     background-image: url('../image/bi_zoom-in.svg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 70px; 
-    opacity: 0; 
+    background-size: 70px;
+    opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 1; 
+    z-index: 1;
   }
 
   img {
@@ -643,10 +643,59 @@ button {
 
 
 // map section
+#map {
+  height: 700px;
+}
 
+#map-link {
+  display: block;
+  position: relative;
 
-footer {
+  >div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $black;
+    color: $text-light;
+    @include fz(32);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all .2s ease;
+  }
+
+  &:hover>div {
+    opacity: .5;
+  }
+
+  >img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// footer
+.footer {
+  height: 550px;
   width: 100%;
-  height: 200px;
-  background-color: #111;
+  background: url(../image/footer-bg.png), $liner-grad-first-screen;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 203px;
+  position: relative;
+}
+
+.contacts{
+  width: 770px;
+  height: 450px;
+  background: url(../image/contacts-bg.png), $text-light;
+  position: absolute;
+  top: -300px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
 }

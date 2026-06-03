@@ -143,6 +143,42 @@ const galleryElement = document.getElementById('lightgallery');
 if (galleryElement) {
   lightGallery(galleryElement, {
     speed: 500,
-    licenseKey: '0000-0000-000-0000' // Додайте цей рядок
+    licenseKey: '0000-0000-000-0000' 
   });
+}
+
+//map
+
+const link = document.getElementById('map-link')
+link.onclick = (e) => {
+  e.preventDefault()
+
+link.remove()
+const leafletCSS = document.createElement('link')
+leafletCSS.setAttribute('rel', 'stylesheet')
+leafletCSS.setAttribute('href', './assets/plugins/leaflet/leaflet.css')
+document.head.appendChild(leafletCSS)
+
+const leafletJS = document.createElement('script')
+leafletJS.setAttribute('src', './assets/plugins/leaflet/leaflet.js')
+leafletJS.onload = () => {
+
+const map = L.map('map').setView([49.839275, 24.029421], 16);
+
+L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
+}).addTo(map);
+
+
+L.marker([49.841672, 24.026475], {
+
+}).addTo(map)
+  .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+
+L.marker([49.841672, 24.026475]).addTo(map)
+  .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+
+}
+document.body.appendChild(leafletJS)
+
 }
