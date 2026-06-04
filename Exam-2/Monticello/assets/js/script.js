@@ -9,7 +9,7 @@ const swiper = new Swiper('.mySwiper', {
     clickable: true,
   },
 
-  allowTouchMove: false, 
+  allowTouchMove: true, 
   autoplay: false, 
   mousewheel: false,     
 

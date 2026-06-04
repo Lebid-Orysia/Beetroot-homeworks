@@ -1067,5 +1067,12 @@ form.contacts-form {
     top: -523px;
   }
 
+  .my-toast{
+    right: 0;
+  }
+
+  .mySwiper {
+    touch-action: pan-y !important; 
+  }
 
 }

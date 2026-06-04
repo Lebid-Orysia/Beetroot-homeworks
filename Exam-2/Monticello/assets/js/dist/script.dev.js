@@ -9,7 +9,7 @@ var swiper = new Swiper('.mySwiper', {
     el: '.swiper-pagination',
     clickable: true
   },
-  allowTouchMove: false,
+  allowTouchMove: true,
   autoplay: false,
   mousewheel: false,
   breakpoints: {
