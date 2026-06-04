@@ -131,7 +131,12 @@
                 <p>Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth
                   is, our thoughts are very powerful.</p>
                 <button type="button">more details</button>
-                <p class="info">New York City, United States - 1776 feet</p>
+                <p class="info">
+                  <svg class="contact-icon contact-icon--location">
+                    <use href="./assets/image/sprite.svg#icon-location"></use>
+                  </svg>
+                  New York City, United States - 1776 feet
+                </p>
               </div>
             </div>
 
@@ -145,7 +150,12 @@
                 <p>Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and
                   how a digital advertising network may help.</p>
                 <button type="button">more details</button>
-                <p class="info">Hong Kong - 1588 feet</p>
+                <p class="info">
+                  <svg class="contact-icon contact-icon--location">
+                    <use href="./assets/image/sprite.svg#icon-location"></use>
+                  </svg>
+                  Hong Kong - 1588 feet
+                </p>
               </div>
             </div>
           </div>
@@ -199,7 +209,7 @@
       <section class="map">
         <div id="map">
           <a href="#" id="map-link"><img src="./assets/image/map.webp" alt="map">
-            <div>Click to load map</div>
+            <div></div>
           </a>
         </div>
       </section>
@@ -209,31 +219,55 @@
     <!-- footer -->
     <footer class="footer">
       <div class="container">
-
-        <div class="contacts-wrapper">
-          <div class="contacts">
+        <div class="contacts">
+          <h2 class="contacts-heading">get in touch</h2>
+          <div class="contacts-wrapper">
             <div class="contacts-info-wrapp">
-              <h2>get in touch</h2>
-              <div class="cotacts-info">
-                <span>91 Nolan Extensions Suite 670</span>
-                <a href="tel:+0013568682454">+001 356-868-2454</a>
-                <a href="mailto:montichello@service.com">montichello@service.com</a>
-                <p> From 07:05AM to 19:30PM</p>
-              </div>
+              <p>
+                <svg class="contact-icon contact-icon--location">
+                  <use href="./assets/image/sprite.svg#icon-location"></use>
+                </svg> 91 Nolan Extensions Suite 670
+              </p>
+              <a href="tel:+0013568682454">
+                <svg class="contact-icon">
+                  <use href="./assets/image/sprite.svg#icon-phone"></use>
+                </svg>
+                +001 356-868-2454</a>
+              <a href="mailto:montichello@service.com">
+                <svg class="contact-icon">
+                  <use href="./assets/image/sprite.svg#icon-mailbox"></use>
+                </svg>
+                montichello@service.com</a>
+              <p>
+                <svg class="contact-icon">
+                  <use href="./assets/image/sprite.svg#icon-clock"></use>
+                </svg>
+                From 07:05AM to 19:30PM
+              </p>
             </div>
 
-            <form>
-              <input type="text">
-              <input type="email">
+            <form action="#" method="POST" class="contacts-form">
+              <div class="did-floating-label-content">
+                <input id="name" name="name" class="did-floating-input" type="text" placeholder=" " required
+                  autocomplete="name">
+                <label for="name" class="did-floating-label">Name</label>
+              </div>
+              <div class="did-floating-label-content">
+                <input id="email" name="email" class="did-floating-input" type="email" placeholder=" " required
+                  autocomplete="email">
+                <label for="email" class="did-floating-label">Email</label>
+              </div>
+
               <button type="submit">submit</button>
-            </form>
           </div>
         </div>
+
 
         <div class="socials">
           <div class="image-wrapp">
             <a href="./index.html">
               <img src="./assets/image/montichello-logo.svg" alt="MONTICELLO-INTERNATIONAL GROUP"></a>
+            <p class="copyrights">Copyrights © 2020 Montichello</p>
           </div>
           <div class="social-icon">
             <a href="https://www.facebook.com/" target="_blank" rel="noreferre, nofollow" title="Link to facebook"><img
@@ -244,7 +278,6 @@
               title="Link to instagram"><img src="./assets/image/instagram.svg" alt="instagram"></a>
           </div>
         </div>
-        <p>Copyrights © 2020 Montichello</p>
       </div>
     </footer>
   </div>
