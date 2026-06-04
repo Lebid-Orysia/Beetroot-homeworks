@@ -533,7 +533,7 @@ button {
   border: 1px solid $text-light;
   background: transparent;
   display: flex;
-  align-items: anchor-center;
+  align-items: center;
   justify-content: center;
 }
 
@@ -765,6 +765,7 @@ form.contacts-form {
   width: 310px;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   input {
     width: 100%;
@@ -779,7 +780,7 @@ form.contacts-form {
 
   .did-floating-label-content {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
   }
 
   .did-floating-label {
@@ -802,27 +803,34 @@ form.contacts-form {
     @include fz(18);
     height: 41px;
     color: $text-dark;
-    opacity: 0.8;
-    border-bottom: 1px solid $text-dark;
+    opacity: 0.2;
+    border-bottom: 1px solid $gray;
     background-color: transparent;
     font-family: $font-family;
     font-weight: 400;
     line-height: 150%;
-    color: $black;
+    color: $gray;
+    padding-bottom: 10px;
+    transition: border-color 0.2s ease;
 
     &:focus {
+      color: $black;
       outline: none;
+      border-bottom: 1px solid $text-dark;
+      opacity: 1;
 
-      ~.did-floating-label {
-        top: -15px;
-        font-size: 11px;
+      &~.did-floating-label {
+        top: -20px;
+        @include fz(11);
       }
     }
-  }
 
-  .did-floating-input:not(:placeholder-shown)~.did-floating-label {
-    top: -15px;
-    font-size: 11px;
+    &:not(:placeholder-shown)~.did-floating-label {
+      top: -20px;
+      @include fz(11);
+      color: $gray; 
+      opacity: 0.5;
+    }
   }
 
 }
@@ -853,4 +861,41 @@ form.contacts-form {
   @include fz(14);
   color: $text-light;
   margin-top: 41px;
+}
+
+
+
+//toast style
+
+.my-toast {
+  position: absolute;
+  right: -44px;
+  top: -40px;
+  border-radius: 5px;
+  padding: 10px;
+  color: $black;
+  min-width: 200px;
+  text-align: center;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  &.success {
+    border: 1px solid #5aff8e;
+  }
+
+  &.error {
+    border: 1px solid #ff7272;
+  }
+}
+
+
+.input-error-message {
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  color: #ff7272;
+  @include fz(10);
+  font-family: $font-family;
+  font-weight: 300;
+  transition: opacity 0.2s ease;
 }

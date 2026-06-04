@@ -245,18 +245,20 @@
                 From 07:05AM to 19:30PM
               </p>
             </div>
-
-            <form action="#" method="POST" class="contacts-form">
+            <form action="#" method="POST" class="contacts-form" id="feedback-form">
               <div class="did-floating-label-content">
-                <input id="name" name="name" class="did-floating-input" type="text" placeholder=" " required
+                <input id="username" name="name" class="did-floating-input" type="text" placeholder=" " 
                   autocomplete="name">
                 <label for="name" class="did-floating-label">Name</label>
+                <span class="input-error-message"></span>
               </div>
               <div class="did-floating-label-content">
-                <input id="email" name="email" class="did-floating-input" type="email" placeholder=" " required
+                <input id="email" name="email" class="did-floating-input" type="email" placeholder=" " 
                   autocomplete="email">
                 <label for="email" class="did-floating-label">Email</label>
+                <span class="input-error-message"></span>
               </div>
+              <textarea name="message" hidden>Hello it's test message</textarea>
 
               <button type="submit">submit</button>
           </div>
