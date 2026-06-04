@@ -5,17 +5,25 @@ var swiper = new Swiper('.mySwiper', {
   direction: 'vertical',
   speed: 1000,
   loop: false,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-    stopOnLastSlide: true
-  },
   pagination: {
     el: '.swiper-pagination',
     clickable: true
   },
-  mousewheel: {
-    releaseOnEdges: true
+  allowTouchMove: false,
+  autoplay: false,
+  mousewheel: false,
+  breakpoints: {
+    576: {
+      allowTouchMove: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        stopOnLastSlide: true
+      },
+      mousewheel: {
+        releaseOnEdges: true
+      }
+    }
   }
 }); //зміна стилів хедера при скролі сторінки
 
