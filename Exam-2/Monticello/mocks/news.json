@@ -6,7 +6,7 @@
     "image": "./assets/image/news1.webp",
     "date": "20 Jan 2020",
     "author": {
-      "name": "ALJA BRUN",
+      "name": "alice ward",
       "avatar":  "./assets/image/news-people1.webp"
     }
   },
@@ -17,7 +17,7 @@
     "image": "./assets/image/news2.webp",
     "date": "13 Dec 2019",
     "author": {
-      "name": "DOMINIC FREEMAN",
+      "name": "dominic freeman",
       "avatar": "./assets/image/news-people2.webp"
     }
   },
@@ -28,7 +28,7 @@
     "image": "./assets/image/news3.webp",
     "date": "30 Nov 2019",
     "author": {
-      "name": "ALICE WARD",
+      "name": "alice ward",
       "avatar": "./assets/image/news-people3.webp"
     }
   },
@@ -39,7 +39,7 @@
     "image": "./assets/image/news4.webp",
     "date": "02 Jun 2026",
     "author": {
-      "name": "ORYSIA LEBID",
+      "name": "orysia lebid",
       "avatar": "./assets/image/orysia.webp"
     }
   }

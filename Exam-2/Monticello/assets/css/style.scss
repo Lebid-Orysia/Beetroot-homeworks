@@ -72,7 +72,7 @@ header.header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 300;
   background: transparent;
   transition: background-color 0.4s ease, padding 0.4s ease;
 }
@@ -301,6 +301,8 @@ hgroup {
   justify-content: space-between;
   margin-bottom: 177px;
   align-items: end;
+  justify-content: center;
+  gap: 65px;
 
   .projects-content {
     width: 475px;
@@ -487,6 +489,7 @@ button {
   font-weight: 400;
   @include fz(18);
   margin-bottom: 25px;
+  text-transform: uppercase;
 }
 
 .news-card__date {
@@ -702,7 +705,7 @@ button {
   left: 50%;
   transform: translateX(-50%);
   padding: 0 60px 69px;
-  z-index: 10000;
+  z-index: 200;
 
   .contacts-heading {
     font-weight: 700;
@@ -828,7 +831,7 @@ form.contacts-form {
     &:not(:placeholder-shown)~.did-floating-label {
       top: -20px;
       @include fz(11);
-      color: $gray; 
+      color: $gray;
       opacity: 0.5;
     }
   }
@@ -888,7 +891,6 @@ form.contacts-form {
   }
 }
 
-
 .input-error-message {
   position: absolute;
   bottom: -22px;
@@ -898,4 +900,167 @@ form.contacts-form {
   font-family: $font-family;
   font-weight: 300;
   transition: opacity 0.2s ease;
+}
+
+@media screen and (max-width: 1400px) {
+
+  #goToNextSlide,
+  #goToPrevSlide {
+    top: 92%;
+    right: 0;
+  }
+
+  #goToPrevSlide {
+    left: 0;
+  }
+}
+
+
+// .................laptop......
+@media screen and (max-width: 1200px) {
+  .header__nav-list {
+    gap: 40px;
+  }
+
+  .swiper-pagination {
+    margin-right: 20px;
+  }
+}
+
+
+// .................tablet......
+
+@media screen and (max-width: 1024px) {
+  .header__nav-list {
+    display: none;
+  }
+
+  hgroup {
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 0.425rem;
+    }
+  }
+
+  .projects-wrapper {
+    align-items: center;
+    margin-bottom: 90px;
+  }
+
+  .projects .projects-heading,
+  .news h2,
+  .gallery .gallery-heading,
+  .contacts .contacts-heading {
+    font-size: 2.35rem;
+  }
+
+  .projects-wrapper .projects-content h2 {
+    font-size: 2rem;
+  }
+
+  .projects-wrapper .projects-content p {
+    font-size: 0.835rem;
+  }
+
+  button {
+    margin-bottom: 25px;
+  }
+
+  .news-card__author-name {
+    font-size: 0.925rem;
+  }
+
+  .card__title {
+    font-size: 1.275rem;
+  }
+
+  .contacts {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .socials {
+    justify-content: center;
+    gap: 100px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .projects-wrapper {
+    flex-direction: column;
+  }
+
+  .projects {
+    margin-bottom: 100px;
+  }
+
+  .header-wrapp {
+    justify-content: flex-start;
+    gap: 100px;
+  }
+
+
+  .contacts-wrapper,
+  .socials {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+  }
+
+  .contacts {
+    top: -450px;
+  }
+
+  .socials {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 60px;
+    gap: 50px;
+  }
+
+  form.contacts-form button {
+    align-self: center;
+  }
+
+  .contacts-wrapper {
+    width: 100%;
+  }
+
+  #lightgallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// .................mobile......
+
+@media screen and (max-width: 576px) {
+  .projects-wrapper .projects-content {
+    width: 100%;
+  }
+
+  swiper-wrapper {
+    transition-duration: 0ms;
+    transform: translate3d(0px, 0px, 0px)
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .header-wrapp {
+    gap: 50px;
+    margin-top: 30px;
+  }
+
+  #goToNextSlide,
+  #goToPrevSlide {
+    display: none;
+  }
+
 }
