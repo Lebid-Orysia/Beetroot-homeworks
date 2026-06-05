@@ -1,8 +1,13 @@
-//слайдер
 const swiper = new Swiper('.mySwiper', {
   direction: 'vertical',
   speed: 1000,
-  loop: false,
+  loop: false, 
+
+  autoplay: {          
+    delay: 3000,
+    disableOnInteraction: false,
+    stopOnLastSlide: true, 
+  },
 
   pagination: {
     el: '.swiper-pagination',
@@ -10,23 +15,9 @@ const swiper = new Swiper('.mySwiper', {
   },
 
   allowTouchMove: true, 
-  autoplay: false, 
-  mousewheel: false,     
-
-  breakpoints: {
-    576: {
-      allowTouchMove: true, 
-      
-      autoplay: {          
-        delay: 3000,
-        disableOnInteraction: false,
-        stopOnLastSlide: true,
-      },
-      
-      mousewheel: {        
-        releaseOnEdges: true,
-      },
-    },
+  
+  mousewheel: {        
+    releaseOnEdges: true, 
   },
 });
 

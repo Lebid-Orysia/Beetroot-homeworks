@@ -72,7 +72,7 @@ header.header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 300;
+  z-index: 500;
   background: transparent;
   transition: background-color 0.4s ease, padding 0.4s ease;
 }
@@ -705,7 +705,7 @@ button {
   left: 50%;
   transform: translateX(-50%);
   padding: 0 60px 69px;
-  z-index: 200;
+  z-index: 450;
 
   .contacts-heading {
     font-weight: 700;
@@ -1071,8 +1071,5 @@ form.contacts-form {
     right: 0;
   }
 
-  .mySwiper {
-    touch-action: pan-y !important; 
-  }
 
 }
