@@ -1,0 +1,368 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: top;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button {
+  transition: all 0.2s ease;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  color: #000;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.page-wrapper main {
+  margin-top: 100px;
+  flex-grow: 1;
+}
+
+.container {
+  width: min(90%, 1170px);
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 10000;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 84px;
+}
+.nav-wrapper ul {
+  display: flex;
+  gap: 42px;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 18%;
+  font-weight: 400;
+}
+.nav-wrapper ul a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+.nav-wrapper ul a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%) scaleX(0);
+  width: 40px;
+  height: 1px;
+  background: #000;
+  transition: transform 0.3s ease;
+}
+.nav-wrapper ul a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.logo-wrapper {
+  margin-top: 4px;
+}
+
+.hamburger-wrap {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s ease;
+}
+
+.mobile-panel {
+  width: 300px;
+  height: 100dvh;
+  background-color: #fff;
+  transform: translateX(-100%);
+  transition: all 1s ease;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+.mobile-panel nav {
+  width: 300px;
+  padding: 20px;
+}
+.mobile-panel nav ul li {
+  border-bottom: 1px solid #eee;
+  width: 100%;
+}
+.mobile-panel nav ul li a {
+  display: inline-block;
+  width: 100%;
+  color: #565656;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 20px;
+  background-color: transparent;
+}
+.mobile-panel nav ul li a:hover {
+  background-color: #7b7b7b;
+  color: #fff;
+}
+.mobile-panel .search-btn {
+  cursor: pointer;
+  padding: 10px 0 10px 40px;
+}
+
+.logo-mobile {
+  padding: 20px 0 20px 20px;
+  max-width: 200px;
+}
+
+body.mob-show .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+body.mob-show .mobile-panel {
+  transform: translateX(0);
+}
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+  background-color: #565656;
+  width: 35px;
+  height: 4px;
+}
+
+.hamburger {
+  padding: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 133%;
+  letter-spacing: 0.05em;
+  margin-bottom: 57px;
+}
+
+.picture-wrapp {
+  aspect-ratio: 1170/500;
+  margin-bottom: 20px;
+}
+
+.first-screen-pic {
+  margin-bottom: 90px;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  margin-bottom: 43px;
+}
+
+p {
+  font-size: 1.1875rem;
+  line-height: 168%;
+  letter-spacing: 0.05em;
+  color: #565656;
+}
+
+.first-paragraf {
+  margin-bottom: 30px;
+}
+
+.project-overview {
+  margin-bottom: 90px;
+}
+.project-overview p {
+  width: 570px;
+}
+
+.user,
+.sketches,
+.final-design {
+  margin-bottom: 90px;
+}
+
+footer {
+  background: #f4f4f4;
+}
+footer .copyright {
+  font-size: 0.75rem;
+  line-height: 166%;
+  letter-spacing: 0.1%;
+  color: #000;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.social-contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.social-contacts .contacts {
+  padding-top: 70px;
+}
+.social-contacts .contacts p {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 3rem;
+  line-height: 133%;
+  letter-spacing: 5%;
+  color: #000;
+  margin-bottom: 26px;
+}
+.social-contacts .contacts a {
+  display: block;
+  line-height: 166%;
+  letter-spacing: 10%;
+  color: #000;
+  margin-bottom: 13px;
+}
+.social-contacts .social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 23px;
+}
+.social-contacts .social-icon li a {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #565656;
+  background-color: #fff;
+  transition: all 0.2 ease;
+}
+.social-contacts .social-icon li a svg {
+  fill: #565656;
+}
+.social-contacts .social-icon li a:hover {
+  background-color: #565656;
+}
+.social-contacts .social-icon li a:hover svg {
+  fill: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    height: 60px;
+  }
+  .header-wrapper {
+    margin-top: 20px;
+  }
+  .hamburger-wrap {
+    display: block;
+  }
+  .picture-wrapp {
+    aspect-ratio: 700/380;
+  }
+  .social-contacts {
+    flex-direction: column;
+    text-align: center;
+  }
+  h1 {
+    font-size: 2.0625rem;
+    line-height: 152%;
+    margin-bottom: 50px;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .project-overview p {
+    width: 100%;
+  }
+  .nav-wrapper {
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .picture-wrapp {
+    aspect-ratio: 1;
+  }
+  h1 {
+    font-size: 1.875rem;
+    line-height: 167%;
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-size: 1.625rem;
+    margin-bottom: 40px;
+  }
+  .first-screen-pic {
+    margin-bottom: 70px;
+  }
+  p {
+    line-height: 200%;
+    letter-spacing: 0.05em;
+  }
+  .first-paragraf {
+    margin-bottom: 35px;
+  }
+  .user,
+  .sketches,
+  .final-design {
+    margin-bottom: 70px;
+  }
+}/*# sourceMappingURL=style.css.map */

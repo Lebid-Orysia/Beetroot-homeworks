@@ -1,0 +1,21 @@
+.my-toast {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  color: aliceblue;
+  min-width: 200px;
+  background-color: rgb(122, 122, 122);
+  z-index: 10000;
+}
+.my-toast.success {
+  background-color: rgb(95, 163, 95);
+}
+.my-toast.error {
+  background-color: rgb(196, 59, 59);
+}
+
+.input.qty-input {
+  width: 60px;
+}/*# sourceMappingURL=style.css.map */

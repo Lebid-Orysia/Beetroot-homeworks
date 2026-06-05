@@ -988,7 +988,6 @@ form.contacts-form {
   }
 }
 
-
 @media screen and (max-width: 768px) {
   .projects-wrapper {
     flex-direction: column;
@@ -1044,9 +1043,9 @@ form.contacts-form {
     width: 100%;
   }
 
-  swiper-wrapper {
+  .swiper-wrapper {
     transition-duration: 0ms;
-    transform: translate3d(0px, 0px, 0px)
+    transform: translate3d(0px, 0px, 0px);
   }
 
   .swiper-pagination {
