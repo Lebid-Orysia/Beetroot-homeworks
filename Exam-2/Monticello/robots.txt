@@ -1,0 +1,22 @@
+User-agent: Amazonbot-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GPTbot
+Disallow: /
+
+User-agent: Viberbot
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+User-agent: *
+Disallow:
+
+Sitemap: https://lebid-orysia.github.io/Beetroot-homeworks/Exam-2/Monticello/sitemap.xml
