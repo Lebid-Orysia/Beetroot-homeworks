@@ -299,4 +299,22 @@ function showToast(message) {
       toast.remove();
     }, 400);
   }, 2500);
+} //mobile menu
+
+
+var hambBtn = document.getElementById('hamb-btn');
+var overlay = document.querySelector('.overlay');
+
+if (hambBtn) {
+  hambBtn.addEventListener('click', function () {
+    hambBtn.classList.add('is-active');
+    document.body.classList.add('mob-show');
+  });
+}
+
+if (overlay && hambBtn) {
+  overlay.addEventListener('click', function () {
+    hambBtn.classList.remove('is-active');
+    document.body.classList.remove('mob-show');
+  });
 }

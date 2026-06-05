@@ -293,3 +293,22 @@ function showToast(message, type = 'success', targetContainer = document.body) {
     }, 400);
   }, 2500);
 }
+
+
+//mobile menu
+const hambBtn = document.getElementById('hamb-btn');
+const overlay = document.querySelector('.overlay');
+
+if (hambBtn) {
+  hambBtn.addEventListener('click', () => {
+    hambBtn.classList.add('is-active');
+    document.body.classList.add('mob-show');
+  });
+}
+
+if (overlay && hambBtn) {
+  overlay.addEventListener('click', () => {
+    hambBtn.classList.remove('is-active');
+    document.body.classList.remove('mob-show');
+  });
+}
