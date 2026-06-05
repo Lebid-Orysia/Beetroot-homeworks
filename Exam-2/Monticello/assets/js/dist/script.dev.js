@@ -317,4 +317,9 @@ if (overlay && hambBtn) {
     hambBtn.classList.remove('is-active');
     document.body.classList.remove('mob-show');
   });
+} //lazy loading
+
+
+if (typeof LazyLoad !== 'undefined') {
+  new LazyLoad({});
 }

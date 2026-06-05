@@ -1021,7 +1021,7 @@ body.mob-show {
   }
 }
 
-.social-icon.mobile{
+.social-icon.mobile {
   filter: brightness(.3);
   margin: 0 20px 20px;
 }
@@ -1105,6 +1105,9 @@ body.mob-show {
     gap: 100px;
   }
 
+  .header .social-icon {
+    display: none;
+  }
 
 }
 
@@ -1163,10 +1166,6 @@ body.mob-show {
     display: none;
   }
 
-  .header .social-icon {
-    display: none;
-  }
- 
 
 }
 
@@ -1195,7 +1194,7 @@ body.mob-show {
     right: 0;
   }
 
-    hgroup h1 {
+  hgroup h1 {
     font-size: 2.7rem;
   }
 

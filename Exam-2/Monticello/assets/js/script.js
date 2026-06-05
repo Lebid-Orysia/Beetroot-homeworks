@@ -312,3 +312,9 @@ if (overlay && hambBtn) {
     document.body.classList.remove('mob-show');
   });
 }
+
+
+//lazy loading
+if (typeof LazyLoad !== 'undefined') {
+  new LazyLoad({});
+}
