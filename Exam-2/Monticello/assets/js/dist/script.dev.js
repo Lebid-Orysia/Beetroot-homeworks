@@ -153,7 +153,7 @@ link.onclick = function (e) {
       iconSize: [106, 106]
     });
     var map = L.map('map').setView([49.839275, 24.029421], 16);
-    L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png', {
+    L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
     }).addTo(map);
     L.marker([49.841672, 24.026475], {
