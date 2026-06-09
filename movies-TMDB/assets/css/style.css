@@ -958,3 +958,7 @@ body.loading::after {
 .input.qty-input {
   width: 60px
 }
+
+.cast-avatar img {
+  width: 100%;
+}
